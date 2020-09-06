@@ -1,0 +1,38 @@
+$font-stack: Helvetica, sans-serif;
+$primary-color: #333;
+
+body {
+	font: 100% $font-stack;
+	color: $primary-color;
+	padding: 0;
+}
+
+%message-shared {
+	border: 1px solid #ccc;
+	padding: 10px;
+	color: #333;
+}
+
+%equal-heights {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.message {
+	@extend %message-shared;
+}
+
+.success {
+	@extend %message-shared;
+	border-color: green;
+}
+
+.error {
+	@extend %message-shared;
+	border-color: #ff0000;
+}
+
+.warning {
+	@extend %message-shared;
+	border-color: yellow;
+}
