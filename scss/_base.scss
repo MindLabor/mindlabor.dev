@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap");
+
+$font: 300 24px/32px Ubuntu;
+$font-xs: 13.9px;
+$font-s: 16.6px;
+$font-m: 20px;
+$font-n: 24px;
+$font-l: 28.8px;
+$font-xl: 34.5px;
+$font-xxl: 41.5px;
+$font-xxxl: 49.8px;
+$dark-font: #282828;
+$light-font: #fff;
+
+.spacer {
+    flex: 1;
+}
+

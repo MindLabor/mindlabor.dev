@@ -1,0 +1,84 @@
+@use "base";
+@use "compatibility";
+
+html, body {
+	margin: 0px;
+	padding: 0px;
+	font: base.$font;
+	color: base.$dark-font;
+	overflow: hidden;
+}
+
+header {
+	background: url("../assets/home/header.png");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	width: 100%;
+	height: 92px;
+	color: white;
+	font-size: base.$font-s;
+
+	/* Header Items */
+	> div {
+		@extend .ml-flex;
+		margin: 0px 20px;
+
+		> div {
+			flex: 0 0 120px;
+			width: 128px;
+			height: 80px;
+			line-height: 80px;
+			text-align: center;
+		}
+
+		> .current-page-hitem {
+			font-size: base.$font-m;
+			font-weight: 400;
+		}
+	
+		> .logo {
+			flex: 0 0 200px;
+			font-size: base.$font-n;
+		}
+	}
+
+	&.mobile-menu{
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	header {
+		display: none;
+
+		&.mobile-menu {
+			display: block;
+		}
+	}
+}
+
+
+@media only screen and (min-width: 600px) and (max-width: 720px) {
+	header {
+		.h-about {
+			display: none;
+		}
+		.h-contact {
+			display: none;
+		}
+	}
+}
+
+@media only screen and (min-width: 600px) and (max-width: 900px) {
+	header .h-contact {
+		display: none;
+	}
+}
+
+
+@media only screen and (min-width: 1920px) {
+    header > div {
+		width: 1880px;
+		margin: 0px auto;
+    }
+}
