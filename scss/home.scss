@@ -7,6 +7,7 @@ html, body {
 	font: base.$font;
 	color: base.$dark-font;
 	overflow: hidden;
+	
 }
 
 header {
@@ -18,17 +19,25 @@ header {
 	color: white;
 	font-size: base.$font-s;
 
-	/* Header Items */
 	> div {
-		@extend .ml-flex;
+		@include compatibility.display-flex();
 		margin: 0px 20px;
 
+		/* Header Items */
 		> div {
 			flex: 0 0 120px;
 			width: 128px;
 			height: 80px;
 			line-height: 80px;
 			text-align: center;
+			cursor: pointer;
+			@include compatibility.user-select(none);
+			transition: opacity base.$transition-duration, font-size base.$transition-duration;
+			
+
+			&:hover {
+				opacity: .85; 
+			}
 		}
 
 		> .current-page-hitem {
@@ -77,8 +86,8 @@ header {
 
 
 @media only screen and (min-width: 1920px) {
-    header > div {
+	header > div {
 		width: 1880px;
 		margin: 0px auto;
-    }
+	}
 }

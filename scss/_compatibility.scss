@@ -1,5 +1,20 @@
-.ml-flex {
-    display: -webkit-box;
+
+@mixin display-flex() {
+	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
+}
+
+@mixin user-select($property) {
+	-webkit-user-select: $property;
+	-moz-user-select: $property;
+	-ms-user-select: $property;
+	user-select: $property;
+}
+
+@mixin user-select($property) {
+	-webkit-user-select: $property;
+	-moz-user-select: $property;
+	-ms-user-select: $property;
+	user-select: $property;
 }
