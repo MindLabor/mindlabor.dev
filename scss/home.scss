@@ -1,15 +1,6 @@
 @use "base";
 @use "compatibility";
 
-html, body {
-	margin: 0px;
-	padding: 0px;
-	font: base.$font;
-	color: base.$dark-font;
-	overflow: hidden;
-	
-}
-
 header {
 	background: url("../assets/home/header.png");
 	background-repeat: no-repeat;
@@ -18,6 +9,7 @@ header {
 	height: 92px;
 	color: white;
 	font-size: base.$font-s;
+	text-rendering: geometricPrecision;
 
 	> div {
 		@include compatibility.display-flex();
@@ -32,11 +24,10 @@ header {
 			text-align: center;
 			cursor: pointer;
 			@include compatibility.user-select(none);
-			transition: opacity base.$transition-duration, font-size base.$transition-duration;
+			@include compatibility.transition(opacity base.$transition-duration);
 			
-
 			&:hover {
-				opacity: .85; 
+				opacity: .85;
 			}
 		}
 
@@ -62,6 +53,29 @@ header {
 
 		&.mobile-menu {
 			display: block;
+		}
+	}
+
+	.mobile-menu { 
+		background: url("../assets/home/mobile-header.png");
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		color: base.$dark-font;
+		height: 79px;
+		position: absolute;
+		bottom: 0;
+
+		> div {
+			@include compatibility.display-flex();
+
+			> div {
+				flex: 1;
+				height: 80px;
+				line-height: 90px;
+				text-align: center;
+				font-size: base.$font-s;
+				@include compatibility.user-select(none);
+			}
 		}
 	}
 }

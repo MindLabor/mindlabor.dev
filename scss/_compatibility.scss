@@ -1,3 +1,4 @@
+@use "base";
 
 @mixin display-flex() {
 	display: -webkit-box;
@@ -17,4 +18,10 @@
 	-moz-user-select: $property;
 	-ms-user-select: $property;
 	user-select: $property;
+}
+
+@mixin transition($properties...) {
+	-webkit-transition: $properties;
+	-o-transition: $properties;
+	transition: $properties;
 }

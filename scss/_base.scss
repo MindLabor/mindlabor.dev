@@ -13,7 +13,19 @@ $dark-font: #282828;
 $light-font: #fff;
 $transition-duration: .1s;
 
+html, body {
+	margin: 0px;
+	padding: 0px;
+	font: $font;
+	color: $dark-font;
+	overflow: hidden;
+}
+
 .spacer {  
 	flex: 1;
 }
 
+a {
+	color: $light-font;
+	text-decoration: none;
+}
