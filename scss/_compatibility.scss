@@ -25,3 +25,9 @@
 	-o-transition: $properties;
 	transition: $properties;
 }
+
+@mixin flex($webkit, $property) {
+	-webkit-box-flex: $webkit;
+	-ms-flex: $property;
+	flex: $property;
+}

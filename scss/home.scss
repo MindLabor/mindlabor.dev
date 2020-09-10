@@ -17,7 +17,7 @@ header {
 
 		/* Header Items */
 		> div {
-			flex: 0 0 120px;
+			@include compatibility.flex(0, 0 0 120px);
 			width: 128px;
 			height: 80px;
 			line-height: 80px;
@@ -37,7 +37,7 @@ header {
 		}
 	
 		> .logo {
-			flex: 0 0 200px;
+			@include compatibility.flex(0, 0 0 200px);
 			font-size: base.$font-n;
 		}
 	}
@@ -69,7 +69,7 @@ header {
 			@include compatibility.display-flex();
 
 			> div {
-				flex: 1;
+				@include compatibility.flex(1, 1);
 				height: 80px;
 				line-height: 90px;
 				text-align: center;
