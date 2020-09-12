@@ -8,7 +8,7 @@ header {
 	width: 100%;
 	height: 92px;
 	color: white;
-	font: 300 24px/32px Manibz;
+	font: 300 24px/32px "Manibz Light";
 	font-size: base.$font-s;
 	text-rendering: geometricPrecision;
 
@@ -31,29 +31,51 @@ header {
 				opacity: .85;
 			}
 		}
-
-		> .current-page-hitem {
-			font-size: base.$font-m;
-			font-weight: 400;
-		}
-	
-		> .logo {
-			@include compatibility.flex(0, 0 0 200px);
-			background: url("../assets/icons/svg/logo-mono-white.svg");
-			background-repeat: no-repeat;
-			background-size: 100% 100%;
-			font-size: base.$font-n;
-			margin: 24px;
-			height: 32px;
-		}
 	}
 
-	&.mobile-menu{
+	.current-page-hitem {
+		font-family: Manibz;
+	}
+
+	.logo {
+		@include compatibility.flex(0, 0 0 200px);
+		background: url("../assets/icons/svg/logo-mono-white.svg");
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		font-size: base.$font-n;
+		margin: 24px;
+		height: 32px;
+	}
+
+	&.mobile-menu {
 		display: none;
 	}
 }
 
-@media only screen and (max-width: 600px) {
+.mobile-menu { 
+	background: url("../assets/home/mobile-header.png");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	color: base.$dark-font;
+	height: 79px;
+	position: absolute;
+	bottom: 0;
+
+	> div {
+		@include compatibility.display-flex();
+
+		> div {
+			@include compatibility.flex(1, 1);
+			height: 80px;
+			line-height: 90px;
+			text-align: center;
+			font-size: base.$font-s;
+			@include compatibility.user-select(none);
+		}
+	}
+}
+
+@media only screen and (max-width: 660px) {
 	header {
 		display: none;
 
@@ -61,46 +83,23 @@ header {
 			display: block;
 		}
 	}
+}
 
-	.mobile-menu { 
-		background: url("../assets/home/mobile-header.png");
+
+@media only screen and (min-width: 660px) and (max-width: 800px) {
+	.h-about {
+		display: none;
+	}
+}
+
+@media only screen and (min-width: 660px) and (max-width: 900px) {
+	header .logo {
+		background: url("../assets/icons/svg/icon-white.svg");
 		background-repeat: no-repeat;
 		background-size: 100% 100%;
-		color: base.$dark-font;
-		height: 79px;
-		position: absolute;
-		bottom: 0;
-
-		> div {
-			@include compatibility.display-flex();
-
-			> div {
-				@include compatibility.flex(1, 1);
-				height: 80px;
-				line-height: 90px;
-				text-align: center;
-				font-size: base.$font-s;
-				@include compatibility.user-select(none);
-			}
-		}
-	}
-}
-
-
-@media only screen and (min-width: 600px) and (max-width: 800px) {
-	header {
-		.h-about {
-			display: none;
-		}
-		.h-contact {
-			display: none;
-		}
-	}
-}
-
-@media only screen and (min-width: 600px) and (max-width: 900px) {
-	header .h-contact {
-		display: none;
+		@include compatibility.flex(0, 0 0 100px);
+		margin: 18px;
+		height: 44px;
 	}
 }
 
