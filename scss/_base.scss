@@ -1,4 +1,14 @@
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap");
+@font-face {
+	font-family: Manibz Light;
+	src: url(../assets/fonts/manibz-light.ttf), url(../assets/fonts/manibz-light.woff), url(../assets/fonts/manibz-light.woff2);
+	font-weight: 300;
+}
+
+@font-face {
+	font-family: Manibz;
+	src: url(../assets/fonts/manibz-regular.ttf), url(../assets/fonts/manibz-regular.woff), url(../assets/fonts/manibz-regular.woff2);
+	font-weight: 400;
+}
 
 $font: 300 24px/32px Ubuntu;
 $font-xs: 13.9px;
