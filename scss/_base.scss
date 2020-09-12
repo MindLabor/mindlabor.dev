@@ -1,3 +1,5 @@
+@use "compatibility";
+
 @font-face {
 	font-family: "Manibz Light";
 	src: url(../assets/fonts/manibz-light.ttf), url(../assets/fonts/manibz-light.woff), url(../assets/fonts/manibz-light.woff2);
@@ -22,6 +24,9 @@ $font-xxxl: 49.8px;
 $dark-font: #282828;
 $light-font: #fff;
 $transition-duration: .1s;
+$blue: #4500CA;
+$pink: #9B2189;
+$shadow: -2px 2px 20px #28282820;
 
 html, body {
 	margin: 0px;
@@ -31,11 +36,121 @@ html, body {
 	overflow: hidden;
 }
 
+a {
+	color: $light-font;
+	text-decoration: none;
+}
+
 .spacer {  
 	flex: 1;
 }
 
-a {
-	color: $light-font;
-	text-decoration: none;
+header {
+	background: url("../assets/home/header.png");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	width: 100%;
+	height: 92px;
+	color: white;
+	font: 300 24px/32px "Manibz Light";
+	font-size: $font-s;
+	text-rendering: geometricPrecision;
+
+	> div {
+		@include compatibility.display-flex();
+		margin: 0px 20px;
+
+		/* Header Items */
+		> div {
+			@include compatibility.flex(0, 0 0 120px);
+			width: 128px;
+			height: 80px;
+			line-height: 80px;
+			text-align: center;
+			cursor: pointer;
+			@include compatibility.user-select(none);
+			@include compatibility.transition(opacity $transition-duration);
+			
+			&:hover {
+				opacity: .85;
+			}
+		}
+	}
+
+	.current-page-hitem {
+		font-family: Manibz;
+	}
+
+	.logo {
+		@include compatibility.flex(0, 0 0 200px);
+		background: url("../assets/icons/svg/logo-mono-white.svg");
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		font-size: $font-n;
+		margin: 24px;
+		height: 32px;
+	}
+
+	&.mobile-menu {
+		display: none;
+	}
+}
+
+.mobile-menu { 
+	background: url("../assets/home/mobile-header.png");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	color: $dark-font;
+	height: 79px;
+	position: absolute;
+	bottom: 0;
+
+	> div {
+		@include compatibility.display-flex();
+
+		> div {
+			@include compatibility.flex(1, 1);
+			height: 80px;
+			line-height: 90px;
+			text-align: center;
+			font-size: $font-s;
+			@include compatibility.user-select(none);
+		}
+	}
+}
+
+@media only screen and (max-width: 660px) {
+	header {
+		display: none;
+
+		&.mobile-menu {
+			display: block;
+		}
+	}
+}
+
+
+@media only screen and (min-width: 660px) and (max-width: 800px) {
+	.h-about {
+		display: none;
+	}
+}
+
+@media only screen and (min-width: 660px) and (max-width: 900px) {
+	header .logo {
+		background: url("../assets/icons/svg/icon-white.svg");
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		@include compatibility.flex(0, 0 0 100px);
+		margin: 18px;
+		height: 44px;
+	}
+}
+
+
+@media only screen and (min-width: 1920px) {
+	header > div {
+		width: 1880px;
+		margin: 0px auto;
+	}
 }

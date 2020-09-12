@@ -1,112 +1,78 @@
-@use "base";
 @use "compatibility";
+@use "base";
 
-header {
-	background: url("../assets/home/header.png");
-	background-repeat: no-repeat;
-	background-size: 100% 100%;
-	width: 100%;
-	height: 92px;
-	color: white;
-	font: 300 24px/32px "Manibz Light";
-	font-size: base.$font-s;
-	text-rendering: geometricPrecision;
 
-	> div {
-		@include compatibility.display-flex();
-		margin: 0px 20px;
+#hero {
+	@include compatibility.display-flex();
+	height: 800px;
+}
 
-		/* Header Items */
-		> div {
-			@include compatibility.flex(0, 0 0 120px);
-			width: 128px;
-			height: 80px;
-			line-height: 80px;
-			text-align: center;
-			cursor: pointer;
-			@include compatibility.user-select(none);
-			@include compatibility.transition(opacity base.$transition-duration);
-			
-			&:hover {
-				opacity: .85;
-			}
-		}
+#lhero {
+	@include compatibility.flex(0, 0 0 720px);
+	margin: 52px;
+
+	#hero-header {
+		font: 400 base.$font-xxxl Manibz;
+		color: #8F1C93;
+		margin: 32px 0px;
 	}
 
-	.current-page-hitem {
-		font-family: Manibz;
-	}
-
-	.logo {
-		@include compatibility.flex(0, 0 0 200px);
-		background: url("../assets/icons/svg/logo-mono-white.svg");
-		background-repeat: no-repeat;
-		background-size: 100% 100%;
-		font-size: base.$font-n;
-		margin: 24px;
-		height: 32px;
-	}
-
-	&.mobile-menu {
-		display: none;
+	#hero-text {
+		font-size: base.$font-m;
 	}
 }
 
-.mobile-menu { 
-	background: url("../assets/home/mobile-header.png");
-	background-repeat: no-repeat;
-	background-size: 100% 100%;
-	color: base.$dark-font;
-	height: 79px;
-	position: absolute;
-	bottom: 0;
+#rhero {
+	@include compatibility.flex(1, 1);
 
-	> div {
-		@include compatibility.display-flex();
+	> .blob {
+		position: absolute;
+		border-radius: 500px;
+		box-shadow: base.$shadow;
+	}
 
-		> div {
-			@include compatibility.flex(1, 1);
-			height: 80px;
-			line-height: 90px;
-			text-align: center;
-			font-size: base.$font-s;
-			@include compatibility.user-select(none);
-		}
+	#big-blob {
+		background: #350055;
+		width: 180px;
+		height: 180px;
+		right: 100px;
+		top: 247px;
+	}
+
+	#med-blob {
+		background: #4476bf;
+		width: 65px;
+		height: 65px;
+		right: 229px;
+		top: 370px;
+	}
+
+	#sma-blob {
+		background: #801800;
+		width: 34px;
+		height: 34px;
+		right: 115px;
+		top: 392px;
+	}
+
+	.blob-img {
+		width: calc(100% - 2px);
+		height: calc(100% - 2px);
+		margin: 1px;
+		border-radius: 500px;
+		background-size: cover !important;
+	} 
+
+	#big-blob-img {
+		background: url("../assets/home/hero-sma.png") no-repeat;
+	}
+
+	#med-blob-img {
+		background: url("../assets/home/hero-med.png") no-repeat;
+	}
+
+	#sma-blob-img {
+		background: url("../assets/home/hero-big.png") no-repeat;
 	}
 }
 
-@media only screen and (max-width: 660px) {
-	header {
-		display: none;
-
-		&.mobile-menu {
-			display: block;
-		}
-	}
-}
-
-
-@media only screen and (min-width: 660px) and (max-width: 800px) {
-	.h-about {
-		display: none;
-	}
-}
-
-@media only screen and (min-width: 660px) and (max-width: 900px) {
-	header .logo {
-		background: url("../assets/icons/svg/icon-white.svg");
-		background-repeat: no-repeat;
-		background-size: 100% 100%;
-		@include compatibility.flex(0, 0 0 100px);
-		margin: 18px;
-		height: 44px;
-	}
-}
-
-
-@media only screen and (min-width: 1920px) {
-	header > div {
-		width: 1880px;
-		margin: 0px auto;
-	}
-}
