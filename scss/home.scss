@@ -3,76 +3,85 @@
 
 
 #hero {
-	@include compatibility.display-flex();
-	height: 800px;
-}
-
-#lhero {
-	@include compatibility.flex(0, 0 0 720px);
-	margin: 52px;
+	height: 250px;
+	width: 1200px;
+	margin: 150px auto 50px auto;
 
 	#hero-header {
-		font: 400 base.$font-xxxl Manibz;
+		font-weight: 400;
+		font-size: base.$font-xxxl;
 		color: #8F1C93;
 		margin: 32px 0px;
 	}
 
 	#hero-text {
 		font-size: base.$font-m;
+		text-rendering: optimizeLegibility;
 	}
 }
 
-#rhero {
-	@include compatibility.flex(1, 1);
+#projects {
+	background: url("../assets/home/bg_projects.png");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	width: 100%;
+	height: 1200px;
+	color: white;
+	font-size: base.$font-s;
+	text-rendering: geometricPrecision;
+	margin-bottom: 100px;
+	@include compatibility.user-select(none);
 
-	> .blob {
-		position: absolute;
-		border-radius: 500px;
-		box-shadow: base.$shadow;
+	#p-header-wrapper {
+		position: relative;
+		width: 160px;
+		height: 160px;
+		left: calc(50% - 80px);
+		top: -50px;
+		padding: 10px;
+		box-shadow: -2px 2px 52px rgb(0 0 0 / 25%);
+		border-radius: 1000px;
+		background-color: #fff;
 	}
 
-	#big-blob {
-		background: #350055;
-		width: 180px;
-		height: 180px;
-		right: 100px;
-		top: 247px;
+	#p-header-circle {
+		width: calc(100% - 10px);
+		height: calc(100% - 10px);
+		padding: 5px;
+		background: linear-gradient(55deg, #4500CA -47.99%, #9B2189 105.69%);
+		border-radius: 1000px;
 	}
 
-	#med-blob {
-		background: #4476bf;
-		width: 65px;
-		height: 65px;
-		right: 229px;
-		top: 370px;
-	}
-
-	#sma-blob {
-		background: #801800;
-		width: 34px;
-		height: 34px;
-		right: 115px;
-		top: 392px;
-	}
-
-	.blob-img {
-		width: calc(100% - 2px);
-		height: calc(100% - 2px);
-		margin: 1px;
-		border-radius: 500px;
-		background-size: cover !important;
-	} 
-
-	#big-blob-img {
-		background: url("../assets/home/hero-sma.png") no-repeat;
-	}
-
-	#med-blob-img {
-		background: url("../assets/home/hero-med.png") no-repeat;
-	}
-
-	#sma-blob-img {
-		background: url("../assets/home/hero-big.png") no-repeat;
+	#p-header {
+		width: 100%;
+		height: 100%;
+		border-radius: 1000px;
+		background-color: #fff;
+		color: base.$dark-font;
+		font-size: base.$font-l;
+		line-height: 150px;
+		text-align: center;
+		color: #7211A9;
 	}
 }
 
+@media only screen and (max-width: 660px) {
+	
+}
+
+@media only screen and (min-width: 660px) and (max-width: 800px) {
+	
+}
+
+@media only screen and (min-width: 660px) and (max-width: 900px) {
+	
+}
+
+@media only screen and (min-width: 1920px) {
+	#hero {
+		width: 1200px;
+		margin: 100px auto;
+	}
+
+	
+}
