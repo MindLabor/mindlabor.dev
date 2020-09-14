@@ -3,15 +3,17 @@
 
 
 #hero {
-	height: 250px;
+	height: auto;
 	width: 1200px;
 	margin: 150px auto 50px auto;
 
 	#hero-header {
 		font-weight: 400;
 		font-size: base.$font-xxxl;
+		font-style: italic;
 		color: #8F1C93;
 		margin: 32px 0px;
+		line-height: 46px;
 	}
 
 	#hero-text {
@@ -66,15 +68,22 @@
 }
 
 @media only screen and (max-width: 660px) {
-	
+	#hero {
+		width: auto;
+		margin: 100px 50px;
+	}
+	#projects {
+		background: url("../assets/home/mobile-bg_projects.png");
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+	}
 }
 
-@media only screen and (min-width: 660px) and (max-width: 800px) {
-	
-}
-
-@media only screen and (min-width: 660px) and (max-width: 900px) {
-	
+@media only screen and (min-width: 660px) and (max-width: 1920px) {
+	#hero {
+		width: (1200px/1920px) * 100%;
+		margin: 100px auto;
+	}
 }
 
 @media only screen and (min-width: 1920px) {
@@ -82,6 +91,4 @@
 		width: 1200px;
 		margin: 100px auto;
 	}
-
-	
 }
