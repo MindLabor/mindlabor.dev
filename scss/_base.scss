@@ -115,6 +115,23 @@ header {
 	}
 }
 
+::-webkit-scrollbar {
+	/*width: 8px;*/
+	display: none;
+}
+
+/*
+::-webkit-scrollbar-track {
+	background-color: #eee;
+}
+
+::-webkit-scrollbar-thumb {
+	border-radius: 100px;
+	background-color: #2d2731cc;
+	height: 50px;
+}
+*/
+
 @media only screen and (max-width: 660px) {
 	header {
 		display: none;
@@ -122,6 +139,10 @@ header {
 		&.mobile-menu {
 			display: block;
 		}
+	}
+
+	::-webkit-scrollbar {
+		display: none;
 	}
 }
 
