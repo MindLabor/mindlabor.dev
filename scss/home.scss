@@ -71,11 +71,28 @@
 	#hero {
 		width: auto;
 		margin: 100px 50px;
+
+		#hero-header {
+			font-size: base.$font-xxl;
+		}
 	}
+	
 	#projects {
 		background: url("../assets/home/mobile-bg_projects.png");
 		background-repeat: no-repeat;
 		background-size: 100% 100%;
+
+		#p-header-wrapper {
+			width: 120px;
+			height: 120px;
+			left: calc(50% - 60px);
+		}
+
+		#p-header {
+			font-size: base.$font-n;
+			line-height: 110px;
+			text-align: center;
+		}
 	}
 }
 
