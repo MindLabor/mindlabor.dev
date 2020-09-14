@@ -76,7 +76,7 @@
 			font-size: base.$font-xxl;
 		}
 	}
-	
+
 	#projects {
 		background: url("../assets/home/mobile-bg_projects.png");
 		background-repeat: no-repeat;
@@ -86,6 +86,7 @@
 			width: 120px;
 			height: 120px;
 			left: calc(50% - 60px);
+			top: -30px;
 		}
 
 		#p-header {
