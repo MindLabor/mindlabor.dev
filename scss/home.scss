@@ -107,6 +107,7 @@
 		font-size: base.$font-s;
 		line-height: 25px;
 		margin: 0px;
+		overflow: hidden;
 	}
 
 	.p-item-tags {
@@ -134,9 +135,32 @@
 		text-rendering: geometricPrecision;
 	}
 
+	.p-item-desc {
+		display: -webkit-box;
+		-webkit-line-clamp: 7;
+		-webkit-box-orient: vertical;  
+		height: 150px;
+		overflow: hidden;
+	}
+
 	#all-projects-btn {
 		position: relative;
 		left: 75%;
+		
+
+		&:hover {
+			animation: plob-right .5s infinite;
+			animation-direction: alternate;
+		}
+	}
+}
+
+@keyframes plob-right {
+	0% {
+		transform: translateX(0px);
+	}
+	100% {
+		transform: translateX(4px);
 	}
 }
 
@@ -166,6 +190,96 @@
 			font-size: base.$font-n;
 			line-height: 110px;
 			text-align: center;
+		}
+
+		.p-item {
+			width: auto;
+			margin: 50px 80px 100px 80px;
+			height: 300px;
+
+			&:nth-child(odd) {
+				margin: 50px 80px 100px 80px;
+			}
+
+			.p-item-tags {
+				height: 0px;
+			}
+
+			.p-item-topics {
+				height: 0px;
+				overflow: hidden;
+			}
+
+			.p-item-image {
+				@include compatibility.flex(0, 0 0 30px);
+
+				> img {
+					left: -250%;
+				}
+			}
+
+			.p-item-desc {
+				height: 200px;
+				-webkit-line-clamp: 8;
+			}
+		}
+
+		#all-projects-btn {
+			left: calc(50% - 60px);
+		}
+	}
+}
+
+@media only screen and (max-width: 760px) {
+	#projects {
+		.p-item {
+			.p-item-tags {
+				height: 0px;
+			}
+
+			.p-item-topics {
+				height: 0px;
+				overflow: hidden;
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: 660px) and (max-width: 1000px) {
+	#projects {
+		.p-item {
+			width: auto;
+			margin: 50px 80px 100px 80px;
+
+			&:nth-child(odd) {
+				margin: 50px 80px 100px 80px;
+			}
+
+			.p-item-desc { 
+				height: 150px;
+				-webkit-line-clamp: 6;
+			}
+		}
+
+		#all-projects-btn {
+			left: calc(50% - 60px);
+		}
+	}
+}
+
+@media only screen and (min-width: 1000px) and (max-width: 1400px) {
+	#projects {
+		.p-item {
+			width: 840px;
+			margin: 50px auto 100px auto;
+
+			&:nth-child(odd) {
+				margin: 50px auto 100px auto;
+			}
+		}
+
+		#all-projects-btn {
+			left: calc(50% - 60px);
 		}
 	}
 }
