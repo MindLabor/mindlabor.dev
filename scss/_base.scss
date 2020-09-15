@@ -135,10 +135,12 @@ header {
 	background: url("../assets/home/mobile-header.png");
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
-	color: $dark-font;
+	color: #363636;
 	height: 79px;
 	position: fixed;
 	bottom: 0;
+	z-index: 99999;
+	font-weight: 400;
 
 	> div {
 		@include compatibility.display-flex();
