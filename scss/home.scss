@@ -27,7 +27,7 @@
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 	width: 100%;
-	height: 1200px;
+	height: 1220px;
 	color: white;
 	font-size: base.$font-s;
 	text-rendering: geometricPrecision;
@@ -75,9 +75,16 @@
 		border-radius: 2px;
 		color: base.$dark-font;
 		margin: 50px auto 100px 20%;
+		cursor: pointer;
 
-		&:nth-child(even) {
+		&:nth-child(odd) {
 			margin: 50px 20% 100px auto;
+		}
+
+		&:hover {
+			.p-item-title {
+				text-decoration: underline;
+			}
 		}
 	}
 
@@ -124,6 +131,16 @@
 		font-size: base.$font-xl;
 		color: #000000;
 		height: 42px;
+		font-weight: 400;
+	}
+
+	.p-item-desc {
+		text-rendering: optimizeLegibility;
+	}
+
+	#all-projects-btn {
+		position: relative;
+		left: 75%;
 	}
 }
 

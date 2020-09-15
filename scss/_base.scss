@@ -23,7 +23,7 @@ $font-xxl: 41.5px;
 $font-xxxl: 49.8px;
 $dark-font: #282828;
 $light-font: #fff;
-$transition-duration: .1s;
+$transition-duration: 70ms;
 $blue: #4500CA;
 $pink: #9B2189;
 $shadow: -2px 2px 20px #28282820;
@@ -42,6 +42,43 @@ a {
 
 .spacer {  
 	flex: 1;
+}
+
+button {
+	font: $font;
+	font-size: $font-s;
+	font-weight: 400;
+	line-height: 20px;
+	text-align: center;
+	border-radius: 100px;
+	width: 120px;
+	height: 42px;
+	border: none;
+	cursor: pointer;
+	box-shadow: -2px 2px 42px rgba(255, 255, 255, 0.2);
+	transition-duration: $transition-duration;
+	transition-property: background, color;
+
+	&.dark-btn {
+		color: white;
+		background: linear-gradient(258.13deg, #9B2189 -20.12%, #4500CA 123.35%);
+	}
+
+	&.light-btn {
+		color: #9B2189;
+		background: #ffffffee;
+		border: 2px solid #ffffffee;
+	}
+
+	&:focus {
+		outline: 0;
+	}
+
+	&:hover {
+		border: 2px solid #ffffffcc;
+		background: #ffffff1a;
+		color: #ffffffee;
+	}
 }
 
 header {
