@@ -33,6 +33,7 @@ html, body {
 	padding: 0px;
 	font: $font;
 	color: $dark-font;
+	text-rendering: optimizeLegibility;
 }
 
 a {
@@ -179,11 +180,14 @@ header {
 		}
 	}
 
+	html, body {
+		text-rendering: auto;
+	}
+
 	::-webkit-scrollbar {
 		display: none;
 	}
 }
-
 
 @media only screen and (min-width: 660px) and (max-width: 800px) {
 	.h-about {
