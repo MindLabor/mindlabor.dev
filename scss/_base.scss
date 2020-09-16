@@ -45,6 +45,14 @@ a {
 	flex: 1;
 }
 
+.orange-tag-style {
+	font-weight: 500;
+	line-height: 20px;
+	color: #FF7A00;
+	height: 32px;
+	font-size: $font-s;
+}
+
 button {
 	font: $font;
 	font-size: $font-s;
