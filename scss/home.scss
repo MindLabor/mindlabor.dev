@@ -199,6 +199,7 @@
 		height: auto;
 		min-width: 360px;
 		max-width: 360px;
+		height: 500px;
 		margin: 0px $x-gap $y-gap $x-gap;
 		box-shadow: -2px 2px 50px rgba(0, 0, 0, 0.25);
 	}
@@ -211,7 +212,7 @@
 		> img {
 			position: relative;
 			width: 100%;
-			top: -50%;
+			top: -40%;
 		}
 	}
 
@@ -239,15 +240,18 @@
 	}
 
 	.mind-description {
+		$line-count: 9;
 		font-size: base.$font-s;
 		line-height: 25px;
+		height: $line-count*25px;
 	}
 
 	#mind-fractals {
-		float: right;
-		margin: 20px 0px;
+		position: relative;
 		width: 90px;
 		height: 32px;
+		bottom: 20px;
+		left: calc(100% - 110px);
 	}
 }
 
