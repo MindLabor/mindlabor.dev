@@ -58,7 +58,7 @@ button {
 	cursor: pointer;
 	box-shadow: -2px 2px 42px rgba(255, 255, 255, 0.2);
 	transition-duration: $transition-duration;
-	transition-property: background, color;
+	transition-property: background, color, opacity;
 
 	&.dark-btn {
 		color: white;
@@ -75,7 +75,11 @@ button {
 		outline: 0;
 	}
 
-	&:hover {
+	&.dark-btn:hover {
+		opacity: .9;
+	}
+
+	&.light-btn:hover {
 		border: 2px solid #ffffffcc;
 		background: #ffffff1a;
 		color: #ffffffee;

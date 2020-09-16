@@ -77,15 +77,20 @@
 		&:hover {
 			.p-item-title {
 				text-decoration: underline;
-			}			
+			}
 		}
 
 		button[id^=project] {
 			position: relative;
-			left: calc(100% - 100px);
+			left: calc(100% - 105px);
 			bottom: 50px;
 			height: 36px;
 			width: 80px;
+
+			&:hover {
+				animation: plob-right .5s infinite;
+				animation-direction: alternate;
+			}
 		}
 	}
 	
