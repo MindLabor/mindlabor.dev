@@ -85,6 +85,14 @@
 				text-decoration: underline;
 			}
 		}
+
+		button[id^=project] {
+			position: relative;
+			bottom: 40px;
+			right: 40px;
+			height: 36px;
+			width: 120px;
+		}
 	}
 
 	.p-item-image {
