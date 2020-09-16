@@ -29,7 +29,7 @@
 	height: 1220px;
 	color: white;
 	font-size: base.$font-s;
-	margin-bottom: 1300px;
+	margin-bottom: 100px;
 	filter: drop-shadow(-2px 2px 20px rgba(0, 0, 0, 0.25));
 	@include compatibility.user-select(none);
 
@@ -167,6 +167,27 @@
 			animation-direction: alternate;
 		}
 	}
+}
+
+#minds {
+	margin-bottom: 1000px;
+	padding: 0px 200px;
+
+	#minds-header {
+		span { 
+			font-size: base.$font-l; 
+			font-weight: 400;
+			margin-right: 20px;
+		}
+
+		button {
+			position: relative;
+			height: 36px;
+			width: 110px;
+			top: -4px;
+		}
+	}
+
 }
 
 @keyframes plob-right {
