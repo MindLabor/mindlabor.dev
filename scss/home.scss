@@ -69,12 +69,15 @@
 		width: 840px;
 		height: 275px;
 		margin: 50px auto 100px 20%;
+		@include compatibility.user-select(text);
+		
 
 		&:nth-child(odd) {
 			margin: 50px 20% 100px auto;
 		}
 
 		button[id^=project] {
+			@include compatibility.user-select(none);
 			position: relative;
 			left: calc(100% - 105px);
 			bottom: 50px;
