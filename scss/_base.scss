@@ -169,6 +169,52 @@ header {
 	}
 }
 
+footer {
+	height: 400px;
+	background: url("../assets/home/mobile-footer.png");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	color: white;
+	$width-step: 24%;
+
+	span {
+		display: block;
+		margin-bottom: 10px;
+	}
+
+	#explore {
+		position: relative;
+		top: 180px;
+		left: $width-step;
+
+		> div {
+			font-size: $font-s;
+			margin-left: 16px;
+			line-height: 32px;
+			cursor: pointer;
+			@include compatibility.user-select(none);
+
+			&:hover {
+				opacity: .85;
+				animation: plob-right .5s infinite;
+				animation-direction: alternate;
+			}
+		}
+	}
+
+	#contact {
+		position: relative;
+		top: 0px;
+		left: $width-step*2;
+	}
+
+	#about-me {
+		position: relative;
+		top: 30px;
+		left: $width-step*3;
+	}
+}
+
 ::-webkit-scrollbar {
 	/*width: 8px;*/
 	display: none;
