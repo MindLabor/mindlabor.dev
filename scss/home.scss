@@ -188,6 +188,21 @@
 		}
 	}
 
+	#minds-items {
+		@include compatibility.display-flex();
+		flex-wrap: wrap;
+		margin-top: 50px;
+
+		.mind-item {
+			$x-gap: 3%;
+			$y-gap: 50px;
+
+			@include compatibility.flex(0, 0 0 (100% - 6*$x-gap)/3);
+			height: 450px;
+			margin: 0px $x-gap $y-gap $x-gap;
+			background-color: salmon;
+		}
+	}
 }
 
 @keyframes plob-right {
