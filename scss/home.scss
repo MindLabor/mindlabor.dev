@@ -74,12 +74,6 @@
 			margin: 50px 20% 100px auto;
 		}
 
-		&:hover {
-			.p-item-title {
-				text-decoration: underline;
-			}
-		}
-
 		button[id^=project] {
 			position: relative;
 			left: calc(100% - 105px);
