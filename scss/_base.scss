@@ -26,6 +26,7 @@ $light-font: #fff;
 $transition-duration: 70ms;
 $blue: #4500CA;
 $pink: #9B2189;
+$small-b-radius: 2px;
 
 @function glow($size: 20px, $strength: 0.2, $drop: 0) {
 	@if $drop == 1 {
