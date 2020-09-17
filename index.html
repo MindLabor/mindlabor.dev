@@ -18,9 +18,10 @@
 		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-123986016-2"></script>
 		<script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-123986016-2');</script>
 		<script src="https://kit.fontawesome.com/157f63bc72.js" crossorigin="anonymous"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" crossorigin="anonymous"></script>
 	</head>
 	<body>
-		<header>
+		<header delay="0" dorder="0">
 			<div>
 				<div class="logo"><a href="#"></a></div>
 				<div class="spacer"></div>
@@ -31,7 +32,7 @@
 				<div class="h-contact"><a href="#"></a>Contact</a></div>
 			</div>
 		</header>
-		<header class="mobile-menu">
+		<header class="mobile-menu" delay="0" dorder="0">
 			<div>
 				<div>About</div>
 				<div>Contact</div>
@@ -40,20 +41,20 @@
 				<div>Minds</div>
 			</div>
 		</header>
-		<div id="hero">
+		<div id="hero" delay="20" dorder="1">
 			<p id="hero-header">Coding made fun!</p>
 			<p id="hero-text">MindLabor is the place where I share my coding projects and experiences. These projects here consist of multiple 
 				mini-articles called Minds. These Minds explain the individual steps of the development journey in-depth. 
 				Some of them contain interactive elements. So go and feel free to play around and explore more. </p>
 		</div>
-		<div id="projects">
+		<div id="projects" delay="20" dorder="2">
 			<div id="p-header-wrapper">
 				<div id="p-header-circle">
 					<div id="p-header">Projects</div>
 				</div>
 			</div>
 			<div id="project-items">
-				<div class="p-item-wrapper">
+				<div class="p-item-wrapper" delay="10" dorder="10">
 					<div class="p-item">
 						<div class="p-item-image"><img src="assets/home/hero-streams.jpg" alt="Streams"></div>
 						<div class="p-item-content">
@@ -69,7 +70,7 @@
 					<button class="dark-btn" id="project-stream">More</button>
 				</div>
 				
-				<div class="p-item-wrapper">
+				<div class="p-item-wrapper" delay="10" dorder="11">
 					<div class="p-item">
 						<div class="p-item-image">
 							<img src="assets/home/hero-fractals.jpg" alt="Fractals">
@@ -90,7 +91,7 @@
 			</div>
 			<button class="light-btn" id="all-projects-btn">All Projects</button>
 		</div>
-		<div id="minds">
+		<div id="minds" delay="20" dorder="100">
 			<div id="minds-header">
 				<span>Latest Minds</span>
 				<button class="dark-btn" id="all-minds-btn">All Minds</button>
@@ -144,7 +145,7 @@
 				</div>
 			</div>
 		</div>
-		<footer>
+		<footer delay="20" dorder="1000">
 			<div id="explore"><span>Explore</span>
 				<div>Projects</div>
 				<div>Minds</div>
@@ -160,5 +161,7 @@
 			</div>
 			<div id="about-me">About Me</div>
 		</footer>
+
+		<script src="js/home.js"></script>
 	</body>
 </html>

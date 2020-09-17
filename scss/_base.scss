@@ -52,6 +52,15 @@ html, body {
 	text-rendering: optimizeLegibility;
 }
 
+[delay] {
+	opacity: 0;
+	transition: opacity 70ms;
+}
+
+.opc1 {
+	opacity: 1;
+}
+
 a {
 	color: $light-font;
 	text-decoration: none;
@@ -142,7 +151,6 @@ header {
 			}
 		}
 	}
-
 
 	.logo {
 		@include compatibility.flex(0, 0 0 200px);
