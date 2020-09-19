@@ -4,7 +4,7 @@
 #hero {
 	height: auto;
 	width: 1200px;
-	margin: 150px auto 50px auto;
+	margin: 120px auto 50px auto;
 
 	#hero-header {
 		font-weight: 400;
@@ -17,6 +17,7 @@
 
 	#hero-text {
 		font-size: base.$font-m;
+		height: 125px;
 	}
 }
 
@@ -28,7 +29,7 @@
 	height: 1220px;
 	color: white;
 	font-size: base.$font-s;
-	margin-bottom: 100px;
+	margin: 100px 0px 130px 0px;
 	filter: base.shadow(32px, 0.3, 1);
 	@include compatibility.user-select(none);
 
@@ -57,7 +58,7 @@
 		border-radius: 1000px;
 		background-color: #fff;
 		color: base.$dark-font;
-		font-size: base.$font-l;
+		font-size: base.$font-n;
 		line-height: 150px;
 		text-align: center;
 		color: #7211A9;
@@ -65,21 +66,23 @@
 	}
 
 	.p-item-wrapper {
-		width: 840px;
-		height: 275px;
-		margin: 50px auto 100px 20%;
+		$offset: 16%;
+		width: 50%;
+		max-width: 860px;
+		height: 295px;
+		margin: 50px auto 100px $offset;
 		@include compatibility.user-select(text);
 		
 
 		&:nth-child(odd) {
-			margin: 50px 20% 100px auto;
+			margin: 50px $offset 100px auto;
 		}
 
 		button[id^=project] {
 			@include compatibility.user-select(none);
 			position: relative;
 			left: calc(100% - 105px);
-			bottom: 50px;
+			bottom: 55px;
 			height: 36px;
 			width: 80px;
 
@@ -118,7 +121,7 @@
 		padding: 36px;
 		font-weight: 300;
 		font-size: base.$font-s;
-		line-height: 25px;
+		line-height: 30px;
 		margin: 0px;
 		overflow: hidden;
 	}
@@ -138,18 +141,20 @@
 	}
 
 	.p-item-title {
-		font-size: base.$font-xl;
-		color: #000000;
+		font-size: base.$font-l;
+		color: #191919;
 		height: 42px;
+		line-height: 42px;
 		font-weight: 400;
 		text-rendering: geometricPrecision;
 	}
 
 	.p-item-desc {
 		display: -webkit-box;
-		-webkit-line-clamp: 7;
-		-webkit-box-orient: vertical;  
-		height: 150px;
+		-webkit-line-clamp: 4;
+		-webkit-box-orient: vertical;
+		margin-top: 8px;
+		height: 120px;
 		overflow: hidden;
 	}
 
@@ -168,7 +173,7 @@
 
 #minds {
 	margin-bottom: 100px;
-	padding: 0px 15%;
+	padding: 0px 8% 0px 15%;
 
 	#minds-header {
 		span { 
@@ -196,10 +201,8 @@
 		$y-gap: 50px;
 
 		@include compatibility.flex(0, 0 0 (100% - 6*$x-gap)/3);
-		height: auto;
-		min-width: 360px;
-		max-width: 360px;
-		height: 500px;
+		max-width: 400px;
+		height: 540px;
 		margin: 0px $x-gap $y-gap $x-gap;
 		box-shadow: base.shadow(50px, 0.3);
 		border-radius: base.$small-b-radius;
@@ -230,14 +233,15 @@
 	}
 
 	.mind-title {
-		font-size: base.$font-l;
+		font-size: base.$font-n;
 		font-weight: 400;
 		margin-bottom: 10px;
+		color: #191919;
 	}
 
 	.mind-read-tag {
 		@extend .orange-tag-style;
-		line-height: base.$font-l + 10px;
+		line-height: 20px;
 		font-size: base.$font-xs;
 		float: right;
 	}
@@ -245,15 +249,15 @@
 	.mind-description {
 		$line-count: 9;
 		font-size: base.$font-s;
-		line-height: 25px;
-		height: $line-count*25px;
+		line-height: 28px;
+		height: $line-count*28px;
 	}
 
 	#mind-fractals {
 		position: relative;
 		width: 90px;
 		height: 32px;
-		bottom: 20px;
+		bottom: 18px;
 		left: calc(100% - 110px);
 	}
 }
@@ -267,6 +271,28 @@
 	}
 }
 
+@media only screen and (max-width: 1920px) {
+	
+}
+
+@media only screen and (max-width: 1200px) {
+
+}
+
+@media only screen and (max-width: 1024px) {
+
+}
+
+@media only screen and (max-width: 768px) {
+
+}
+
+@media only screen and (max-width: 480px) {
+
+}
+
+
+/*
 @media only screen and (max-width: 660px) {
 	#hero {
 		width: auto;
@@ -404,3 +430,5 @@
 		margin: 100px auto;
 	}
 }
+
+*/

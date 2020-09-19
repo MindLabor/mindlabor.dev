@@ -12,16 +12,17 @@
 	font-weight: 400;
 }
 
-$font: 300 24px/32px Ubuntu;
-$font-xs: 13.9px;
-$font-s: 16.6px;
-$font-m: 20px;
-$font-n: 24px;
-$font-l: 28.8px;
-$font-xl: 34.5px;
-$font-xxl: 41.5px;
-$font-xxxl: 49.8px;
-$dark-font: #282828;
+$font: 300 28.8px/38px Ubuntu;
+$font-xxs: 13.9px;
+$font-xs: 16.6px;
+$font-s: 20px;
+$font-m: 24px;
+$font-n: 28.8px;
+$font-l: 34.5px;
+$font-xl: 41.5px;
+$font-xxl: 49.8px;
+$font-xxxl: 59.7px;
+$dark-font: #333;
 $light-font: #fff;
 $transition-duration: 70ms;
 $blue: #4500CA;
@@ -47,6 +48,8 @@ $small-b-radius: 2px;
 html, body {
 	margin: 0px;
 	padding: 0px;
+	width: 100%;
+	overflow-x: hidden;
 	font: $font;
 	color: $dark-font;
 	text-rendering: optimizeLegibility;
@@ -73,14 +76,14 @@ a {
 .orange-tag-style {
 	font-weight: 500;
 	line-height: 20px;
-	color: #FF7A00;
-	height: 32px;
-	font-size: $font-s;
+	color: #f66600;
+	height: 20px;
+	font-size: $font-xs;
 }
 
 button {
 	font: $font;
-	font-size: $font-s;
+	font-size: $font-xs;
 	font-weight: 400;
 	line-height: 20px;
 	text-align: center;
@@ -125,7 +128,6 @@ header {
 	width: 100%;
 	height: 92px;
 	color: white;
-	font: 300 24px/32px Ubuntu;
 	font-size: $font-s;
 	text-rendering: geometricPrecision;
 	filter: shadow(32px, 0.3, 1);
