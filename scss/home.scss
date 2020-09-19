@@ -373,6 +373,11 @@
 /* TABLET */
 @media only screen and (max-width: 768px) {
 	#projects {
+		background: url("../assets/home/bg_projects-mobile.svg");
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		padding-bottom: 60px;
+
 		.p-item-image {
 			@include compatibility.flex(0, 0 0 74px);
 		}
@@ -401,12 +406,7 @@
 		margin-bottom: 90px;
 
 		.p-item-image {
-			@include compatibility.flex(0, 0 0 10px);
-			filter: blur(1px);
-
-			> img {
-				left: -3200%;
-			}
+			@include compatibility.flex(0, 0 0 0px);
 		}
 
 		.p-item-minds {
@@ -477,7 +477,7 @@
 			width: 120px;
 			height: 120px;
 			left: calc(50% - 60px);
-			top: -25px;
+			top: -42px;
 		}
 	
 		#p-header {
