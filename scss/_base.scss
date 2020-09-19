@@ -175,22 +175,59 @@ header {
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 	color: #363636;
-	height: 79px;
+	height: 90px;
 	position: fixed;
 	bottom: 0;
 	z-index: 99999;
 	font-weight: 400;
+	font-size: $font-xs;
+
+	.home-item > div {
+		background: url("../assets/icons/svg/icon-black.svg");
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		width: 100%;
+		height: 24px;
+	}
+
+	.current-page-hitem {
+		> div {
+			background: url("../assets/icons/svg/icon.svg");
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
+			width: 100%;
+			height: 24px;
+		}
+
+		i.fa-flask {
+			color: #9e2eea;
+		}
+
+		i.fa-grip-horizontal {
+			color: #ee48cc;
+		}
+
+		i.fa-info {
+			color: #651aff;
+		}
+	} 
 
 	> div {
 		@include compatibility.display-flex();
 
-		> div {
+		.mobile-menu-item {
 			@include compatibility.flex(1, 1);
-			height: 80px;
-			line-height: 90px;
+			height: 90px;
+			padding-top: 30px;
+			line-height: 24px;
 			text-align: center;
-			font-size: $font-s;
 			@include compatibility.user-select(none);
+			color: #011526;
+			opacity: .9;
+
+			i {
+				font-size: 18px;
+			}
 		}
 	}
 }
@@ -247,6 +284,10 @@ footer {
 	}
 }
 
+.fa-newspaper, .fa-flask {
+	font-size: 16px;
+}
+
 ::-webkit-scrollbar {
 	display: none;
 }
@@ -285,7 +326,6 @@ footer {
 		height: 44px;
 	}
 }
-
 
 @media only screen and (min-width: 1920px) {
 	header > div {
