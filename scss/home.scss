@@ -26,7 +26,7 @@
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 	width: 100%;
-	height: 1220px;
+	padding-bottom: 120px;
 	color: white;
 	font-size: base.$font-s;
 	margin: 100px 0px 130px 0px;
@@ -69,7 +69,6 @@
 		$offset: 16%;
 		width: 50%;
 		max-width: 860px;
-		height: 295px;
 		margin: 50px auto 100px $offset;
 		@include compatibility.user-select(text);
 		
@@ -118,7 +117,7 @@
 
 	.p-item-content {
 		@include compatibility.flex(1, 1);
-		padding: 36px;
+		padding: 36px 36px 64px 36px;
 		font-weight: 300;
 		font-size: base.$font-s;
 		line-height: 30px;
@@ -150,17 +149,14 @@
 	}
 
 	.p-item-desc {
-		display: -webkit-box;
-		-webkit-line-clamp: 4;
-		-webkit-box-orient: vertical;
 		margin-top: 8px;
-		height: 120px;
 		overflow: hidden;
 	}
 
 	#all-projects-btn {
 		position: relative;
 		left: 75%;
+		bottom: 50px;
 		box-shadow: base.glow(30px, 0.2);
 		
 
@@ -272,6 +268,10 @@
 }
 
 @media only screen and (max-width: 1920px) {
+	
+}
+
+@media only screen and (max-width: 1660px) {
 	
 }
 
