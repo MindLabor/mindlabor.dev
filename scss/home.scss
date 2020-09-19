@@ -17,7 +17,6 @@
 
 	#hero-text {
 		font-size: base.$font-m;
-		height: 125px;
 	}
 }
 
@@ -29,7 +28,7 @@
 	padding-bottom: 120px;
 	color: white;
 	font-size: base.$font-s;
-	margin: 100px 0px 130px 0px;
+	margin: 130px 0px 130px 0px;
 	filter: base.shadow(32px, 0.3, 1);
 	@include compatibility.user-select(none);
 
@@ -188,6 +187,7 @@
 
 	#minds-items {
 		@include compatibility.display-flex();
+		justify-content: space-around;
 		flex-wrap: wrap;
 		margin-top: 50px;
 	}
@@ -201,6 +201,7 @@
 	}
 
 	.mind-item {
+		min-width: 380px;
 		max-width: 400px;
 		box-shadow: base.shadow(50px, 0.3);
 		border-radius: base.$small-b-radius;
@@ -245,6 +246,16 @@
 		float: right;
 	}
 
+	.mind-read-tag-mobile {
+		@extend .orange-tag-style;
+		display: none;
+		color: #191919;
+		line-height: 20px;
+		font-size: base.$font-xs;
+		float: left;
+		width: 100%;
+	}
+
 	.mind-description {
 		font-size: base.$font-s;
 		line-height: 28px;
@@ -270,145 +281,46 @@
 	}
 }
 
+/* DESKTOP */
 @media only screen and (max-width: 1920px) {
-	
+	#projects .p-item-wrapper {
+		margin: 50px auto 100px 13%;
+
+		&:nth-child(odd) {
+			margin: 50px 13% 100px auto;
+		}
+	}
+
+	#minds {
+		padding: 0px 8% 0px 8%;
+	}
 }
 
-@media only screen and (max-width: 1660px) {
-	
+@media only screen and (max-width: 1700px) {
+	#minds {
+		padding: 0px 15% 0px 15%;
+
+		.mind-item {
+			min-width: 400px;
+		}
+	}
 }
 
-@media only screen and (max-width: 1200px) {
-
-}
-
-@media only screen and (max-width: 1024px) {
-
-}
-
-@media only screen and (max-width: 768px) {
-
-}
-
-@media only screen and (max-width: 480px) {
-
-}
-
-
-/*
-@media only screen and (max-width: 660px) {
+@media only screen and (max-width: 1340px) {
 	#hero {
 		width: auto;
-		margin: 100px 50px;
-
-		#hero-header {
-			font-size: base.$font-xxl;
-		}
+		margin: 120px 10% 50px 10%;
 	}
 
-	#projects {
-		background: url("../assets/home/mobile-bg_projects.png");
-		background-repeat: no-repeat;
-		background-size: 100% 100%;
-
-		#p-header-wrapper {
-			width: 120px;
-			height: 120px;
-			left: calc(50% - 60px);
-			top: -30px;
-		}
-
-		#p-header {
-			font-size: base.$font-n;
-			line-height: 110px;
-			text-align: center;
-		}
-
-		.p-item-wrapper {
-			width: auto;
-			height: 300px;
-			margin: 50px 80px 100px 80px;
-
-			&:nth-child(odd) {
-				margin: 50px 80px 100px 80px;
-			}
-		}
-
-		.p-item {
-			.p-item-tags {
-				height: 0px;
-			}
-
-			.p-item-topics {
-				height: 0px;
-				overflow: hidden;
-			}
-
-			.p-item-image {
-				@include compatibility.flex(0, 0 0 30px);
-
-				> img {
-					left: -250%;
-				}
-			}
-
-			.p-item-desc {
-				height: 200px;
-				-webkit-line-clamp: 8;
-			}
-		}
-
-		#all-projects-btn {
-			left: calc(50% - 60px);
-		}
+	#minds {
+		padding: 0px 8% 0px 8%;
 	}
-}
 
-@media only screen and (max-width: 760px) {
-	#projects {
-		.p-item {
-			.p-item-tags {
-				height: 0px;
-			}
-
-			.p-item-topics {
-				height: 0px;
-				overflow: hidden;
-			}
-		}
-	}
-}
-
-@media only screen and (min-width: 660px) and (max-width: 1000px) {
 	#projects {
 		.p-item-wrapper {
 			width: auto;
-			margin: 50px 80px 100px 80px;
-
-			&:nth-child(odd) {
-				margin: 50px 80px 100px 80px;
-			}
-		}
-
-		.p-item {
-			.p-item-desc { 
-				height: 150px;
-				-webkit-line-clamp: 6;
-			}
-		}
-
-		#all-projects-btn {
-			left: calc(50% - 60px);
-		}
-	}
-}
-
-@media only screen and (min-width: 1000px) and (max-width: 1400px) {
-	#projects {
-		.p-item-wrapper {
-			width: 840px;
 			margin: 50px auto 100px auto;
-
+	
 			&:nth-child(odd) {
 				margin: 50px auto 100px auto;
 			}
@@ -420,18 +332,22 @@
 	}
 }
 
-@media only screen and (min-width: 660px) and (max-width: 1920px) {
-	#hero {
-		width: (1200px/1920px) * 100%;
-		margin: 100px auto;
-	}
+/* TABLET */
+@media only screen and (max-width: 1200px) {
+
 }
 
-@media only screen and (min-width: 1920px) {
-	#hero {
-		width: 1200px;
-		margin: 100px auto;
-	}
+/* TABLET */
+@media only screen and (max-width: 1024px) {
+
 }
 
-*/
+/* MOBILE */
+@media only screen and (max-width: 768px) {
+
+}
+
+/* MOBILE */
+@media only screen and (max-width: 480px) {
+
+}
