@@ -192,14 +192,16 @@
 		margin-top: 50px;
 	}
 
-	.mind-item {
+	.mind-item-wrapper {
 		$x-gap: 3%;
 		$y-gap: 50px;
 
 		@include compatibility.flex(0, 0 0 (100% - 6*$x-gap)/3);
-		max-width: 400px;
-		height: 540px;
 		margin: 0px $x-gap $y-gap $x-gap;
+	}
+
+	.mind-item {
+		max-width: 400px;
 		box-shadow: base.shadow(50px, 0.3);
 		border-radius: base.$small-b-radius;
 	}
@@ -219,7 +221,8 @@
 	}
 
 	.mind-content {
-		padding: 25px 30px;
+		padding: 25px 30px 0px 30px;
+		margin-bottom: 28px;
 	}
 
 	.mind-tags {
@@ -243,18 +246,18 @@
 	}
 
 	.mind-description {
-		$line-count: 9;
 		font-size: base.$font-s;
 		line-height: 28px;
-		height: $line-count*28px;
 	}
 
 	#mind-fractals {
+		$gap: 20px;
+		$width: 75px;
 		position: relative;
-		width: 90px;
+		width: $width;
 		height: 32px;
-		bottom: 18px;
-		left: calc(100% - 110px);
+		bottom: $gap;
+		left: calc(100% - 95px);
 	}
 }
 
