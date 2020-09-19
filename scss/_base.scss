@@ -196,13 +196,18 @@ header {
 }
 
 footer {
+	@include compatibility.display-flex();
 	height: 400px;
 	background: url("../assets/home/bg_footer.svg");
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 	filter: shadow(32px, 0.3, 1);
 	color: white;
-	$width-step: 24%;
+	padding-top: 160px;
+
+	.footer-item {
+		@include compatibility.flex(1, 1);
+	}
 
 	span {
 		display: block;
@@ -210,15 +215,14 @@ footer {
 	}
 
 	#explore {
-		position: relative;
-		top: 180px;
-		left: $width-step;
+		margin: 70px auto auto auto;
+		width: 100px;
+
 
 		> div {
 			font-size: $font-s;
 			margin-left: 16px;
 			line-height: 32px;
-			width: 90px;
 			cursor: pointer;
 			@include compatibility.user-select(none);
 
@@ -231,34 +235,21 @@ footer {
 	}
 
 	#contact {
-		position: relative;
-		top: 0px;
-		left: $width-step*2;
+		margin: 10px auto auto auto;
+		width: 100px;
+		text-align: center;
 	}
 
 	#about-me {
-		position: relative;
-		top: 30px;
-		left: $width-step*3;
+		margin: 120px auto auto auto;
+		width: 130px;
+		text-align: center;
 	}
 }
 
 ::-webkit-scrollbar {
-	/*width: 8px;*/
 	display: none;
 }
-
-/*
-::-webkit-scrollbar-track {
-	background-color: #eee;
-}
-
-::-webkit-scrollbar-thumb {
-	border-radius: 100px;
-	background-color: #2d2731cc;
-	height: 50px;
-}
-*/
 
 @media only screen and (max-width: 660px) {
 	header {
