@@ -61,11 +61,11 @@ header > div::before {
 		border-radius: 1000px;
 		background-color: #fff;
 		color: base.$dark-font;
-		font-size: base.$font-n;
-		font-weight: 400;
+		font-size: base.$font-n - 3px;
+		font-weight: bold;
 		line-height: 150px;
 		text-align: center;
-		color: #7211A9;
+		color: #681199eb;
 		text-rendering: geometricPrecision;
 	}
 
