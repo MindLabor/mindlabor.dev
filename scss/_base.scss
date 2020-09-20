@@ -55,6 +55,10 @@ html, body {
 	text-rendering: optimizeLegibility;
 }
 
+h1, h2, h3 {
+	margin: 0;
+}
+
 [delay] {
 	opacity: 0;
 	transition: opacity 70ms;
@@ -263,6 +267,8 @@ footer {
 	span {
 		display: block;
 		margin-bottom: 10px;
+		font-weight: bold;
+		font-size: $font-n - 3px;
 	}
 
 	#explore {
@@ -314,6 +320,8 @@ footer {
 		width: 130px;
 		text-align: center;
 		cursor: pointer;
+		font-weight: bold;
+		font-size: $font-n - 3px;
 
 		&:hover {
 			opacity: .85;
@@ -344,6 +352,10 @@ footer {
 
 	::-webkit-scrollbar {
 		display: none;
+	}
+
+	footer {
+		margin-bottom: 75px;
 	}
 }
 

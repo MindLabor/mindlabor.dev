@@ -149,10 +149,10 @@ header > div::before {
 	}
 
 	.p-item-title {
-		font-size: base.$font-l;
-		color: #191919;
-		line-height: 42px;
-		font-weight: 400;
+		font-size: base.$font-l - 3px;
+		line-height: 39px;
+		font-weight: bold;
+    	color: #333;
 		text-rendering: geometricPrecision;
 	}
 
@@ -180,17 +180,17 @@ header > div::before {
 	padding: 0px 8% 0px 15%;
 
 	#minds-header {
-		span { 
+
+		h2 { 
 			font-size: base.$font-l; 
-			font-weight: 400;
-			margin-right: 20px;
+			font-weight: bold;
+			display: inline-block;
 		}
 
 		button {
 			position: relative;
 			height: 36px;
 			width: 110px;
-			top: -4px;
 		}
 	}
 
@@ -242,10 +242,11 @@ header > div::before {
 	}
 
 	.mind-title {
-		font-size: base.$font-n;
+		font-size: base.$font-n - 3px;
 		font-weight: 400;
 		margin-bottom: 10px;
-		color: #191919;
+		color: #333;
+		font-weight: bold;
 	}
 
 	.mind-read-tag {
@@ -446,8 +447,9 @@ header > div::before {
 		#minds-header {
 			text-align: center;
 
-			> span {
+			> h2 {
 				margin: 0;
+				display: block;
 			}
 		}
 
