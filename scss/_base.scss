@@ -159,19 +159,24 @@ header {
 				opacity: .85;
 				width: 132px;
 			}
-		}
+			
+			&.current-page-hitem {
+				line-height: 72px - 10px;
+			}
 
-		&::before {
-			display: block;
-			position: relative;
-			top: 52px;
-			width: 20px;
-			height: 5px;
-			border-radius: 100px;
-			background-color: white;
-			z-index: 99999;
-			opacity: .85;
-			content: '';
+			&.current-page-hitem::before {
+				display: block;
+				position: relative;
+				top: 52px;
+				width: 20px;
+				height: 5px;
+				left: calc(100% - 70px);
+				border-radius: 100px;
+				background-color: white;
+				z-index: 99999;
+				opacity: .85;
+				content: '';
+			}
 		}
 	}
 
@@ -360,6 +365,10 @@ footer {
 
 	footer {
 		margin-bottom: 75px;
+	}
+
+	.current-page-hitem::before {
+		display: none !important;
 	}
 }
 
