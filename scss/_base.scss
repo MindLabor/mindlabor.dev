@@ -300,7 +300,7 @@ footer {
 
 		i {
 			width: $font-m;
-			opacity: .8;
+			opacity: .85;
 			cursor: pointer;
 
 			&:hover {
@@ -313,6 +313,11 @@ footer {
 		margin: 120px auto auto auto;
 		width: 130px;
 		text-align: center;
+		cursor: pointer;
+
+		&:hover {
+			opacity: .85;
+		}
 	}
 }
 
