@@ -147,7 +147,8 @@ button {
 		max-width: 220px;
 		min-width: 160px;
 		margin: auto;
-		animation: splash-anim 1.8s cubic-bezier(0.280, 0.840, 0.420, 1) infinite;
+		animation: splash-anim 1.7s cubic-bezier(0.280, 0.840, 0.420, 1) infinite;
+		animation-delay: .5s;
 
 		&.animated {
 			animation: splash-out .5s;
