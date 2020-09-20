@@ -1,6 +1,22 @@
 $(document).ready(() => {
-    handleLoading();
+
+    // Handle Loading UI
+    setTimeout(() => {
+        handleSplashScreen();
+        handleLoading();
+    }, 1200);
+    
 });
+
+
+/**
+ * Handle the UI of the splash screen
+ */
+function handleSplashScreen() {
+    $("#splash").addClass("animated");
+    $("#splash-wrapper").css("opacity", "0");
+    setTimeout(() => {$("#splash-wrapper").addClass("hidden")}, 500);
+}
 
 
 /**
