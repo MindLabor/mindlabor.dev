@@ -248,7 +248,7 @@ header {
 
 footer {
 	@include compatibility.display-flex();
-	height: 400px;
+    height: 340px;
 	background: url("../assets/home/bg_footer.svg");
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
@@ -289,6 +289,24 @@ footer {
 		margin: 10px auto auto auto;
 		width: 100px;
 		text-align: center;
+	}
+
+	.social-icon-wrapper {
+		text-align: center;
+		font-size: $font-m;
+		letter-spacing: 6px;
+		line-height: $font-m;
+		margin-top: 20px;
+
+		i {
+			width: $font-m;
+			opacity: .8;
+			cursor: pointer;
+
+			&:hover {
+				opacity: 1;
+			}
+		}
 	}
 
 	#about-me {
