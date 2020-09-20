@@ -194,6 +194,7 @@ header {
 	z-index: 99999;
 	font-weight: 400;
 	font-size: $font-xs;
+	filter: shadow(32px, 0.24, 1);
 
 	.home-item > div {
 		background: url("../assets/icons/svg/icon-black.svg");
