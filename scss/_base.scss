@@ -141,16 +141,29 @@ header {
 			@include compatibility.flex(0, 0 0 120px);
 			width: 128px;
 			height: 80px;
-			line-height: 80px;
+			line-height: 70px;
+			text-shadow: glow(16px, .3);
 			text-align: center;
 			cursor: pointer;
-			text-shadow: glow(10px, 0.4);
 			@include compatibility.user-select(none);
-			@include compatibility.transition(opacity $transition-duration);
+			@include compatibility.transition(opacity $transition-duration, width $transition-duration);
 			
 			&:hover {
 				opacity: .85;
+				width: 132px;
 			}
+		}
+
+		&::before {
+			display: block;
+			position: relative;
+			top: 54px;
+			width: 16px;
+			height: 4px;
+			border-radius: 100px;
+			background-color: white;
+			z-index: 99999;
+			content: '';
 		}
 	}
 
@@ -311,7 +324,7 @@ footer {
 }
 
 @media only screen and (min-width: 660px) and (max-width: 800px) {
-	.h-about {
+	#h-about {
 		display: none;
 	}
 }

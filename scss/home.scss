@@ -1,6 +1,10 @@
 @use "compatibility";
 @use "base";
 
+header > div::before {
+	left: calc(100% - 548px);
+}
+
 #hero {
 	height: auto;
 	width: 1200px;
