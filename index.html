@@ -13,7 +13,8 @@
 
 		<link rel="canonical" href="https://www.mindlabor.dev/">
 		<link rel="shortcut icon" href="assets/icons/ico/favicon-32x32.png" type="image/x-icon">
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" crossorigin="anonymous">
 		<link rel="stylesheet" href="css/home.css">
 
 		<!-- Global site tag (gtag.js) - Google Analytics -->
@@ -56,20 +57,20 @@
 				</div>
 			</div>
 		</header>
-		<div id="hero">
+		<div id="hero" data-aos="zoom-in-up">
 			<h1 id="hero-header">Coding made fun!</h1>
 			<p id="hero-text">MindLabor is the place where I share my coding projects and experiences. These projects here consist of multiple 
 				mini-articles called Minds. These Minds explain the individual steps of the development journey in-depth. 
 				Some of them contain interactive elements. So go and feel free to play around and explore more. </p>
 		</div>
-		<div id="projects">
+		<div id="projects" data-aos="fade-up">
 			<div id="p-header-wrapper">
 				<div id="p-header-circle">
 					<h2 id="p-header">Projects</h2>
 				</div>
 			</div>
 			<div id="project-items">
-				<div class="p-item-wrapper">
+				<div class="p-item-wrapper" data-aos="fade-up-left" data-aos-anchor-placement="top-bottom">
 					<div class="p-item">
 						<div class="p-item-image"><img src="assets/home/hero-streams.jpg" alt="Streams"></div>
 						<div class="p-item-content">
@@ -85,7 +86,7 @@
 					<button class="dark-btn" id="project-stream">More</button>
 				</div>
 				
-				<div class="p-item-wrapper">
+				<div class="p-item-wrapper" data-aos="fade-up-right" data-aos-anchor-placement="top-bottom">
 					<div class="p-item">
 						<div class="p-item-image">
 							<img src="assets/home/hero-fractals.jpg" alt="Fractals">
@@ -106,13 +107,13 @@
 			</div>
 			<button class="light-btn" id="all-projects-btn">All Projects</button>
 		</div>
-		<div id="minds">
+		<div id="minds" data-aos="fade-up" data-aos-delay="100">
 			<div id="minds-header">
 				<h2>Latest Minds</h2>
 				<button class="dark-btn" id="all-minds-btn">All Minds</button>
 			</div>
 			<div id="minds-items">
-				<div class="mind-item-wrapper">
+				<div class="mind-item-wrapper" data-aos="fade-up">
 					<div class="mind-item">
 						<div class="mind-image">
 							<img src="assets/home/hero-fractals.jpg" alt="Fractals">
@@ -129,7 +130,7 @@
 						<button class="dark-btn" id="mind-fractals">Read</button>
 					</div>
 				</div>
-				<div class="mind-item-wrapper">
+				<div class="mind-item-wrapper" data-aos="fade-up">
 					<div class="mind-item">
 						<div class="mind-image">
 							<img src="assets/home/hero-discord-bot.jpg" alt="Discord Bot">
@@ -147,7 +148,7 @@
 						<button class="dark-btn" id="mind-fractals">Read</button>
 					</div>
 				</div>
-				<div class="mind-item-wrapper">
+				<div class="mind-item-wrapper" data-aos="fade-up">
 					<div class="mind-item">
 						<div class="mind-image">
 							<img src="assets/home/hero-dft-drawer.jpg" alt="DFT Drawer">
@@ -199,6 +200,7 @@
 			</div>
 		</footer>
 		
+		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" crossorigin="anonymous"></script>
 		<script src="js/home.js"></script>
 	</body>
