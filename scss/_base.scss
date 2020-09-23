@@ -41,6 +41,10 @@ h1 {
 	font-size: 3rem;
 }
 
+h2 {
+	font-weight: normal;
+}
+
 #splash-wrapper {
 	position: fixed;
 	width: 100vw;
@@ -55,7 +59,7 @@ h1 {
 
 	#splash {
 		position: relative;
-		background: url("../assets/icons/svg/logo-ver.svg");
+		background: url("../assets/mindlabor/logo-ver.svg");
 		background-repeat: no-repeat;
 		background-position: center;
 		height: 100vh;
@@ -118,6 +122,15 @@ $splash-bounce: .04;
 	background-color: $blue;
 }
 
+.inline-link {
+	cursor: pointer;
+	text-decoration: underline;
+
+	&:hover {
+		opacity: .85;
+	}
+}
+
 header {
 	background: url("../assets/home/header.svg");
 	background-repeat: no-repeat;
@@ -144,7 +157,7 @@ header {
 
 		#logo {
 			@include compatibility.flex(1, 1);
-			background: url("../assets/icons/svg/logo-mono-white.svg");
+			background: url("../assets/mindlabor/logo-mono-white.svg");
 			background-repeat: no-repeat;
 			background-size: contain;
 			margin: 32px;
@@ -216,6 +229,7 @@ header {
 		color: white;
 		border-radius: 8px;
 		padding: 0px 20px;
+		cursor: pointer;
 	}
 
 	#projects-more {
@@ -305,6 +319,7 @@ header {
 		color: white;
 		border-radius: 6px;
 		padding: 0px 20px;
+		cursor: pointer;
 	}
 
 	#articles-more {
