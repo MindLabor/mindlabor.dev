@@ -390,7 +390,7 @@ footer {
 	color: white;
 	justify-content: center;
 	line-height: 1.5rem;
-	padding: 180px 3rem 0px 180px;
+	padding: 180px 3rem 0px 3rem;
 
 	h2 {
 		@include compatibility.user-select(none);
@@ -398,7 +398,7 @@ footer {
 
 	#footer {
 		@include compatibility.display-flex();
-		justify-content: center;
+		justify-content: space-evenly;
 	}
 
 	#follow-box {
@@ -413,6 +413,7 @@ footer {
 		@include compatibility.flex(1, 1);
 		padding: 2rem;
 		height: 250px;
+		max-width: 560px;
 
 		.round-btn {
 			width: 140px;
@@ -421,6 +422,7 @@ footer {
 
 	.footer-copy {
 		height: 60px;
+		font-size: .85rem;
 		@include compatibility.user-select(none);
 	}
 
