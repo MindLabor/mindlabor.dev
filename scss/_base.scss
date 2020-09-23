@@ -106,6 +106,18 @@ $splash-bounce: .04;
 	cursor: pointer;
 }
 
+.tag-pink {
+	background-color: $pink;
+}
+
+.tag-purple {
+	background-color: $purple;
+}
+
+.tag-blue {
+	background-color: $blue;
+}
+
 header {
 	background: url("../assets/home/header.svg");
 	background-repeat: no-repeat;
@@ -148,5 +160,61 @@ header {
 
 	#hero {
 		margin: 150px 300px;
+	}
+}
+
+#projects {
+	margin: 150px auto;
+	width: 1200px;
+
+	h1 {
+		font-size: 2.5rem;
+		color: $dark-font;
+		text-align: center;
+		width: 100%;
+	}
+
+	.project {
+		display: grid;
+		grid-template-columns: 180px 1fr;
+		margin: 72px 0px;
+		height: 260px;
+	}
+
+	.p-preview {
+		height: 100%;
+		width: 180px;
+		border-radius: 10px;
+		overflow: hidden;
+
+		> img {
+			position: relative;
+			left: -30%
+		}
+	}
+
+	.p-content {
+		padding: 32px 52px;
+	}
+
+	.p-title {
+		font-size: 1.75rem;
+		width: 100%;
+	}
+
+	.p-desc {
+		color: $light-font;
+		line-height: 1.5rem;
+	}
+
+	.p-tag {
+		float: left;
+		margin: 5px;
+		height: 2rem;
+		line-height: 2rem;
+		text-align: center;
+		color: white;
+		border-radius: 8px;
+		padding: 0px 20px;
 	}
 }
