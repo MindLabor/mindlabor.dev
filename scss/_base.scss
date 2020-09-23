@@ -7,22 +7,6 @@ $blue: #6306FA;
 $purple: #710AF7;
 $pink: #EC34C6;
 
-@function glow($size: 20px, $strength: 0.2, $drop: 0) {
-	@if $drop == 1 {
-		@return drop-shadow(-2px 2px $size rgba(255, 255, 255, $strength));
-	}
-
-	@return -2px 2px $size rgba(255, 255, 255, $strength);
-}
-
-@function shadow($size: 20px, $strength: 0.2, $drop: 0) {
-	@if $drop == 1 {
-		@return drop-shadow(-2px 2px $size rgba(40, 40, 40, $strength));
-	}
-
-	@return -2px 2px $size rgba(40, 40, 40, $strength);
-}
-
 html, body {
 	margin: 0px;
 	padding: 0px;

@@ -20,7 +20,7 @@ header {
 			line-height: 100px;
 			text-align: center;
 			cursor: pointer;
-			transition: transform base.$transition-duration;
+			transition: transform base.$transition-duration, flex .2s;
 			@include compatibility.user-select(none);
 
 			&:hover {
@@ -141,11 +141,20 @@ header {
 }
 
 #time-hero {
-	height: 100px;
+	height: 400px;
 	width: 100%;
 	background-color: base.$dark-font;
 	color: white;
-	padding: 150px 300px;
+
+	> div {
+		width: 880px;
+		margin: 150px auto 150px 18%;
+		padding: 120px 0px;
+	}
+
+	p {
+		line-height: 1.5rem;
+	}
 }
 
 #articles {
@@ -248,4 +257,47 @@ header {
 	}
 }
 
+@media only screen and (max-width: 1600px) {
+	#hero {
+		text-align: center;
 
+		#learn-more {
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+
+	#time-hero > div {
+		text-align: center;
+		margin: 150px auto;
+	}
+}
+
+@media only screen and (max-width: 1400px) {
+
+	#projects {
+		margin: 150px (100%/14);
+		width: auto;
+	}
+	
+}
+
+@media only screen and (max-width: 1240px) {
+
+	header #header div {
+		@include compatibility.flex(0, 0 0 100px);
+
+		&#sign-up {
+			@include compatibility.flex(0, 0 0 140px);
+		}
+	}
+	
+}
+
+@media only screen and (max-width: 1000px) {
+
+	header #hero {
+		margin-top: 120px;
+	}
+	
+}
