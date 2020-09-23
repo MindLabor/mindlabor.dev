@@ -316,7 +316,48 @@ header {
 		height: 52px;
 		cursor: pointer;
 		text-decoration: underline;
-		margin: 4rem auto;
+		margin: 4rem auto 150px auto;
+	}
+}
+
+footer {
+	text-align: center;
+	background: url("../assets/home/footer.svg");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	color: white;
+	justify-content: center;
+	line-height: 1.5rem;
+	padding: 180px 3rem 0px 180px;
+
+	#footer {
+		@include compatibility.display-flex();
+		justify-content: center;
 	}
 
+	#follow-box {
+		margin-top: 52px;
+	}
+
+	#signup-box {
+		margin-top: 112px;
+	}
+
+	.footer-item {
+		@include compatibility.flex(1, 1);
+		padding: 2rem;
+		height: 250px;
+
+		.round-btn {
+			width: 140px;
+		}
+	}
+
+	.footer-copy {
+		height: 60px;
+	}
+
+	p {
+		opacity: .85;
+	}
 }
