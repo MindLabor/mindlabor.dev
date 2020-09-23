@@ -206,7 +206,6 @@ header {
 		margin: 72px 0px;
 		height: 260px;
 		transition: transform $transition-duration;
-		cursor: pointer;
 	
 		&:hover {
 			transform: translateY(-4px);
@@ -218,6 +217,7 @@ header {
 		width: 180px;
 		border-radius: 10px;
 		overflow: hidden;
+		cursor: pointer;
 
 		> img {
 			position: relative;
@@ -232,6 +232,7 @@ header {
 	.p-title {
 		font-size: 1.75rem;
 		width: 100%;
+		cursor: pointer;
 	}
 
 	.p-desc {
@@ -303,10 +304,9 @@ header {
 	}
 
 	.article {
-		height: 520px;
+		height: 510px;
 		border-radius: 16px;
 		box-shadow: 0px 5px 10px 1px rgba($dark-font, 20%);
-		cursor: pointer;
 		transition: transform $transition-duration;
 	
 		&:hover {
@@ -319,6 +319,7 @@ header {
 		width: 100%;
 		overflow: hidden;
 		border-radius: 16px;
+		cursor: pointer;
 
 		> img {
 			width: 100%;
@@ -334,6 +335,7 @@ header {
 		line-height: 1rem;
 		font-size: 1.25rem;
 		width: 100%;
+		cursor: pointer;
 	}
 
 	.a-desc {
