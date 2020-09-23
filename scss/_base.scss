@@ -29,12 +29,16 @@ html, body {
 	width: 100%;
 	overflow-x: hidden;
 	font-family: "Cabin";
-	font-size: 24px;
+	font-size: 20px;
 	color: $dark-font;
 }
 
 h1, h2, h3 {
 	margin: 0;
+}
+
+h1 {
+	font-size: 3rem;
 }
 
 #splash-wrapper {
@@ -90,9 +94,59 @@ $splash-bounce: .04;
 	}
 }
 
+.round-btn {
+	background-color: white;
+	color: $dark-font;
+	text-transform: uppercase;
+	height: 52px;
+	letter-spacing: 0.07em;
+	border-radius: 26px;
+	line-height: 52px;
+	margin: auto;
+	cursor: pointer;
+}
+
 header {
 	background: url("../assets/home/header.svg");
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 	width: 100%;
+	height: 860px;
+	color: white;
+
+	#header {
+		@include compatibility.display-flex();
+		height: 100px;
+		padding: 10px 50px;
+
+		div {
+			@include compatibility.flex(0, 0 0 140px);
+			line-height: 100px;
+			text-align: center;
+			cursor: pointer;
+		}
+
+		#sign-up {
+			line-height: 52px;
+		}
+
+		#logo {
+			@include compatibility.flex(1, 1);
+			background: url("../assets/icons/svg/logo-mono-white.svg");
+			background-repeat: no-repeat;
+			background-size: contain;
+			margin: 32px;
+		}
+	}
+
+	#learn-more {
+		margin-left: 20px;
+		width: 200px;
+		text-align: center;
+		margin: 40px auto auto 0px;
+	}
+
+	#hero {
+		margin: 150px 300px;
+	}
 }
