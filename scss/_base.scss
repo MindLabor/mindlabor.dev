@@ -51,7 +51,8 @@ h2 {
 	height: 100vh;
 	z-index: 999999;
 	background-color: white;
-	transition: opacity .5s;
+	transition: opacity $transition-duration;
+	@include compatibility.user-select(none);
 
 	&.hidden {
 		display: none;
@@ -108,6 +109,12 @@ $splash-bounce: .04;
 	line-height: 52px;
 	margin: auto;
 	cursor: pointer;
+	transition: transform $transition-duration;
+	@include compatibility.user-select(none);
+
+	&:hover {
+		transform: translateY(-4px);
+	}
 }
 
 .tag-pink {
@@ -149,6 +156,12 @@ header {
 			line-height: 100px;
 			text-align: center;
 			cursor: pointer;
+			transition: transform $transition-duration;
+			@include compatibility.user-select(none);
+
+			&:hover {
+				transform: translateY(-4px);
+			}
 		}
 
 		#sign-up {
@@ -192,6 +205,12 @@ header {
 		grid-template-columns: 180px 1fr;
 		margin: 72px 0px;
 		height: 260px;
+		transition: transform $transition-duration;
+		cursor: pointer;
+	
+		&:hover {
+			transform: translateY(-4px);
+		}
 	}
 
 	.p-preview {
@@ -230,6 +249,12 @@ header {
 		border-radius: 8px;
 		padding: 0px 20px;
 		cursor: pointer;
+		transition: transform $transition-duration;
+		@include compatibility.user-select(none);
+	
+		&:hover {
+			transform: translateY(-4px);
+		}
 	}
 
 	#projects-more {
@@ -242,6 +267,11 @@ header {
 		cursor: pointer;
 		text-decoration: underline;
 		margin: auto;
+		transition: opacity $transition-duration;
+	
+		&:hover {
+			opacity: .85;
+		}
 	}
 }
 
@@ -276,6 +306,12 @@ header {
 		height: 520px;
 		border-radius: 16px;
 		box-shadow: 0px 5px 10px 1px rgba($dark-font, 20%);
+		cursor: pointer;
+		transition: transform $transition-duration;
+	
+		&:hover {
+			transform: translateY(-4px);
+		}
 	}
 
 	.a-preview {
@@ -320,6 +356,12 @@ header {
 		border-radius: 6px;
 		padding: 0px 20px;
 		cursor: pointer;
+		transition: transform $transition-duration;
+		@include compatibility.user-select(none);
+	
+		&:hover {
+			transform: translateY(-4px);
+		}
 	}
 
 	#articles-more {
@@ -332,6 +374,11 @@ header {
 		cursor: pointer;
 		text-decoration: underline;
 		margin: 4rem auto 150px auto;
+		transition: opacity $transition-duration;
+	
+		&:hover {
+			opacity: .85;
+		}
 	}
 }
 
@@ -344,6 +391,10 @@ footer {
 	justify-content: center;
 	line-height: 1.5rem;
 	padding: 180px 3rem 0px 180px;
+
+	h2 {
+		@include compatibility.user-select(none);
+	}
 
 	#footer {
 		@include compatibility.display-flex();
@@ -370,9 +421,20 @@ footer {
 
 	.footer-copy {
 		height: 60px;
+		@include compatibility.user-select(none);
 	}
 
 	p {
 		opacity: .85;
+	}
+
+	#privacy {
+		cursor: pointer;
+		opacity: .6;
+		transition: opacity $transition-duration;
+	
+		&:hover {
+			opacity: .8;
+		}
 	}
 }
