@@ -139,21 +139,14 @@ footer {
 	#footer {
 		@include compatibility.display-flex();
 		justify-content: space-evenly;
-	}
-
-	#follow-box {
-		margin-top: 52px;
-	}
-
-	#signup-box {
-		margin-top: 112px;
+		flex-wrap: wrap;
 	}
 
 	.footer-item {
-		@include compatibility.flex(1, 1);
-		padding: 2rem;
-		height: 250px;
+		@include compatibility.flex(0, 0 0 320px);
+		padding: 4rem;
 		max-width: 560px;
+		min-width: 300px;
 
 		.round-btn {
 			width: 140px;
@@ -178,5 +171,13 @@ footer {
 		&:hover {
 			opacity: .8;
 		}
+	}
+}
+
+
+	
+@media only screen and (max-width: 1600px) {
+	footer .footer-item {
+		padding: 3rem;
 	}
 }
