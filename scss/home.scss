@@ -45,10 +45,11 @@ header {
 		margin-left: 20px;
 		width: 200px;
 		text-align: center;
-		margin: 40px auto auto 0px;
+		margin: 40px auto auto auto;
 	}
 
 	#hero {
+		text-align: center;
 		margin: 150px 18%;
 	}
 }
@@ -148,8 +149,9 @@ header {
 
 	> div {
 		width: 880px;
-		margin: 150px auto 150px 18%;
+		margin: 150px auto;
 		padding: 120px 0px;
+		text-align: center;
 	}
 
 	p {
@@ -258,19 +260,7 @@ header {
 }
 
 @media only screen and (max-width: 1600px) {
-	#hero {
-		text-align: center;
-
-		#learn-more {
-			margin-left: auto;
-			margin-right: auto;
-		}
-	}
-
-	#time-hero > div {
-		text-align: center;
-		margin: 150px auto;
-	}
+	
 }
 
 @media only screen and (max-width: 1400px) {
