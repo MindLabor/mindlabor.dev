@@ -57,6 +57,7 @@ header {
 #projects {
 	margin: 150px auto;
 	width: 1200px;
+	display: block;
 
 	h1 {
 		font-size: 2.5rem;
@@ -121,6 +122,11 @@ header {
 		&:hover {
 			transform: translateY(-4px);
 		}
+	}
+
+	.p-tags {
+		height: 50px;
+		overflow: hidden;
 	}
 
 	#projects-more {
@@ -283,5 +289,27 @@ header {
 @media only screen and (max-width: 1000px) {
 	header #hero {
 		margin-top: 120px;
+	}
+	#projects {
+		.p-preview {
+			width: 100%;
+			height: 160px;
+
+			> img {
+				left: 0;
+				width: 100%;
+			}
+		}
+
+		.project {
+			display: block;
+			position: relative;
+			height: auto;
+			min-height: 100% !important;
+		}
+
+		.p-content {
+			padding: 32px;
+		}
 	}
 }
