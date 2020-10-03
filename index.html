@@ -32,10 +32,17 @@
 		<div id="splash-wrapper">
 			<div id="splash"></div>
 		</div>
+		<div class="mobile-menu">
+			<div class="menu-active" id="menu-home">Home</div>
+			<div id="menu-projects">Projects</div>
+			<div id="menu-articles">Articles</div>
+			<div id="menu-about">About</div>
+			<div id="menu-sign-up">Sign Up</div>
+		</div>
 
 		<header>
 			<div id="header">
-				<div id="mobile-header-burger" onclick="$(this).toggleClass('open');">
+				<div id="mobile-header-burger" onclick="$(this).toggleClass('open'); $('.mobile-menu').toggleClass('open'); $('body').toggleClass('fixed'); $('#header').toggleClass('header-mobile-open')">
 					<span></span>
 					<span></span>
 					<span></span>
