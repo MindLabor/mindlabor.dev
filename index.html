@@ -2,23 +2,23 @@
 <html lang="en">
 	<head>
 		<title>MindLabor - The Coding Blog</title>
-		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta name="description" content="Explore cool coding projects and learn how they are built. From the beautiful world of fractals to Discord bots and Chrome extensions.">
-		<meta name="twitter:title" content="MindLabor" />
-		<meta name="twitter:image" content="https://www.mindlabor.dev/assets/icons/png/white-bg-icon.png" />
-		<meta name="twitter:description" content="Explore cool coding projects and learn how they are built. From the beautiful world of fractals to Discord bots and Chrome extensions." />
-		<meta name="twitter:card" content="summary" />
-		<meta name="twitter:site" content="@labor_mind" />
-		<meta name="twitter:creator" content="@labor_mind" />
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Explore full coding projects and learn about every step from idea to release. From the beautiful world of fractals to Discord bots and Chrome extensions.">
+		<meta name="twitter:title" content="MindLabor">
+		<meta name="twitter:image" content="https://www.mindlabor.dev/assets/mindlabor/white-bg-icon.png">
+		<meta name="twitter:description" content="Explore cool coding projects and learn how they are built. From the beautiful world of fractals to Discord bots and Chrome extensions.">
+		<meta name="twitter:card" content="summary">
+		<meta name="twitter:site" content="@labor_mind">
+		<meta name="twitter:creator" content="@labor_mind">
 		<meta property="og:title" content="MindLabor">
 		<meta property="og:image" content="https://www.mindlabor.dev/assets/mindlabor/white-bg-icon.png">
-		<meta property="og:description" content="A Coding Projects Blog by Samuel Braun">
+		<meta property="og:description" content="Explore full coding projects and learn about every step from idea to release.">
 		<meta property="og:url" content="https://www.mindlabor.dev/">
 		<meta property="og:type" content="blog">
 
 		<link rel="canonical" href="https://www.mindlabor.dev/">
-		<link rel="shortcut icon" href="assets/icons/ico/favicon-32x32.png" type="image/x-icon">
+		<link rel="shortcut icon" href="assets/mindlabor/favicon-32x32.png" type="image/x-icon">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap">
 		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" crossorigin="anonymous">
 		<link rel="stylesheet" href="css/home.css">
@@ -32,21 +32,35 @@
 		<div id="splash-wrapper">
 			<div id="splash"></div>
 		</div>
+		<div class="mobile-menu">
+			<div class="menu-active" id="menu-home">Home</div>
+			<div id="menu-projects">Projects</div>
+			<div id="menu-articles">Articles</div>
+			<div id="menu-about">About</div>
+			<div id="menu-sign-up">Sign Up</div>
+		</div>
 
 		<header>
 			<div id="header">
+				<div id="mobile-header-burger" onclick="$(this).toggleClass('open'); $('.mobile-menu').toggleClass('open'); $('body').toggleClass('fixed'); $('#header').toggleClass('header-mobile-open')">
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
 				<div id="logo"></div>
-				<div>Home</div>
-				<div>Projects</div>
-				<div>Articles</div>
-				<div>About</div>
-				<div>Sign In</div>
+				<div class="spacer"></div>
+				<div id="header-home">Home</div>
+				<div id="header-projects">Projects</div>
+				<div id="header-articles">Articles</div>
+				<div id="header-about">About</div>
+				<div id="header-sign-in">Sign In</div>
 				<div class="round-btn" id="sign-up">Sign Up</div>
 			</div>
 			<div id="hero">
 				<h1>Practice coding the easy way.</h1>
 				<p>Explore full coding projects and learn about every step from idea to release.</p>	
-				<div class="round-btn" id="learn-more">Learn more</div>
+				<div class="round-btn" id="learn-more">Get Started</div>
 			</div>
 		</header>
 
@@ -81,7 +95,7 @@
 
 		<section id="time-hero">
 			<div>
-				<h1>Not enough time? No Problem.</h1>
+				<h1>Not enough time?<span class="text-ext"> No Problem.</span></h1>
 				<p>Explore our mini-articles about various topics that help you with your projects and personal development.</p>
 			</div>
 		</section>

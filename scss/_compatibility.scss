@@ -30,3 +30,46 @@
 	-ms-flex: $property;
 	flex: $property;
 }
+
+@mixin transform($arg) {
+	-webkit-transform: $arg;
+	-ms-transform: $arg;
+	transform: $arg;
+}
+
+@mixin clip-path($arg) {
+	-webkit-clip-path: $arg;
+	clip-path: $arg;
+}
+
+@mixin backdrop-filter($arg) {
+	-webkit-backdrop-filter: $arg;
+	backdrop-filter: $arg;
+}
+
+@mixin animation($arg) {
+	-webkit-animation: $arg;
+	animation: $arg;
+}
+
+@mixin animation-delay($arg) {
+	-webkit-animation-delay: .5s;
+	animation-delay: .5s;
+}
+
+@mixin filter($arg) {
+	-webkit-filter: $arg;
+	filter: $arg;
+}
+
+@mixin justify-content($arg) {
+	-webkit-box-pack: $arg;
+	-ms-flex-pack: $arg;
+	justify-content: $arg;
+}
+
+@mixin flex-wrap($arg) {
+	-ms-flex-wrap: $arg;
+	flex-wrap: $arg;
+}
+

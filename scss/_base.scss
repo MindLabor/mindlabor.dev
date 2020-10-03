@@ -7,6 +7,132 @@ $blue: #6306FA;
 $purple: #710AF7;
 $pink: #EC34C6;
 
+@mixin burger-menu($vertical-space: 8px, $height: 4px, $width: 1.5rem) {
+	@include compatibility.flex(0, 0 0 $width);
+	@include compatibility.transform(rotate(0deg));
+	@include compatibility.transition(.5s ease-in-out);
+	width: $width;
+	height: 2*$vertical-space + $height;
+	position: relative;
+	margin: auto;
+	z-index: 1000000;
+
+	span {
+		display: block;
+		position: absolute;
+		height: $height;
+		width: $width;
+		background: white;
+		border-radius: 9px;
+		opacity: 1;
+		left: 0;
+		@include compatibility.transform(rotate(0deg));
+		@include compatibility.transition(.25s ease-in-out);
+	}
+	
+	span:nth-child(1) {
+		top: 0px;
+	}
+	
+	span:nth-child(2),span:nth-child(3) {
+		top: $vertical-space;
+	}
+	
+	span:nth-child(4) {
+		top: 2*$vertical-space;
+	}
+	
+	&.open span:nth-child(1) {
+		top: $vertical-space;
+		width: 0%;
+		left: 50%;
+	}
+	
+	&.open span:nth-child(2) {
+		@include compatibility.transform(rotate(45deg));
+	}
+	
+	&.open span:nth-child(3) {
+		@include compatibility.transform(rotate(-45deg));
+	}
+	
+	&.open span:nth-child(4) {
+		top: $vertical-space;
+		width: 0%;
+		left: 50%;
+	}
+}
+
+.fixed {
+	position: fixed;
+}
+
+header #header.header-mobile-open {
+	#mobile-header-burger span {
+		background: #cac9ce !important;
+	}
+
+	#header-sign-in {
+		color: #cac9ce !important;
+	}
+}
+
+.mobile-menu {
+	display: block;
+	position: fixed;
+	content: '';
+	background-color: transparent;
+	-webkit-transition: background-color .2s, -webkit-clip-path .5s;
+	transition: background-color .2s, -webkit-clip-path .5s;
+	-o-transition: clip-path .5s, background-color .2s;
+	transition: clip-path .5s, background-color .2s;
+	transition: clip-path .5s, background-color .2s, -webkit-clip-path .5s;
+	@include compatibility.clip-path(circle(0px at 40px 60px));
+	@include compatibility.backdrop-filter(blur(3px));
+	height: 100vh;
+	z-index: 999999;
+	width: 100%;
+	overflow: hidden;
+	padding: 120px 10px 0px 40px;
+
+	&.open {
+		@include compatibility.clip-path(circle(100%));
+		background-color: rgba($dark-font, 0.99);
+	}
+
+	> div {
+		z-index: 1000000;
+		font-size: 0.9rem;
+	}
+
+	$dot-size: 6px;
+	$dot-gap: 10px;
+
+	[id^="menu-"] {
+		color: #cac9ce;
+		height: 4*$dot-gap;
+		line-height: 4*$dot-gap;
+		margin-left: $dot-gap+$dot-size;
+	}
+
+	.menu-active {
+		margin-left: 0;
+		color: white !important;
+	}
+
+	.menu-active::before {
+		display: inline-block;
+		position: relative;
+		content: '';
+		width: $dot-size;
+		height: $dot-size;
+		background-color: #fff;
+		border-radius: $dot-size/2;
+		top: -$dot-size/2;
+		margin-right: $dot-gap;
+	}
+}
+
 html, body {
 	margin: 0px;
 	padding: 0px;
@@ -29,13 +155,17 @@ h2 {
 	font-weight: normal;
 }
 
+.spacer {
+	display: none;
+}
+
 #splash-wrapper {
 	position: fixed;
 	width: 100vw;
 	height: 100vh;
 	z-index: 999999;
 	background-color: white;
-	transition: opacity $transition-duration;
+	@include compatibility.transition(opacity $transition-duration);
 	@include compatibility.user-select(none);
 
 	&.hidden {
@@ -52,33 +182,33 @@ h2 {
 		max-width: 220px;
 		min-width: 160px;
 		margin: auto;
-		animation: splash-anim 1.7s cubic-bezier(0.280, 0.840, 0.420, 1) infinite;
-		animation-delay: .5s;
+		@include compatibility.animation(splash-anim 1.7s cubic-bezier(0.280, 0.840, 0.420, 1) infinite);
+		@include compatibility.animation-delay(.5s);
 
 		&.animated {
-			animation: splash-out .5s;
+			@include compatibility.animation(splash-out .5s);
 		}
 	}
 }
 
 $splash-bounce: .04;
 @keyframes splash-anim {
-	0%   { transform: scale(1,1)      translateY(0); }
-    10%  { transform: scale(1 + 2*$splash-bounce, 1 - 2*$splash-bounce)   translateY(0); }
-    30%  { transform: scale(1 - 2*$splash-bounce, 1 + 2*$splash-bounce)   translateY(-100px * ($splash-bounce/.05)); }
-    50%  { transform: scale(1 + $splash-bounce, 1 - $splash-bounce) translateY(0); }
-    57%  { transform: scale(1,1)      translateY(-7px * ($splash-bounce/.05)); }
-    64%  { transform: scale(1,1)      translateY(0); }
-    100% { transform: scale(1,1)      translateY(0); }
+	0%   { @include compatibility.transform(scale(1,1) translateY(0)); }
+    10%  { @include compatibility.transform(scale(1 + 2*$splash-bounce, 1 - 2*$splash-bounce)   translateY(0)); }
+    30%  { @include compatibility.transform(scale(1 - 2*$splash-bounce, 1 + 2*$splash-bounce)   translateY(-100px * ($splash-bounce/.05))); }
+    50%  { @include compatibility.transform(scale(1 + $splash-bounce, 1 - $splash-bounce) translateY(0)); }
+    57%  { @include compatibility.transform(scale(1,1) translateY(-7px * ($splash-bounce/.05))); }
+    64%  { @include compatibility.transform(scale(1,1) translateY(0)); }
+    100% { @include compatibility.transform(scale(1,1) translateY(0)); }
 }
 
 @keyframes splash-out {
 	0% {
-		filter: blur(0);
+		@include compatibility.filter(blur(0));
 		opacity: 1;
 	}
 	100% {
-		filter: blur(5px);
+		@include compatibility.filter(blur(5px));
 		opacity: 0;
 	}
 }
@@ -93,11 +223,15 @@ $splash-bounce: .04;
 	line-height: 52px;
 	margin: auto;
 	cursor: pointer;
+	-webkit-transition: -webkit-transform $transition-duration;
+	transition: -webkit-transform $transition-duration;
+	-o-transition: transform $transition-duration;
 	transition: transform $transition-duration;
+	transition: transform $transition-duration, -webkit-transform $transition-duration;
 	@include compatibility.user-select(none);
 
 	&:hover {
-		transform: translateY(-4px);
+		@include compatibility.transform(translateY(-4px));
 	}
 }
 
@@ -128,7 +262,7 @@ footer {
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 	color: white;
-	justify-content: center;
+	@include compatibility.justify-content(center);
 	line-height: 1.5rem;
 	padding: 180px 3rem 0px 3rem;
 
@@ -138,22 +272,15 @@ footer {
 
 	#footer {
 		@include compatibility.display-flex();
-		justify-content: space-evenly;
-	}
-
-	#follow-box {
-		margin-top: 52px;
-	}
-
-	#signup-box {
-		margin-top: 112px;
+		@include compatibility.justify-content(space-evenly);
+		@include compatibility.flex-wrap(wrap);
 	}
 
 	.footer-item {
-		@include compatibility.flex(1, 1);
-		padding: 2rem;
-		height: 250px;
+		@include compatibility.flex(0, 0 0 320px);
+		padding: 4rem;
 		max-width: 560px;
+		min-width: 300px;
 
 		.round-btn {
 			width: 140px;
@@ -173,10 +300,18 @@ footer {
 	#privacy {
 		cursor: pointer;
 		opacity: .6;
-		transition: opacity $transition-duration;
+		@include compatibility.transition(opacity $transition-duration);
 	
 		&:hover {
 			opacity: .8;
 		}
+	}
+}
+
+
+	
+@media only screen and (max-width: 1600px) {
+	footer .footer-item {
+		padding: 3rem;
 	}
 }
