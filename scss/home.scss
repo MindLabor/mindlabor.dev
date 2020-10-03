@@ -20,11 +20,15 @@ header {
 			line-height: 100px;
 			text-align: center;
 			cursor: pointer;
+			-webkit-transition: -webkit-transform base.$transition-duration, -webkit-box-flex .2s;
+			transition: -webkit-transform base.$transition-duration, -webkit-box-flex .2s;
+			-o-transition: transform base.$transition-duration, flex .2s;
 			transition: transform base.$transition-duration, flex .2s;
+			transition: transform base.$transition-duration, flex .2s, -webkit-transform base.$transition-duration, -webkit-box-flex .2s, -ms-flex .2s;
 			@include compatibility.user-select(none);
 
 			&:hover {
-				transform: translateY(-4px);
+				@include compatibility.transform(translateY(-4px));
 			}
 		}
 
@@ -39,16 +43,25 @@ header {
 			background-size: contain;
 			margin: 32px;
 		}
+
+		#header-sign-in {
+			margin-right: 1rem;
+		}
+
+		#mobile-header-burger {
+			display: none;
+		}
 	}
 
 	#learn-more {
 		margin-left: 20px;
 		width: 200px;
 		text-align: center;
-		margin: 40px auto auto 0px;
+		margin: 40px auto auto auto;
 	}
 
 	#hero {
+		text-align: center;
 		margin: 150px 18%;
 	}
 }
@@ -56,6 +69,7 @@ header {
 #projects {
 	margin: 150px auto;
 	width: 1200px;
+	display: block;
 
 	h1 {
 		font-size: 2.5rem;
@@ -66,10 +80,18 @@ header {
 
 	.project {
 		display: grid;
+		-ms-grid-columns: 180px 1fr;
 		grid-template-columns: 180px 1fr;
-		margin: 72px 0px;
+		margin: 72px auto;
+		-webkit-box-shadow: 0px 2px 15px 4px rgba(base.$dark-font, 20%);
+		box-shadow: 0px 2px 15px 4px rgba(base.$dark-font, 20%);
 		height: 260px;
+		-webkit-transition: -webkit-transform base.$transition-duration;
+		transition: -webkit-transform base.$transition-duration;
+		-o-transition: transform base.$transition-duration;
 		transition: transform base.$transition-duration;
+		transition: transform base.$transition-duration, -webkit-transform base.$transition-duration;
+		border-radius: 10px;
 	
 		&:hover {
 			transform: translateY(-4px);
@@ -114,12 +136,17 @@ header {
 		border-radius: 8px;
 		padding: 0px 20px;
 		cursor: pointer;
-		transition: transform base.$transition-duration;
+		@include compatibility.transition(transform base.$transition-duration);
 		@include compatibility.user-select(none);
 	
 		&:hover {
-			transform: translateY(-4px);
+			@include compatibility.transform(translateY(-4px));
 		}
+	}
+
+	.p-tags {
+		height: 50px;
+		overflow: hidden;
 	}
 
 	#projects-more {
@@ -132,7 +159,7 @@ header {
 		cursor: pointer;
 		text-decoration: underline;
 		margin: auto;
-		transition: opacity base.$transition-duration;
+		@include compatibility.transition(opacity base.$transition-duration);
 	
 		&:hover {
 			opacity: .85;
@@ -148,8 +175,9 @@ header {
 
 	> div {
 		width: 880px;
-		margin: 150px auto 150px 18%;
+		margin: 150px auto;
 		padding: 120px 0px;
+		text-align: center;
 	}
 
 	p {
@@ -173,17 +201,21 @@ header {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(300px, 500px));
 		gap: 5rem;
-		justify-content: center;
+		@include compatibility.justify-content(center);
 	}
 
 	.article {
 		height: 510px;
 		border-radius: 16px;
 		box-shadow: 0px 5px 10px 1px rgba(base.$dark-font, 20%);
+		-webkit-transition: -webkit-transform base.$transition-duration;
+		transition: -webkit-transform base.$transition-duration;
+		-o-transition: transform base.$transition-duration;
 		transition: transform base.$transition-duration;
+		transition: transform base.$transition-duration, -webkit-transform base.$transition-duration;
 	
 		&:hover {
-			transform: translateY(-4px);
+			@include compatibility.transform(translateY(-4px));
 		}
 	}
 
@@ -231,7 +263,7 @@ header {
 		border-radius: 6px;
 		padding: 0px 20px;
 		cursor: pointer;
-		transition: transform base.$transition-duration;
+		@include compatibility.transition(transform base.$transition-duration);
 		@include compatibility.user-select(none);
 	
 		&:hover {
@@ -249,7 +281,7 @@ header {
 		cursor: pointer;
 		text-decoration: underline;
 		margin: 4rem auto 150px auto;
-		transition: opacity base.$transition-duration;
+		@include compatibility.transition(opacity base.$transition-duration);
 	
 		&:hover {
 			opacity: .85;
@@ -258,32 +290,17 @@ header {
 }
 
 @media only screen and (max-width: 1600px) {
-	#hero {
-		text-align: center;
-
-		#learn-more {
-			margin-left: auto;
-			margin-right: auto;
-		}
-	}
-
-	#time-hero > div {
-		text-align: center;
-		margin: 150px auto;
-	}
+	
 }
 
 @media only screen and (max-width: 1400px) {
-
 	#projects {
 		margin: 150px (100%/14);
 		width: auto;
 	}
-	
 }
 
 @media only screen and (max-width: 1240px) {
-
 	header #header div {
 		@include compatibility.flex(0, 0 0 100px);
 
@@ -291,13 +308,289 @@ header {
 			@include compatibility.flex(0, 0 0 140px);
 		}
 	}
-	
 }
 
 @media only screen and (max-width: 1000px) {
+	header {
+		#logo {
+			display: none;
+		}
 
-	header #hero {
-		margin-top: 120px;
+		#hero {
+			margin: 110px 10%;
+		}
+
+		#header > div {
+			@include compatibility.flex(1, 1);
+		}
 	}
+
+	#projects {
+		.p-preview {
+			width: 100%;
+			height: 160px;
+
+			> img {
+				left: 0;
+				width: 100%;
+			}
+		}
+
+		.project {
+			display: block;
+			position: relative;
+			height: auto;
+			min-height: 100% !important;
+			max-width: 500px;
+			box-shadow: 0px 5px 10px 1px rgba(base.$dark-font, 20%);
+		}
+
+		.p-content {
+			padding: 32px;
+		}
+	}
+
+	#time-hero {
+		span.text-ext {
+			display: none;
+		}
+
+		> div {
+			width: auto;
+			padding: 120px 32px;
+		}
+	}
+}
+
+@media only screen and (max-width: 780px) {
+	h1 {
+		font-size: 2.5rem;
+	}
+
+	header {
+
+		#header {
+			padding: 10px 30px;
+
+			#sign-up, #header-about, #header-articles, #header-projects, #header-home {
+				display: none;
+			}
+
+			#logo, #mobile-header-burger {
+				display: block;
+			}
+
+			#logo {
+				@include compatibility.flex(1, 1);
+				background-position: center;
+			}
+
+			#header-sign-in {
+				text-align: right;
+				margin-right: 0px;
+				@include compatibility.flex(0, 0 0 60px);
+			}
+
+			#mobile-header-burger {
+				@include base.burger-menu();
+			}
+
+		}
+
+	}
+}
+
+
+@media only screen and (max-width: 780px) {
+	h1 {
+		font-size: 2.5rem;
+	}
+
+	#articles .a-preview {
+		height: 200px;
+	}
+
 	
+	#header-sign-in {
+		z-index: 1000000 !important;
+	}
+}
+
+
+@media only screen and (max-width: 500px) {
+	#time-hero {
+		h1 {
+			font-size: 2rem;
+		}
+
+		> div {
+			text-align: left;
+		}
+	}
+}
+
+@media only screen and (max-width: 420px) {
+
+	header {
+		background: url(../assets/home/header-mobile.svg);
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		height: 440px;
+
+		#learn-more {
+			width: 140px;
+			height: 2rem;
+			line-height: 2rem;
+			letter-spacing: 0px;
+			font-size: 0.9rem;
+			font-weight: 500;
+			text-transform: initial;
+			margin-left: 0px;
+			margin-top: 0px;
+		}
+
+		#header {
+			padding: 10px 30px;
+
+			#logo {
+				display: none;
+			}
+
+			#header-sign-in {
+				z-index: 1000000;
+				font-size: 0.9rem;
+				@include compatibility.transition(color .5s);
+				@include compatibility.flex(0, 0 0 70px);
+			}
+		}
+
+		#hero {
+			margin: 10px 30px;
+		}
+
+		h1 {
+			font-size: 1.8rem;
+			text-align: left;
+			line-height: 1.8rem;
+		}
+
+		p {
+			font-size: 0.9rem;
+			text-align: left;
+		}
+
+		.spacer {
+			display: block;
+		}
+	}
+
+	#projects {
+		margin: 72px 20px;
+
+		h1 {
+			font-size: 2rem;
+		}
+
+		.p-title {
+			font-size: 1.5rem;
+		}
+
+		.p-content {
+			padding: 24px;
+		}
+
+		.p-tags {
+			height: 40px;
+		}
+
+		.p-tag {
+			font-size: 0.8rem;
+			line-height: 1.75rem;
+			height: 1.75rem;
+		}
+
+		.p-desc {
+			line-height: 1.25rem;
+		}
+	}
+
+	#articles {
+		margin: 100px 20px;
+
+		h1 {
+			font-size: 2rem;
+			margin-top: 0px;
+			margin-bottom: 42px;
+		}
+
+		.a-title {
+			font-size: 1.25rem;
+			line-height: 1.25rem;
+		}
+
+		.a-content {
+			padding: 24px;
+		}
+
+		.a-desc {
+			line-height: 1.25rem;
+		}
+
+		.article {
+			height: auto;
+			padding-bottom: 24px;
+		}
+
+		#articles-wrapper {
+			gap: 3rem;
+		}
+
+		#articles-more {
+			margin: 4rem auto 100px auto;
+		}
+	}
+
+	#time-hero {
+		height: 250px;
+		padding: 30px;
+		width: auto;
+		height: auto;
+
+		h1 {
+			font-size: 2rem;
+		}
+
+		> div {
+			width: auto;
+			text-align: left;
+			padding: 0px;
+			margin: 100px auto;
+		}
+	}
+
+	footer {
+		background: url(../assets/home/footer-mobile.svg);
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		padding: 100px 30px 0px 30px;
+
+		.round-btn {
+			width: 140px;
+			height: 2rem;
+			line-height: 2rem;
+			font-size: 0.9rem;
+			font-weight: 500;
+			text-transform: initial;
+		}
+
+		.footer-item {
+			padding: 2rem 0px;
+			margin: auto 10px;
+			@include compatibility.flex(0, 0 0 300px);
+		}
+
+		.footer-copy {
+			margin-top: 40px;
+		}
+	}
 }
