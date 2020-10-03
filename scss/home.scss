@@ -20,11 +20,15 @@ header {
 			line-height: 100px;
 			text-align: center;
 			cursor: pointer;
+			-webkit-transition: -webkit-transform base.$transition-duration, -webkit-box-flex .2s;
+			transition: -webkit-transform base.$transition-duration, -webkit-box-flex .2s;
+			-o-transition: transform base.$transition-duration, flex .2s;
 			transition: transform base.$transition-duration, flex .2s;
+			transition: transform base.$transition-duration, flex .2s, -webkit-transform base.$transition-duration, -webkit-box-flex .2s, -ms-flex .2s;
 			@include compatibility.user-select(none);
 
 			&:hover {
-				transform: translateY(-4px);
+				@include compatibility.transform(translateY(-4px));
 			}
 		}
 
@@ -76,11 +80,17 @@ header {
 
 	.project {
 		display: grid;
+		-ms-grid-columns: 180px 1fr;
 		grid-template-columns: 180px 1fr;
 		margin: 72px auto;
+		-webkit-box-shadow: 0px 2px 15px 4px rgba(base.$dark-font, 20%);
 		box-shadow: 0px 2px 15px 4px rgba(base.$dark-font, 20%);
 		height: 260px;
+		-webkit-transition: -webkit-transform base.$transition-duration;
+		transition: -webkit-transform base.$transition-duration;
+		-o-transition: transform base.$transition-duration;
 		transition: transform base.$transition-duration;
+		transition: transform base.$transition-duration, -webkit-transform base.$transition-duration;
 		border-radius: 10px;
 	
 		&:hover {
@@ -126,11 +136,11 @@ header {
 		border-radius: 8px;
 		padding: 0px 20px;
 		cursor: pointer;
-		transition: transform base.$transition-duration;
+		@include compatibility.transition(transform base.$transition-duration);
 		@include compatibility.user-select(none);
 	
 		&:hover {
-			transform: translateY(-4px);
+			@include compatibility.transform(translateY(-4px));
 		}
 	}
 
@@ -149,7 +159,7 @@ header {
 		cursor: pointer;
 		text-decoration: underline;
 		margin: auto;
-		transition: opacity base.$transition-duration;
+		@include compatibility.transition(opacity base.$transition-duration);
 	
 		&:hover {
 			opacity: .85;
@@ -191,17 +201,21 @@ header {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(300px, 500px));
 		gap: 5rem;
-		justify-content: center;
+		@include compatibility.justify-content(center);
 	}
 
 	.article {
 		height: 510px;
 		border-radius: 16px;
 		box-shadow: 0px 5px 10px 1px rgba(base.$dark-font, 20%);
+		-webkit-transition: -webkit-transform base.$transition-duration;
+		transition: -webkit-transform base.$transition-duration;
+		-o-transition: transform base.$transition-duration;
 		transition: transform base.$transition-duration;
+		transition: transform base.$transition-duration, -webkit-transform base.$transition-duration;
 	
 		&:hover {
-			transform: translateY(-4px);
+			@include compatibility.transform(translateY(-4px));
 		}
 	}
 
@@ -249,7 +263,7 @@ header {
 		border-radius: 6px;
 		padding: 0px 20px;
 		cursor: pointer;
-		transition: transform base.$transition-duration;
+		@include compatibility.transition(transform base.$transition-duration);
 		@include compatibility.user-select(none);
 	
 		&:hover {
@@ -267,7 +281,7 @@ header {
 		cursor: pointer;
 		text-decoration: underline;
 		margin: 4rem auto 150px auto;
-		transition: opacity base.$transition-duration;
+		@include compatibility.transition(opacity base.$transition-duration);
 	
 		&:hover {
 			opacity: .85;
@@ -367,12 +381,14 @@ header {
 			}
 
 			#logo {
-				@include compatibility.flex(0, 0 0 160px);
+				@include compatibility.flex(1, 1);
+				background-position: center;
 			}
 
 			#header-sign-in {
 				text-align: right;
 				margin-right: 0px;
+				@include compatibility.flex(0, 0 0 60px);
 			}
 
 			#mobile-header-burger {
@@ -392,6 +408,11 @@ header {
 
 	#articles .a-preview {
 		height: 200px;
+	}
+
+	
+	#header-sign-in {
+		z-index: 1000000 !important;
 	}
 }
 
@@ -438,7 +459,7 @@ header {
 			#header-sign-in {
 				z-index: 1000000;
 				font-size: 0.9rem;
-				transition: color .5s;
+				@include compatibility.transition(color .5s);
 				@include compatibility.flex(0, 0 0 70px);
 			}
 		}
@@ -565,7 +586,7 @@ header {
 		.footer-item {
 			padding: 2rem 0px;
 			margin: auto 10px;
-			flex: 0 0 300px;
+			@include compatibility.flex(0, 0 0 300px);
 		}
 
 		.footer-copy {
