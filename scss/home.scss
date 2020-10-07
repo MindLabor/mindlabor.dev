@@ -38,7 +38,7 @@ header {
 
 		#logo {
 			@include compatibility.flex(1, 1);
-			background: url("../assets/mindlabor/logo-mono-white.svg");
+			background: url("../assets/global/mindlabor/logo-mono-white.svg");
 			background-repeat: no-repeat;
 			background-size: contain;
 			margin: 32px;
