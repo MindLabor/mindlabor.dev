@@ -204,8 +204,9 @@ header {
 		@include compatibility.justify-content(center);
 	}
 
-	.article {
-		height: 510px;
+	.article {    
+		height: auto;
+		padding-bottom: 24px;
 		border-radius: 16px;
 		box-shadow: 0px 5px 10px 1px rgba(base.$dark-font, 20%);
 		-webkit-transition: -webkit-transform base.$transition-duration;
@@ -220,14 +221,15 @@ header {
 	}
 
 	.a-preview {
-		height: 260px;
+		height: auto;
 		width: 100%;
-		overflow: hidden;
-		border-radius: 16px;
 		cursor: pointer;
+		border-radius: 16px;
 
 		> img {
-			width: 100%;
+			max-width: 100%;
+			height: auto;
+			border-radius: 16px;
 		}
 	}
 
@@ -268,6 +270,10 @@ header {
 	
 		&:hover {
 			transform: translateY(-4px);
+		}
+
+		&:first-child {
+			margin-left: 0px;
 		}
 	}
 
@@ -407,7 +413,7 @@ header {
 	}
 
 	#articles .a-preview {
-		height: 200px;
+		height: auto;
 	}
 
 	
@@ -534,11 +540,6 @@ header {
 
 		.a-desc {
 			line-height: 1.25rem;
-		}
-
-		.article {
-			height: auto;
-			padding-bottom: 24px;
 		}
 
 		#articles-wrapper {
