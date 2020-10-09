@@ -105,6 +105,18 @@ header #header.header-mobile-open {
 		font-size: 0.9rem;
 	}
 
+	a {
+		display: block;
+		width: 100px;
+		height: 100%;
+		float: left;
+		transition: transform .5s;
+	}
+
+	a:hover {
+		transform: translateX(4px);
+	}
+
 	$dot-size: 6px;
 	$dot-gap: 10px;
 
@@ -121,15 +133,16 @@ header #header.header-mobile-open {
 	}
 
 	.menu-active::before {
-		display: inline-block;
+		display: block;
 		position: relative;
 		content: '';
 		width: $dot-size;
 		height: $dot-size;
 		background-color: #fff;
 		border-radius: $dot-size/2;
-		top: -$dot-size/2;
+		top: 20px - $dot-size/2;
 		margin-right: $dot-gap;
+		float: left;
 	}
 }
 
@@ -153,6 +166,15 @@ h1 {
 
 h2 {
 	font-weight: normal;
+}
+
+a, a:hover, a:focus, a:active {
+	color: inherit;
+	text-decoration: none;
+}
+
+#github-inline {
+	color: white;
 }
 
 .spacer {
@@ -306,9 +328,24 @@ footer {
 			opacity: .8;
 		}
 	}
+
+	#social-links {
+		@include compatibility.display-flex();
+		@include compatibility.justify-content(center);
+		@include compatibility.flex-wrap(wrap);
+		width: 150px;
+		margin: 30px auto auto auto;
+
+		> div {
+			@include compatibility.flex(0, 0 0 40px);
+			margin: 0px 5px;
+		}
+
+		img {
+			width: 40px;
+		}
+	}
 }
-
-
 	
 @media only screen and (max-width: 1600px) {
 	footer .footer-item {
