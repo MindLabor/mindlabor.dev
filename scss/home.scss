@@ -72,108 +72,6 @@ header {
 	}
 }
 
-#projects {
-	margin: 150px auto;
-	width: 1200px;
-	display: block;
-
-	h1 {
-		font-size: 2.5rem;
-		color: base.$dark-font;
-		text-align: center;
-		width: 100%;
-	}
-
-	.project {
-		display: grid;
-		-ms-grid-columns: 180px 1fr;
-		grid-template-columns: 180px 1fr;
-		margin: 72px auto;
-		-webkit-box-shadow: 0px 2px 15px 4px rgba(base.$dark-font, 20%);
-		box-shadow: 0px 2px 15px 4px rgba(base.$dark-font, 20%);
-		height: 260px;
-		-webkit-transition: -webkit-transform base.$transition-duration;
-		transition: -webkit-transform base.$transition-duration;
-		-o-transition: transform base.$transition-duration;
-		transition: transform base.$transition-duration;
-		transition: transform base.$transition-duration, -webkit-transform base.$transition-duration;
-		border-radius: 10px;
-	
-		&:hover {
-			transform: translateY(-4px);
-		}
-	}
-
-	.p-preview {
-		height: 100%;
-		width: 180px;
-		border-radius: 10px;
-		overflow: hidden;
-		cursor: pointer;
-
-		> img {
-			position: relative;
-			left: -30%;
-			height: 280px;
-		}
-	}
-
-	.p-content {
-		padding: 32px 52px;
-	}
-
-	.p-title {
-		font-size: 1.75rem;
-		width: 100%;
-		cursor: pointer;
-	}
-
-	.p-desc {
-		color: base.$light-font;
-		line-height: 1.5rem;
-	}
-
-	.p-tag {
-		float: left;
-		margin: 5px;
-		height: 2rem;
-		line-height: 2rem;
-		text-align: center;
-		color: white;
-		border-radius: 8px;
-		padding: 0px 20px;
-		cursor: pointer;
-		@include compatibility.transition(transform base.$transition-duration);
-		@include compatibility.user-select(none);
-	
-		&:hover {
-			@include compatibility.transform(translateY(-4px));
-		}
-	}
-
-	.p-tags {
-		height: 50px;
-		overflow: hidden;
-	}
-
-	#projects-more {
-		letter-spacing: .05em;
-		text-transform: uppercase;
-		font-size: 1.25rem;
-		text-align: center;
-		width: 100px;
-		height: 52px;
-		cursor: pointer;
-		text-decoration: underline;
-		margin: auto;
-		@include compatibility.transition(opacity base.$transition-duration);
-	
-		&:hover {
-			opacity: .85;
-		}
-	}
-}
-
 #time-hero {
 	height: 400px;
 	width: 100%;
@@ -192,9 +90,9 @@ header {
 	}
 }
 
-#articles {
+.content-box {
 	justify-content: center;
-    margin: auto 5rem;
+	margin: auto 5rem;
 
 	h1 {
 		margin: 150px auto 72px auto;
@@ -204,7 +102,7 @@ header {
 		width: 100%;
 	}
 
-	#articles-wrapper {
+	.content-box-wrapper {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(300px, 500px));
 		gap: 5rem;
@@ -300,16 +198,22 @@ header {
 			opacity: .85;
 		}
 	}
-}
 
-@media only screen and (max-width: 1600px) {
+	#projects-more {
+		letter-spacing: .05em;
+		text-transform: uppercase;
+		font-size: 1.25rem;
+		text-align: center;
+		width: 100px;
+		height: 52px;
+		cursor: pointer;
+		text-decoration: underline;
+		margin: 4rem auto 150px auto;
+		@include compatibility.transition(opacity base.$transition-duration);
 	
-}
-
-@media only screen and (max-width: 1400px) {
-	#projects {
-		margin: 150px (100%/14);
-		width: auto;
+		&:hover {
+			opacity: .85;
+		}
 	}
 }
 
@@ -335,34 +239,6 @@ header {
 
 		#header > div {
 			@include compatibility.flex(1, 1);
-		}
-	}
-
-	#projects {
-		.p-preview {
-			width: 100%;
-			height: auto;
-			overflow: visible;
-
-			> img {
-				left: 0;
-				width: 100%;
-				height: auto;
-				border-radius: 10px;
-			}
-		}
-
-		.project {
-			display: block;
-			position: relative;
-			height: auto;
-			min-height: 100% !important;
-			max-width: 500px;
-			box-shadow: 0px 5px 10px 1px rgba(base.$dark-font, 20%);
-		}
-
-		.p-content {
-			padding: 32px;
 		}
 	}
 
@@ -422,7 +298,7 @@ header {
 		font-size: 2.5rem;
 	}
 
-	#articles .a-preview {
+	.content-box .a-preview {
 		height: auto;
 	}
 
@@ -499,38 +375,8 @@ header {
 			display: block;
 		}
 	}
-
-	#projects {
-		margin: 72px 20px;
-
-		h1 {
-			font-size: 2rem;
-		}
-
-		.p-title {
-			font-size: 1.5rem;
-		}
-
-		.p-content {
-			padding: 24px;
-		}
-
-		.p-tags {
-			height: 40px;
-		}
-
-		.p-tag {
-			font-size: 0.8rem;
-			line-height: 1.75rem;
-			height: 1.75rem;
-		}
-
-		.p-desc {
-			line-height: 1.25rem;
-		}
-	}
-
-	#articles {
+	
+	.content-box {
 		margin: 100px 20px;
 
 		h1 {
@@ -552,7 +398,7 @@ header {
 			line-height: 1.25rem;
 		}
 
-		#articles-wrapper {
+		.content-box-wrapper {
 			gap: 3rem;
 		}
 
