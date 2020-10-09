@@ -339,6 +339,11 @@ footer {
 		> div {
 			@include compatibility.flex(0, 0 0 40px);
 			margin: 0px 5px;
+			transition: transform .5s;
+
+			&:hover {
+				transform: translateY(-4px);
+			}
 		}
 
 		img {
@@ -352,3 +357,10 @@ footer {
 		padding: 3rem;
 	}
 }
+
+@media only screen and (max-width: 1000px) {
+	footer {
+		padding-top: 240px;
+	}
+}
+
