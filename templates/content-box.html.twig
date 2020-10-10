@@ -1,11 +1,15 @@
 <div class="article">
-	<div class="a-preview"><a href="/maintenance"><img src="{{ thumbnail }}" alt="{{ title }}"></a></div>
+	<a href="{{ href }}">
+		<div class="a-preview">
+			<img src="{{ thumbnail }}" alt="{{ title }}">
+		</div>
+	</a>
 	<div class="a-content">
-		<div class="a-title"><a href="/maintenance">{{ title }}</a></div>
+		<div class="a-title"><a href="{{ href }}">{{ title }}</a></div>
 		<div class="a-desc">{{ description }}</div>
 		<div class="a-tags">
 			{% for tag in tags %}
-				<div class="a-tag tag-purple">{{ tag }}</div>
+				<div class="a-tag tag-purple"><a href="/maintenance">{{ tag }}</a></div>
 			{% endfor %}
 		</div>
 	</div>
