@@ -1,3 +1,15 @@
+<?php
+
+	# Load twig templates
+	require __DIR__ . "/vendor/autoload.php";
+
+	use Twig\Environment;
+	use Twig\Loader\FilesystemLoader;
+
+	$loader = new FilesystemLoader(__DIR__ . "/templates");
+	$twig = new Environment($loader);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -130,36 +142,10 @@
 			<div id="articles-more">More</div>
 		</section>
 
-		<footer>
-			<div id="footer">
-				<div class="footer-item">
-					<h2>About</h2>
-					<p>Did you ever want to become a master in a particular technology, but you ended up searching the web for hours instead? <br><br>
-						Our mission is to create projects based on that technology and teach you exactly how we have built them to give you the best introduction possible.</p>
-				</div>
-				<div class="footer-item" id="follow-box">
-					<h2>Contact us</h2>
-					<div id="social-links">
-						<div><a href="mailto:admin@mindlabor.dev" target="_blank"><img src="assets/global/icons/mail.svg" alt="Email"></a></div>
-						<div><a href="https://github.com/MindLabor" target="_blank"><img src="assets/global/icons/github.svg" alt="Github"></a></div>
-						<div><a href="https://medium.com/@MindLabor" target="_blank"><img src="assets/global/icons/medium.svg" alt="Medium"></a></div>
-						<div><a href="https://www.instagram.com/mindlabor/" target="_blank"><img src="assets/global/icons/instagram.svg" alt="Instagram"></a></div>
-						<div><a href="https://twitter.com/labor_mind" target="_blank"><img src="assets/global/icons/twitter.svg" alt="Twitter"></a></div>
-					</div>
-					<p>Did you find any issues? Or do you want to contribute to this site?</p>
-					<p>Visit our GitHub <span class="inline-link"><a id="github-inline" href="https://github.com/MindLabor">here</a></span>.</p>
-				</div>
-				<div class="footer-item" id="signup-box">
-					<h2>Explore</h2>
-					<p>Want to receive updates of new projects and get access to more content?</p>
-					<div class="round-btn">Sign Up</div>
-				</div>
-			</div>
-			<div class="footer-copy">
-				© 2020 MindLabor. <span id="privacy">Privacy Policy</span>
-			</div>
-		</footer>
-		
+		<?php 
+			echo $twig->render("footer.html.twig");
+		?>
+
 		<script type="application/ld+json">
 			{
 			  "@context": "http://schema.org",

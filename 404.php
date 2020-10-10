@@ -1,3 +1,15 @@
+<?php
+
+	# Load twig templates
+	require __DIR__ . "/vendor/autoload.php";
+
+	use Twig\Environment;
+	use Twig\Loader\FilesystemLoader;
+
+	$loader = new FilesystemLoader(__DIR__ . "/templates");
+	$twig = new Environment($loader);
+?>
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -12,103 +24,7 @@
 
 		<link rel="canonical" href="https://www.mindlabor.dev/">
 		<link rel="shortcut icon" href="assets/icons/ico/favicon-32x32.png" type="image/x-icon">
-		<style type="text/css">
-			body {
-				background-color: #eee;
-			}
-
-			* {
-				font-family: "Helvetica Neue", "Segoe UI", Segoe, Helvetica, Arial,
-					"Lucida Grande", sans-serif;
-				font-weight: normal;
-				margin: 0;
-				padding: 0;
-				text-align: center;
-			}
-
-			.container {
-				margin: auto;
-				height: 600px;
-				margin-top: calc(50vh - 300px);
-			}
-
-			.row:before,
-			.row:after {
-				display: table;
-				content: " ";
-			}
-
-			.col-md-6 {
-				width: 50%;
-			}
-
-			.col-md-push-3 {
-				margin-left: 25%;
-			}
-
-			h1 {
-				font-size: 48px;
-				font-weight: 300;
-				margin: 0 0 20px 0;
-			}
-
-			.lead {
-				font-size: 21px;
-				font-weight: 200;
-				margin-bottom: 20px;
-			}
-
-			p {
-				margin: 0 0 10px;
-			}
-
-			a {
-				color: #3282e6;
-				text-decoration: none;
-			}
-
-			.imgcont {
-				width: 280px;
-				height: 280px;
-				overflow: hidden;
-				border-radius: 400px;
-				margin: 100px auto 50px auto;
-				box-shadow: -2px 2px 20px rgba(40, 40, 40, .1);
-			}
-
-			img {
-				position: relative;
-				left: -20%;
-			}
-
-			a {
-				display: block;
-				margin: auto;
-				font-size: 18px;
-				line-height: 42px;
-				text-align: center;
-				border-radius: 100px;
-				margin-top: 48px;
-				width: 170px;
-				height: 42px;
-				border: none;
-				cursor: pointer;
-				color: white;
-				box-shadow: -2px 2px 20px rgba(40, 40, 40, .1);
-			}
-
-			a:hover {
-				opacity: .9;
-			}
-
-			.a {
-				background-color: #c51d1d;
-			}
-
-			.b {
-				background-color: #25921e;
-			}
-		</style>
+		<link rel="stylesheet" href="css/404.css">
 	</head>
 
 	<body>
@@ -133,5 +49,8 @@
 				</div>
 			</div>
 		</div>
+		<?php 
+			echo $twig->render("footer.html.twig");
+		?>
 	</body>
 </html>
