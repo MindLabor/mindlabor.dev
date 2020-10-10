@@ -46,10 +46,10 @@
 		</div>
 		<div class="mobile-menu">
 			<div class="menu-active" id="menu-home"><a href="#">Home</a></div></a>
-			<div id="menu-projects"><a href="#">Projects</a></div></a>
-			<div id="menu-articles"><a href="#">Articles</a></div></a>
-			<div id="menu-about"><a href="#">About</a></div></a>
-			<div id="menu-sign-up"><a href="#">Sign Up</a></div></a>
+			<div id="menu-projects"><a href="/maintenance">Projects</a></div></a>
+			<div id="menu-articles"><a href="/maintenance">Articles</a></div></a>
+			<div id="menu-about"><a href="/maintenance">About</a></div></a>
+			<div id="menu-sign-up"><a href="/maintenance">Sign Up</a></div></a>
 		</div>
 
 		<header>
@@ -63,11 +63,11 @@
 				<div id="logo"></div>
 				<div class="spacer"></div>
 				<div id="header-home"><a href="#">Home</a></div>
-				<div id="header-projects"><a href="#">Projects</a></div></a>
-				<div id="header-articles"><a href="#">Articles</a></div></a>
-				<div id="header-about"><a href="#">About</a></div></a>
-				<div id="header-sign-in"><a href="#">Sign In</a></div></a>
-				<div class="round-btn" id="sign-up"><a href="#">Sign Up</a></div></a>
+				<div id="header-projects"><a href="/maintenance">Projects</a></div></a>
+				<div id="header-articles"><a href="/maintenance">Articles</a></div></a>
+				<div id="header-about"><a href="/maintenance">About</a></div></a>
+				<div id="header-sign-in"><a href="/maintenance">Sign In</a></div></a>
+				<div class="round-btn" id="sign-up"><a href="/maintenance">Sign Up</a></div></a>
 			</div>
 			<div id="hero">
 				<h1>Practice coding the cool way.</h1>
