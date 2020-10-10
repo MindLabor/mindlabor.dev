@@ -11,7 +11,7 @@
 	</head>
 	<body>
 		<div id="container">
-			<b>404</b><br><span>Looks like this page doesn't exist.</span><br><a id="link" href="/">Home</a>	
+			<b>Beep.. Boop..</b><br><span>We are currently working on this page. It will be available soon.</span><br><a id="link" href="/">Home</a>	
 		</div>
 	</body>
 </html>
