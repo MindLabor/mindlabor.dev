@@ -17,17 +17,17 @@
 		<meta http-equiv="content-type" content="text/html; charset=utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="Explore full coding projects from Discord bots to Chrome extensions and learn about every step from idea to release.">
-		<meta name="twitter:title" content="MindLabor">
-		<meta name="twitter:image" content="https://www.mindlabor.dev/assets/global/mindlabor/white-bg-icon.png">
-		<meta name="twitter:description" content="Explore full coding projects from Discord bots to Chrome extensions and learn about every step from idea to release.">
-		<meta name="twitter:card" content="summary">
-		<meta name="twitter:site" content="@labor_mind">
-		<meta name="twitter:creator" content="@labor_mind">
-		<meta property="og:title" content="MindLabor">
-		<meta property="og:image" content="https://www.mindlabor.dev/assets/global/mindlabor/white-bg-icon.png">
-		<meta property="og:description" content="Explore full coding projects from Discord bots to Chrome extensions and learn about every step from idea to release.">
-		<meta property="og:url" content="https://www.mindlabor.dev/">
-		<meta property="og:type" content="blog">
+		
+		<?php echo $twig->render("social-cards.twig", [
+			"title" => "MindLabor",
+			"image" => "https://www.mindlabor.dev/assets/global/mindlabor/white-bg-icon.png",
+			"description" => "Explore full coding projects from Discord bots to Chrome extensions and learn about every step from idea to release.",
+			"tw_card" => "summary",
+			"tw_site" => "@labor_mind",
+			"tw_creator" => "@labor_mind",
+			"og_url" => "https://www.mindlabor.dev/",
+			"og_type" => "blog",
+		]); ?>
 
 		<link rel="canonical" href="https://www.mindlabor.dev/">
 		<link rel="shortcut icon" href="assets/global/mindlabor/favicon-32x32.png" type="image/x-icon">
@@ -79,7 +79,7 @@
 			<h1>Latest Projects</h1>
 			<div class="content-box-wrapper">
 
-				<?php echo $twig->render("content-box.html.twig", [
+				<?php echo $twig->render("content-box.twig", [
 					"thumbnail" => "assets/projects/thumb-skadi.svg",
 					"href" => "/maintenance",
 					"title" => "Discord Music Bot with NodeJS",
@@ -87,7 +87,7 @@
 					"tags" => ["NodeJs", "Discord API", "Audio"]
 				]); ?>
 
-				<?php echo $twig->render("content-box.html.twig", [
+				<?php echo $twig->render("content-box.twig", [
 					"thumbnail" => "assets/projects/thumb-fractals.jpg",
 					"href" => "/maintenance",
 					"title" => "Fractal Generator",
@@ -110,7 +110,7 @@
 			<h1>Latest Articles</h1>
 			<div class="content-box-wrapper">
 
-				<?php echo $twig->render("content-box.html.twig", [
+				<?php echo $twig->render("content-box.twig", [
 					"thumbnail" => "assets/articles/thumb-streams.svg",
 					"href" => "/maintenance",
 					"title" => "Functional Streams with Java",
@@ -118,7 +118,7 @@
 					"tags" => ["Java", "Functional"]
 				]); ?>
 
-				<?php echo $twig->render("content-box.html.twig", [
+				<?php echo $twig->render("content-box.twig", [
 					"thumbnail" => "assets/articles/thumb-fft.svg",
 					"href" => "/maintenance",
 					"title" => "FFT in Javascript using p5.js",
@@ -131,7 +131,7 @@
 		</section>
 
 		<?php 
-			echo $twig->render("footer.html.twig");
+			echo $twig->render("footer.twig");
 		?>
 
 		<script type="application/ld+json">
