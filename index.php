@@ -72,7 +72,7 @@
 			<div id="hero">
 				<h1>Practice coding the cool way.</h1>
 				<p>Explore full coding projects and learn about every step from idea to release.</p>	
-				<div class="round-btn" id="learn-more">Get Started</div>
+				<div class="round-btn" id="learn-more"><a href="/maintenance">Get Started</a></div>
 			</div>
 		</header>
 		<section class="content-box">
@@ -95,7 +95,7 @@
 					]);
 				?>
 			</div>
-			<div id="projects-more">More</div>
+			<div id="projects-more"><a href="/maintenance">More</a></div>
 		</section>
 
 		<section id="time-hero">
@@ -125,7 +125,7 @@
 					]);
 				?>
 			</div>
-			<div id="articles-more">More</div>
+			<div id="articles-more"><a href="/maintenance">More</a></div>
 		</section>
 
 		<?php 
