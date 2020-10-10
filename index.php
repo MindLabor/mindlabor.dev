@@ -76,10 +76,11 @@
 			</div>
 		</header>
 		<section class="content-box">
-			<h1>Latest Projects</h1>
+			<h1 data-aos="fade-up" data-aos-duration="400" data-aos-offset="100">Latest Projects</h1>
 			<div class="content-box-wrapper">
 
 				<?php echo $twig->render("content-box.twig", [
+					"index" => 0,
 					"thumbnail" => "assets/projects/thumb-skadi.svg",
 					"href" => "/maintenance",
 					"title" => "Discord Music Bot with NodeJS",
@@ -88,6 +89,7 @@
 				]); ?>
 
 				<?php echo $twig->render("content-box.twig", [
+					"index" => 1,
 					"thumbnail" => "assets/projects/thumb-fractals.jpg",
 					"href" => "/maintenance",
 					"title" => "Fractal Generator",
@@ -107,10 +109,11 @@
 		</section>
 
 		<section class="content-box">
-			<h1>Latest Articles</h1>
+			<h1 data-aos="fade-up" data-aos-duration="400" data-aos-offset="100">Latest Articles</h1>
 			<div class="content-box-wrapper">
 
 				<?php echo $twig->render("content-box.twig", [
+					"index" => 0,
 					"thumbnail" => "assets/articles/thumb-streams.svg",
 					"href" => "/maintenance",
 					"title" => "Functional Streams with Java",
@@ -119,6 +122,7 @@
 				]); ?>
 
 				<?php echo $twig->render("content-box.twig", [
+					"index" => 1,
 					"thumbnail" => "assets/articles/thumb-fft.svg",
 					"href" => "/maintenance",
 					"title" => "FFT in Javascript using p5.js",
