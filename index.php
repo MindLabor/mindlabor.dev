@@ -78,29 +78,22 @@
 		<section class="content-box">
 			<h1>Latest Projects</h1>
 			<div class="content-box-wrapper">
-				<div class="article">
-					<div class="a-preview"><img src="assets/projects/thumb-skadi.svg" alt="Discord Music Bot"></div>
-					<div class="a-content">
-						<div class="a-title">Discord Music Bot with NodeJS</div>
-						<div class="a-desc">Make your own Discord bot that streams music from YouTube, searches for lyrics, and shows other songs of the same artist.</div>
-						<div class="a-tags">
-							<div class="a-tag tag-purple">Java</div>
-							<div class="a-tag tag-purple">Functional</div>
-						</div>
-					</div>
-				</div>
-				<div class="article">
-					<div class="a-preview"><img src="assets/projects/thumb-fractals.jpg" alt="Fractal Generator"></div>
-					<div class="a-content">
-						<div class="a-title">Fractal Generator</div>
-						<div class="a-desc">Dive into the world of fractals. Learn how they are created and write a program that generates them in Java.</div>
-						<div class="a-tags">
-							<div class="a-tag tag-purple">Java</div>
-							<div class="a-tag tag-purple">Recursion</div>
-							<div class="a-tag tag-purple">Math</div>
-						</div>
-					</div>
-				</div>
+				<?php 
+					echo $twig->render("content-box.html.twig", [
+						"thumbnail" => "assets/projects/thumb-skadi.svg",
+						"title" => "Discord Music Bot with NodeJS",
+						"description" => "Make your own Discord bot that streams music from YouTube, searches for lyrics, and shows other songs of the same artist.",
+						"tags" => ["NodeJs", "Discord API", "Audio"]
+					]);
+				?>
+				<?php 
+					echo $twig->render("content-box.html.twig", [
+						"thumbnail" => "assets/projects/thumb-fractals.jpg",
+						"title" => "Fractal Generator",
+						"description" => "Dive into the world of fractals. Learn how they are created and write a program that generates them in Java.",
+						"tags" => ["Java", "Recursion", "Math"]
+					]);
+				?>
 			</div>
 			<div id="projects-more">More</div>
 		</section>
@@ -115,29 +108,22 @@
 		<section class="content-box">
 			<h1>Latest Articles</h1>
 			<div class="content-box-wrapper">
-				<div class="article">
-					<div class="a-preview"><img src="assets/articles/thumb-streams.svg" alt="Streams"></div>
-					<div class="a-content">
-						<div class="a-title">Functional Streams with Java</div>
-						<div class="a-desc">A useful trick to make your code more readable and concise.</div>
-						<div class="a-tags">
-							<div class="a-tag tag-purple">Java</div>
-							<div class="a-tag tag-purple">Functional</div>
-						</div>
-					</div>
-				</div>
-				<div class="article">
-					<div class="a-preview"><img src="assets/articles/thumb-fft.svg" alt="FFT Analysis"></div>
-					<div class="a-content">
-						<div class="a-title">FFT in Javascript using p5.js</div>
-						<div class="a-desc">Decompose an audio signal from your microphone into its frequencies using this simple library.</div>
-						<div class="a-tags">
-							<div class="a-tag tag-purple">p5.js</div>
-							<div class="a-tag tag-purple">Tools</div>
-							<div class="a-tag tag-purple">Audio</div>
-						</div>
-					</div>
-				</div>
+				<?php 
+					echo $twig->render("content-box.html.twig", [
+						"thumbnail" => "assets/articles/thumb-streams.svg",
+						"title" => "Functional Streams with Java",
+						"description" => "A useful trick to make your code more readable and concise.",
+						"tags" => ["Java", "Functional"]
+					]);
+				?>
+				<?php 
+					echo $twig->render("content-box.html.twig", [
+						"thumbnail" => "assets/articles/thumb-fft.svg",
+						"title" => "FFT in Javascript using p5.js",
+						"description" => "Decompose an audio signal from your microphone into its frequencies using this simple library.",
+						"tags" => ["p5.js", "Tools", "Audio"]
+					]);
+				?>
 			</div>
 			<div id="articles-more">More</div>
 		</section>

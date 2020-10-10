@@ -1,0 +1,12 @@
+<div class="article">
+	<div class="a-preview"><img src="{{ thumbnail }}" alt="{{ title }}"></div>
+	<div class="a-content">
+		<div class="a-title">{{ title }}</div>
+		<div class="a-desc">{{ description }}</div>
+		<div class="a-tags">
+			{% for tag in tags %}
+				<div class="a-tag tag-purple">{{ tag }}</div>
+			{% endfor %}
+		</div>
+	</div>
+</div>
