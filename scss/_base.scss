@@ -121,6 +121,12 @@ header {
 			background-repeat: no-repeat;
 			background-size: contain;
 			margin: 32px;
+
+			a {
+				width: 200px;
+				height: 100%;
+				margin: 0px;
+			}
 		}
 
 		#header-sign-in {
@@ -549,6 +555,10 @@ html:not(.no-js) [data-aos=fade-up] {
 			#logo {
 				@include compatibility.flex(1, 1);
 				background-position: center;
+
+				a {
+					margin: auto;
+				}
 			}
 
 			#header-sign-in {
