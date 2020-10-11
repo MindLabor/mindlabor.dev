@@ -37,6 +37,12 @@
 	transform: $arg;
 }
 
+@mixin force-transform($arg) {
+	-webkit-transform: $arg !important;
+	-ms-transform: $arg !important;
+	transform: $arg !important;
+}
+
 @mixin clip-path($arg) {
 	-webkit-clip-path: $arg;
 	clip-path: $arg;
