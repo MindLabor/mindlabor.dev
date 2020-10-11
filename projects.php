@@ -14,13 +14,13 @@
 <html lang="en">
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 		<?php # Title, meta tags & social media cards 
 			echo $twig->render("meta.twig", [
-				"title" => "MindLabor - Projects",
+				"title" => "Projects - MindLabor",
+				"description" => "Browse all projects and learn how we have built them step by step.",
+				"robots" => "index, follow",
 				"image" => "https://www.mindlabor.dev/assets/global/mindlabor/white-bg-icon.png",
-				"description" => "Explore full coding projects from Discord bots to Chrome extensions and learn about every step from idea to release.",
 				"tw_card" => "summary",
 				"tw_site" => "@labor_mind",
 				"tw_creator" => "@labor_mind",

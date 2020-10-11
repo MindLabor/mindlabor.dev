@@ -14,12 +14,12 @@
 <html lang="en">
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 		<?php echo $twig->render("meta.twig", [
-			"title" => "MindLabor - Practice coding the cool way",
-			"image" => "https://www.mindlabor.dev/assets/global/mindlabor/white-bg-icon.png",
+			"title" => "Practice coding the cool way - MindLabor",
 			"description" => "Explore full coding projects from Discord bots to Chrome extensions and learn about every step from idea to release.",
+			"robots" => "index, follow",
+			"image" => "https://www.mindlabor.dev/assets/global/mindlabor/white-bg-icon.png",
 			"tw_card" => "summary",
 			"tw_site" => "@labor_mind",
 			"tw_creator" => "@labor_mind",
