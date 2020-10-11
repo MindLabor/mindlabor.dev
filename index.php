@@ -41,7 +41,7 @@
 			<div id="splash"></div>
 		</div>
 		<div class="mobile-menu">
-			<div class="menu-active" id="menu-home"><a href="#">Home</a></div></a>
+			<div class="menu-active" id="menu-home"><a href="/">Home</a></div></a>
 			<div id="menu-projects"><a href="/maintenance">Projects</a></div></a>
 			<div id="menu-articles"><a href="/maintenance">Articles</a></div></a>
 			<div id="menu-about"><a href="/maintenance">About</a></div></a>
@@ -58,7 +58,7 @@
 				</div>
 				<div id="logo"></div>
 				<div class="spacer"></div>
-				<div id="header-home"><a href="#">Home</a></div>
+				<div id="header-home"><a href="/">Home</a></div>
 				<div id="header-projects"><a href="/projects">Projects</a></div></a>
 				<div id="header-articles"><a href="/maintenance">Articles</a></div></a>
 				<div id="header-about"><a href="/maintenance">About</a></div></a>
