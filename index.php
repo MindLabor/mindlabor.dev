@@ -13,13 +13,11 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>MindLabor - Practice coding the cool way</title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="description" content="Explore full coding projects from Discord bots to Chrome extensions and learn about every step from idea to release.">
-		
-		<?php echo $twig->render("social-cards.twig", [
-			"title" => "MindLabor",
+
+		<?php echo $twig->render("meta.twig", [
+			"title" => "MindLabor - Practice coding the cool way",
 			"image" => "https://www.mindlabor.dev/assets/global/mindlabor/white-bg-icon.png",
 			"description" => "Explore full coding projects from Discord bots to Chrome extensions and learn about every step from idea to release.",
 			"tw_card" => "summary",
@@ -27,9 +25,9 @@
 			"tw_creator" => "@labor_mind",
 			"og_url" => "https://www.mindlabor.dev/",
 			"og_type" => "blog",
+			"content_url" => "https://www.mindlabor.dev/",
 		]); ?>
 
-		<link rel="canonical" href="https://www.mindlabor.dev/">
 		<link rel="shortcut icon" href="assets/global/mindlabor/favicon-32x32.png" type="image/x-icon">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap">
 		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" crossorigin="anonymous">

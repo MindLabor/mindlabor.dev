@@ -13,31 +13,27 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>MindLabor - Practice coding the cool way</title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="description" content="Explore full coding projects from Discord bots to Chrome extensions and learn about every step from idea to release.">
-		
-		<?php echo $twig->render("social-cards.twig", [
-			"title" => "MindLabor",
-			"image" => "https://www.mindlabor.dev/assets/global/mindlabor/white-bg-icon.png",
-			"description" => "Explore full coding projects from Discord bots to Chrome extensions and learn about every step from idea to release.",
-			"tw_card" => "summary",
-			"tw_site" => "@labor_mind",
-			"tw_creator" => "@labor_mind",
-			"og_url" => "https://www.mindlabor.dev/",
-			"og_type" => "blog",
-		]); ?>
 
-		<link rel="canonical" href="https://www.mindlabor.dev/">
+		<?php # Title, meta tags & social media cards 
+			echo $twig->render("meta.twig", [
+				"title" => "MindLabor - Projects",
+				"image" => "https://www.mindlabor.dev/assets/global/mindlabor/white-bg-icon.png",
+				"description" => "Explore full coding projects from Discord bots to Chrome extensions and learn about every step from idea to release.",
+				"tw_card" => "summary",
+				"tw_site" => "@labor_mind",
+				"tw_creator" => "@labor_mind",
+				"og_url" => "https://www.mindlabor.dev/projects",
+				"og_type" => "blog",
+				"content_url" => "https://www.mindlabor.dev/projects",
+			]);
+		?>
+
 		<link rel="shortcut icon" href="assets/global/mindlabor/favicon-32x32.png" type="image/x-icon">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap">
 		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" crossorigin="anonymous">
 		<link rel="stylesheet" href="css/projects.css">
-
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-123986016-2"></script>
-		<script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-123986016-2');</script>
 	</head>
 	<body>
 		<div id="splash-wrapper">
