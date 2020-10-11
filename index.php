@@ -13,7 +13,6 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<meta http-equiv="content-type" content="text/html; charset=utf-8">
 
 		<?php echo $twig->render("meta.twig", [
 			"title" => "Practice coding the cool way - MindLabor",
@@ -136,19 +135,29 @@
 		?>
 
 		<script type="application/ld+json">
-			{
-			  "@context": "http://schema.org",
-			  "@type": "Product",
-			  "name": "MindLabor",
-			  "url": "https://www.mindlabor.dev/",
-			  "address": "",
-			  "sameAs": [
-				"https://twitter.com/labor_mind",
-				"https://www.linkedin.com/in/samuel-braun",
-				"https://github.com/MindLabor",
-				"https://medium.com/@MindLabor",
-				"https://www.instagram.com/mindlabor/"
-			  ]
+			{ 
+				"@context": "https://schema.org",
+				"@type": "Organization",
+				"name": "MindLabor",
+				"url": "https://www.mindlabor.dev/",
+				"logo": "https://www.mindlabor.dev/assets/global/mindlabor/white-bg-icon.png",
+				"foundingDate": "2020",
+				"founders": [{
+					"@type": "Person",
+					"name": "Samuel Braun"
+				}],
+				"contactPoint": {
+					"@type": "ContactPoint",
+					"contactType": "Support Email",
+					"email": "support@mindlabor.dev"
+				},
+				"sameAs": [ 
+					"http://twitter.com/labor_mind",
+					"http://www.linkedin.com/in/samuel-braun",
+					"http://github.com/MindLabor",
+					"http://medium.com/@MindLabor",
+					"http://www.instagram.com/mindlabor/"
+				]
 			}
 		</script>
 		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
