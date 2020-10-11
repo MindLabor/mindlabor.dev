@@ -2,5 +2,19 @@
 @use "base";
 
 header {
-	margin-bottom: 300px;
+	margin-bottom: 100px;
+}
+
+.content-box {
+	margin-bottom: 160px;
+
+	h1 {
+		line-height: 120px;
+		text-align: center;
+	}
+
+	h2 {
+		margin-bottom: 100px;
+		text-align: center;
+	}
 }

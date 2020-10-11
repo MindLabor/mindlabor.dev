@@ -155,6 +155,7 @@
 		</script>
 		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 		<script src="vendor/jquery-3.5.1.min.js"></script>
+		<script src="js/general.js"></script>
 		<script src="js/home.js"></script>
 	</body>
 </html>

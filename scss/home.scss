@@ -60,95 +60,12 @@ header {
 }
 
 .content-box {
-	justify-content: center;
-	margin: auto 5rem;
-
 	h1 {
 		margin: 150px auto 72px auto;
 		font-size: 2.5rem;
 		color: base.$dark-font;
 		text-align: center;
 		width: 100%;
-	}
-
-	.content-box-wrapper {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(300px, 500px));
-		gap: 5rem;
-		@include compatibility.justify-content(center);
-	}
-
-	.article {    
-		height: auto;
-		padding-bottom: 24px;
-		border-radius: 16px;
-		box-shadow: 0px 5px 10px 1px rgba(base.$dark-font, 20%);
-		-webkit-transition: -webkit-transform base.$transition-duration;
-		transition: -webkit-transform base.$transition-duration;
-		-o-transition: transform base.$transition-duration;
-		transition: transform base.$transition-duration;
-		transition: transform base.$transition-duration, -webkit-transform base.$transition-duration;
-	
-		&:hover {
-			@include compatibility.transform(translateY(-4px));
-		}
-	}
-
-	.a-preview {
-		height: auto;
-		width: 100%;
-		cursor: pointer;
-		border-radius: 16px;
-
-		img {
-			max-width: 100%;
-			height: auto;
-			border-radius: 16px;
-		}
-	}
-
-	.a-content {
-		padding: 32px;
-	}
-
-	.a-title {
-		font-weight: 700;
-		line-height: 1rem;
-		font-size: 1.25rem;
-		width: 100%;
-		cursor: pointer;
-	}
-
-	.a-desc {
-		margin-top: 1rem;
-		color: base.$light-font;
-	}
-
-	.a-tags {
-		margin-top: 1rem;
-	}
-
-	.a-tag {
-		float: left;
-		margin: 5px;
-		font-size: .75rem;
-		height: 1.5rem;
-		line-height: 1.5rem;
-		text-align: center;
-		color: white;
-		border-radius: 6px;
-		padding: 0px 20px;
-		cursor: pointer;
-		@include compatibility.transition(transform base.$transition-duration);
-		@include compatibility.user-select(none);
-	
-		&:hover {
-			transform: translateY(-4px);
-		}
-
-		&:first-child {
-			margin-left: 0px;
-		}
 	}
 
 	#articles-more {
@@ -232,7 +149,6 @@ header {
 		height: auto;
 	}
 
-	
 	#header-sign-in {
 		z-index: 1000000 !important;
 	}

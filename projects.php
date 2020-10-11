@@ -47,6 +47,34 @@
 		<?php 
 			echo $twig->render("header.twig");
 		?>
+		
+		<section class="content-box">
+			<div>
+				<h1>Projects</h1>
+				<h2>Browse all projects and learn how we have built them step by step.</h2>
+			</div>
+			<div class="content-box-wrapper">
+
+				<?php echo $twig->render("content-box.twig", [
+					"index" => 0,
+					"thumbnail" => "assets/projects/thumb-skadi.svg",
+					"href" => "/maintenance",
+					"title" => "Discord Music Bot with NodeJS",
+					"description" => "Make your own Discord bot that streams music from YouTube, searches for lyrics, and shows other songs of the same artist.",
+					"tags" => ["NodeJs", "Discord API", "Audio"]
+				]); ?>
+
+				<?php echo $twig->render("content-box.twig", [
+					"index" => 1,
+					"thumbnail" => "assets/projects/thumb-fractals.jpg",
+					"href" => "/maintenance",
+					"title" => "Fractal Generator",
+					"description" => "Dive into the world of fractals. Learn how they are created and write a program that generates them in Java.",
+					"tags" => ["Java", "Recursion", "Math"]
+				]); ?>
+
+			</div>
+		</section>
 
 		<?php 
 			echo $twig->render("footer.twig");
@@ -70,6 +98,7 @@
 		</script>
 		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 		<script src="vendor/jquery-3.5.1.min.js"></script>
-		<script src="js/home.js"></script>
+		<script src="js/general.js"></script>
+		<script src="js/projects.js"></script>
 	</body>
 </html>
