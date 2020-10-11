@@ -151,7 +151,7 @@ html, body {
 	padding: 0px;
 	width: 100%;
 	overflow-x: hidden;
-	font-family: "Cabin";
+	font-family: "Cabin", sans-serif;
 	font-size: 20px;
 	color: $dark-font;
 }
@@ -351,6 +351,11 @@ footer {
 		}
 	}
 }
+
+html:not(.no-js) [data-aos=fade-up] {
+    -webkit-transform: translate3d(0, 30px, 0);
+    transform: translate3d(0, 30px, 0);
+}
 	
 @media only screen and (max-width: 1600px) {
 	footer .footer-item {
@@ -364,3 +369,30 @@ footer {
 	}
 }
 
+@media only screen and (max-width: 420px) {
+	footer {
+		background: url(../assets/home/footer-mobile.svg);
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		padding: 100px 30px 0px 30px;
+
+		.round-btn {
+			width: 140px;
+			height: 2rem;
+			line-height: 2rem;
+			font-size: 0.9rem;
+			font-weight: 500;
+			text-transform: initial;
+		}
+
+		.footer-item {
+			padding: 2rem 0px;
+			margin: auto 10px;
+			@include compatibility.flex(0, 0 0 300px);
+		}
+
+		.footer-copy {
+			margin-top: 40px;
+		}
+	}
+}
