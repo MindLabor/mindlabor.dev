@@ -62,7 +62,7 @@
 				<div id="logo"></div>
 				<div class="spacer"></div>
 				<div id="header-home"><a href="#">Home</a></div>
-				<div id="header-projects"><a href="/maintenance">Projects</a></div></a>
+				<div id="header-projects"><a href="/projects">Projects</a></div></a>
 				<div id="header-articles"><a href="/maintenance">Articles</a></div></a>
 				<div id="header-about"><a href="/maintenance">About</a></div></a>
 				<div id="header-sign-in"><a href="/maintenance">Sign In</a></div></a>
@@ -97,7 +97,7 @@
 				]); ?>
 
 			</div>
-			<div id="projects-more"><a href="/maintenance">More</a></div>
+			<div id="projects-more"><a href="/projects">More</a></div>
 		</section>
 
 		<section id="time-hero">
