@@ -1,6 +1,6 @@
 @use "compatibility";
 
-$dark-font: #29293A;
+$dark-font: #011526;
 $light-font: #767676;
 $transition-duration: .5s;
 $blue: #6306FA;
@@ -22,7 +22,6 @@ $pink: #EC34C6;
 		position: absolute;
 		height: $height;
 		width: $width;
-		background: white;
 		border-radius: 9px;
 		opacity: 1;
 		left: 0;
@@ -67,13 +66,68 @@ $pink: #EC34C6;
 	position: fixed;
 }
 
-header #header.header-mobile-open {
-	#mobile-header-burger span {
-		background: #cac9ce !important;
-	}
+header {
+	width: 100%;
+	color: $dark-font;
+	height: 100px;
 
-	#header-sign-in {
-		color: #cac9ce !important;
+	#header {
+		@include compatibility.display-flex();
+		height: 100px;
+		padding: 10px 50px;
+
+		div {
+			@include compatibility.flex(0, 0 0 140px);
+			line-height: 100px;
+			text-align: center;
+			cursor: pointer;
+			-webkit-transition: -webkit-transform $transition-duration, -webkit-box-flex .2s;
+			transition: -webkit-transform $transition-duration, -webkit-box-flex .2s;
+			-o-transition: transform $transition-duration, flex .2s;
+			transition: transform $transition-duration, flex .2s;
+			transition: transform $transition-duration, flex .2s, -webkit-transform $transition-duration, -webkit-box-flex .2s, -ms-flex .2s;
+			@include compatibility.user-select(none);
+
+			&:hover {
+				@include compatibility.transform(translateY(-4px));
+			}
+		}
+
+		a {
+			display: block;
+			width: 100%;
+			height: 100%;
+		}
+
+		#sign-up {
+			line-height: 52px;
+		}
+
+		#logo {
+			@include compatibility.flex(1, 1);
+			background: url("../assets/global/mindlabor/logo.svg");
+			background-repeat: no-repeat;
+			background-size: contain;
+			margin: 32px;
+		}
+
+		#header-sign-in {
+			margin-right: 1rem;
+		}
+
+		#mobile-header-burger {
+			display: none;
+		}
+
+		&.header-mobile-open {
+			#mobile-header-burger span {
+				background: #cac9ce !important;
+			}
+		
+			#header-sign-in {
+				color: #cac9ce !important;
+			}
+		}
 	}
 }
 
@@ -236,8 +290,8 @@ $splash-bounce: .04;
 }
 
 .round-btn {
-	background-color: white;
-	color: $dark-font;
+	background: linear-gradient(84deg, #5300FF -30%, #FC39C0 130%);
+	color: white;
 	text-transform: uppercase;
 	height: 52px;
 	letter-spacing: 0.07em;
@@ -245,15 +299,10 @@ $splash-bounce: .04;
 	line-height: 52px;
 	margin: auto;
 	cursor: pointer;
-	-webkit-transition: -webkit-transform $transition-duration;
-	transition: -webkit-transform $transition-duration;
-	-o-transition: transform $transition-duration;
-	transition: transform $transition-duration;
-	transition: transform $transition-duration, -webkit-transform $transition-duration;
 	@include compatibility.user-select(none);
 
 	&:hover {
-		@include compatibility.transform(translateY(-4px));
+		opacity: .95;
 	}
 }
 
@@ -350,6 +399,11 @@ footer {
 			width: 40px;
 		}
 	}
+
+	.round-btn {
+		background: white;
+		color: $dark-font;
+	}
 }
 
 html:not(.no-js) [data-aos=fade-up] {
@@ -363,13 +417,91 @@ html:not(.no-js) [data-aos=fade-up] {
 	}
 }
 
+@media only screen and (max-width: 1240px) {
+	header #header div {
+		@include compatibility.flex(0, 0 0 100px);
+
+		&#sign-up {
+			@include compatibility.flex(0, 0 0 140px);
+		}
+	}
+}
+
 @media only screen and (max-width: 1000px) {
+	header {
+		#logo {
+			display: none;
+		}
+
+		#header > div {
+			@include compatibility.flex(1, 1);
+		}
+	}
+
 	footer {
 		padding-top: 240px;
 	}
 }
 
+@media only screen and (max-width: 780px) {
+	header {
+		#header {
+			padding: 10px 30px;
+
+			#sign-up, #header-about, #header-articles, #header-projects, #header-home {
+				display: none;
+			}
+
+			#logo, #mobile-header-burger {
+				display: block;
+			}
+
+			#logo {
+				@include compatibility.flex(1, 1);
+				background-position: center;
+			}
+
+			#header-sign-in {
+				z-index: 1000000;
+				text-align: right;
+				margin-right: 0px;
+				@include compatibility.flex(0, 0 0 60px);
+				font-weight: bolder;
+				line-height: 105px;
+			}
+
+			#mobile-header-burger {
+				@include burger-menu();
+
+				span {
+					background: $dark-font;
+				}
+			}
+		}
+	}
+}
+
 @media only screen and (max-width: 420px) {
+	header {
+		#header {
+			padding: 10px 30px;
+
+			#logo {
+				display: none;
+			}
+
+			#header-sign-in {
+				z-index: 1000000;
+				@include compatibility.transition(color .5s);
+				@include compatibility.flex(0, 0 0 70px);
+			}
+		}
+
+		.spacer {
+			display: block;
+		}
+	}
+
 	footer {
 		background: url(../assets/home/footer-mobile.svg);
 		background-repeat: no-repeat;

@@ -1,7 +1,6 @@
 @use "compatibility";
 @use "base";
 
-
 header {
 	background: url("../assets/home/header.svg");
 	background-repeat: no-repeat;
@@ -11,37 +10,6 @@ header {
 	color: white;
 
 	#header {
-		@include compatibility.display-flex();
-		height: 100px;
-		padding: 10px 50px;
-
-		div {
-			@include compatibility.flex(0, 0 0 140px);
-			line-height: 100px;
-			text-align: center;
-			cursor: pointer;
-			-webkit-transition: -webkit-transform base.$transition-duration, -webkit-box-flex .2s;
-			transition: -webkit-transform base.$transition-duration, -webkit-box-flex .2s;
-			-o-transition: transform base.$transition-duration, flex .2s;
-			transition: transform base.$transition-duration, flex .2s;
-			transition: transform base.$transition-duration, flex .2s, -webkit-transform base.$transition-duration, -webkit-box-flex .2s, -ms-flex .2s;
-			@include compatibility.user-select(none);
-
-			&:hover {
-				@include compatibility.transform(translateY(-4px));
-			}
-		}
-
-		a {
-			display: block;
-			width: 100%;
-			height: 100%;
-		}
-
-		#sign-up {
-			line-height: 52px;
-		}
-
 		#logo {
 			@include compatibility.flex(1, 1);
 			background: url("../assets/global/mindlabor/logo-mono-white.svg");
@@ -49,14 +17,11 @@ header {
 			background-size: contain;
 			margin: 32px;
 		}
+	}
 
-		#header-sign-in {
-			margin-right: 1rem;
-		}
-
-		#mobile-header-burger {
-			display: none;
-		}
+	.round-btn {
+		background: white;
+		color: base.$dark-font;
 	}
 
 	#learn-more {
@@ -221,28 +186,11 @@ header {
 	}
 }
 
-@media only screen and (max-width: 1240px) {
-	header #header div {
-		@include compatibility.flex(0, 0 0 100px);
-
-		&#sign-up {
-			@include compatibility.flex(0, 0 0 140px);
-		}
-	}
-}
 
 @media only screen and (max-width: 1000px) {
 	header {
-		#logo {
-			display: none;
-		}
-
 		#hero {
 			margin: 110px 10%;
-		}
-
-		#header > div {
-			@include compatibility.flex(1, 1);
 		}
 	}
 
@@ -262,41 +210,20 @@ header {
 	h1 {
 		font-size: 2.5rem;
 	}
-
-	header {
-
-		#header {
-			padding: 10px 30px;
-
-			#sign-up, #header-about, #header-articles, #header-projects, #header-home {
-				display: none;
-			}
-
-			#logo, #mobile-header-burger {
-				display: block;
-			}
-
-			#logo {
-				@include compatibility.flex(1, 1);
-				background-position: center;
-			}
-
-			#header-sign-in {
-				text-align: right;
-				margin-right: 0px;
-				@include compatibility.flex(0, 0 0 60px);
-			}
-
-			#mobile-header-burger {
-				@include base.burger-menu();
-			}
-
-		}
-
-	}
 }
 
 @media only screen and (max-width: 780px) {
+
+	header #header {
+		#logo {
+			background-position: center;
+		}
+
+		#mobile-header-burger span {
+			background: white;
+		}
+	}
+
 	h1 {
 		font-size: 2.5rem;
 	}
@@ -331,6 +258,22 @@ header {
 		background-size: 100% 100%;
 		height: 440px;
 
+		#hero {
+			margin: 10px 30px;
+
+			h1 {
+				font-size: 1.8rem;
+				text-align: left;
+				line-height: 1.8rem;
+			}
+	
+			p {
+				font-size: 0.9rem;
+				text-align: left;
+			}
+	
+		}
+		
 		#learn-more {
 			width: 140px;
 			height: 2rem;
@@ -341,40 +284,6 @@ header {
 			text-transform: initial;
 			margin-left: 0px;
 			margin-top: 0px;
-		}
-
-		#header {
-			padding: 10px 30px;
-
-			#logo {
-				display: none;
-			}
-
-			#header-sign-in {
-				z-index: 1000000;
-				font-size: 0.9rem;
-				@include compatibility.transition(color .5s);
-				@include compatibility.flex(0, 0 0 70px);
-			}
-		}
-
-		#hero {
-			margin: 10px 30px;
-		}
-
-		h1 {
-			font-size: 1.8rem;
-			text-align: left;
-			line-height: 1.8rem;
-		}
-
-		p {
-			font-size: 0.9rem;
-			text-align: left;
-		}
-
-		.spacer {
-			display: block;
 		}
 	}
 	

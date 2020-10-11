@@ -33,7 +33,7 @@
 		<link rel="shortcut icon" href="assets/global/mindlabor/favicon-32x32.png" type="image/x-icon">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap">
 		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" crossorigin="anonymous">
-		<link rel="stylesheet" href="css/home.css">
+		<link rel="stylesheet" href="css/projects.css">
 
 		<!-- Global site tag (gtag.js) - Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-123986016-2"></script>
@@ -43,37 +43,10 @@
 		<div id="splash-wrapper">
 			<div id="splash"></div>
 		</div>
-		<div class="mobile-menu">
-			<div class="menu-active" id="menu-home"><a href="#">Home</a></div></a>
-			<div id="menu-projects"><a href="/maintenance">Projects</a></div></a>
-			<div id="menu-articles"><a href="/maintenance">Articles</a></div></a>
-			<div id="menu-about"><a href="/maintenance">About</a></div></a>
-			<div id="menu-sign-up"><a href="/maintenance">Sign Up</a></div></a>
-		</div>
 
-		<header>
-			<div id="header">
-				<div id="mobile-header-burger" onclick="$(this).toggleClass('open'); $('.mobile-menu').toggleClass('open'); $('body').toggleClass('fixed'); $('#header').toggleClass('header-mobile-open')">
-					<span></span>
-					<span></span>
-					<span></span>
-					<span></span>
-				</div>
-				<div id="logo"></div>
-				<div class="spacer"></div>
-				<div id="header-home"><a href="#">Home</a></div>
-				<div id="header-projects"><a href="/maintenance">Projects</a></div></a>
-				<div id="header-articles"><a href="/maintenance">Articles</a></div></a>
-				<div id="header-about"><a href="/maintenance">About</a></div></a>
-				<div id="header-sign-in"><a href="/maintenance">Sign In</a></div></a>
-				<div class="round-btn" id="sign-up"><a href="/maintenance">Sign Up</a></div></a>
-			</div>
-			<div id="hero">
-				<h1>Practice coding the cool way.</h1>
-				<p>Explore full coding projects and learn about every step from idea to release.</p>	
-				<a href="/maintenance"><div class="round-btn" id="learn-more">Get Started</div></a>
-			</div>
-		</header>
+		<?php 
+			echo $twig->render("header.twig");
+		?>
 
 		<?php 
 			echo $twig->render("footer.twig");
@@ -97,5 +70,6 @@
 		</script>
 		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 		<script src="vendor/jquery-3.5.1.min.js"></script>
+		<script src="js/home.js"></script>
 	</body>
 </html>
