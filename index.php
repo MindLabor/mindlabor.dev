@@ -64,7 +64,7 @@
 			<div id="hero">
 				<h1>Practice coding the cool way.</h1>
 				<p>Explore full coding projects and learn about every step from idea to release.</p>	
-				<a href="/maintenance"><div class="round-btn" id="learn-more">Get Started</div></a>
+				<div class="round-btn" id="learn-more">Get Started</div>
 			</div>
 		</header>
 		<section class="content-box">
