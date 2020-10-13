@@ -31,10 +31,6 @@
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap">
 		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" crossorigin="anonymous">
 		<link rel="stylesheet" href="css/home.css">
-
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-123986016-2"></script>
-		<script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-123986016-2');</script>
 	</head>
 	<body>
 		<div id="splash-wrapper">
@@ -68,7 +64,7 @@
 			<div id="hero">
 				<h1>Practice coding the cool way.</h1>
 				<p>Explore full coding projects and learn about every step from idea to release.</p>	
-				<a href="/maintenance"><div class="round-btn" id="learn-more">Get Started</div></a>
+				<div class="round-btn" id="learn-more">Get Started</div>
 			</div>
 		</header>
 		<section class="content-box">
@@ -161,7 +157,7 @@
 			}
 		</script>
 		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-		<script src="vendor/jquery-3.5.1.min.js"></script>
+		<script src="vendor/jquery-351.js"></script>
 		<script src="js/general.js"></script>
 		<script src="js/home.js"></script>
 	</body>
