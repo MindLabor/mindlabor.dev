@@ -92,7 +92,7 @@
 			  ]
 			}
 		</script>
-		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+		<script src="https://unpkg.com/aos@next/dist/aos.js" integrity="sha384-ZGo5k5ISlEzWLoXyt+lnvKt9j03Z7GkxXh14zLqVy098XJhcdKHjL8pQYVMI8WiH" crossorigin="anonymous"></script>
 		<script src="vendor/jquery-351.js"></script>
 		<script src="js/general.js"></script>
 		<script src="js/projects.js"></script>
