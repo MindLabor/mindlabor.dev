@@ -11,7 +11,7 @@
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 	<head>
 
 		<?php echo $twig->render("meta.twig", [
