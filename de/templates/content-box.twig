@@ -1,0 +1,24 @@
+{# 
+	href:			Link to project/article (string)
+	thumbnail:		Thumbnail image path (string)
+	title:			The title (string)
+	description:	The description (string)
+	tags:			Array of tags (string[])
+#}
+
+<div class="article" data-aos="fade-up" data-aos-duration="400" data-aos-offset="50" data-aos-delay="{{ (index+1) * 100}}">
+	<a href="{{ href }}"> 
+		<div class="a-preview">
+			<img src="{{ thumbnail }}" alt="{{ title }}">
+		</div>
+	</a>
+	<div class="a-content">
+		<div class="a-title"><a href="{{ href }}">{{ title }}</a></div>
+		<div class="a-desc">{{ description }}</div>
+		<div class="a-tags">
+			{% for tag in tags %}
+				<div class="a-tag tag-purple"><a href="/de/maintenance">{{ tag }}</a></div>
+			{% endfor %}
+		</div>
+	</div>
+</div>
