@@ -90,7 +90,7 @@
 				]); ?>
 
 			</div>
-			<div id="projects-more"><a href="/projects">More</a></div>
+			<div class="round-btn" id="projects-more"><a href="/projects">More</a></div>
 		</section>
 
 		<section id="time-hero">
@@ -123,7 +123,7 @@
 				]);?>
 
 			</div>
-			<div id="articles-more"><a href="/maintenance">More</a></div>
+			<div class="round-btn" id="articles-more"><a href="/maintenance">More</a></div>
 		</section>
 
 		<?php 

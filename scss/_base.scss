@@ -316,11 +316,21 @@ $splash-bounce: .04;
 	border-radius: 26px;
 	line-height: 52px;
 	margin: auto;
+	text-align: center;
+	text-decoration: none !important;
 	cursor: pointer;
 	@include compatibility.user-select(none);
+	@include hover-transition();
 
 	&:hover {
 		opacity: .95;
+	}
+
+	a {
+		display: block;
+		width: 100%;
+		height: 100%;
+		font-size: 1rem;
 	}
 }
 
