@@ -33,9 +33,7 @@
 		<link rel="stylesheet" href="css/home.css">
 	</head>
 	<body>
-		<div id="splash-wrapper">
-			<div id="splash"></div>
-		</div>
+		<div id="splash-wrapper"></div>
 		<div class="mobile-menu">
 			<div class="menu-active" id="menu-home"><a href="/">Home</a></div></a>
 			<div id="menu-projects"><a href="/maintenance">Projects</a></div></a>

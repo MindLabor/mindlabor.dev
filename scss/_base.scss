@@ -265,46 +265,6 @@ a, a:hover, a:focus, a:active {
 	&.hidden {
 		display: none;
 	}
-
-	#splash {
-		position: relative;
-		background: url("../assets/global/mindlabor/logo-ver.svg");
-		background-repeat: no-repeat;
-		background-position: center;
-		height: 100vh;
-		width: 24vw;
-		max-width: 220px;
-		min-width: 160px;
-		margin: auto;
-		@include compatibility.animation(splash-anim 1.7s cubic-bezier(0.280, 0.840, 0.420, 1) infinite);
-		@include compatibility.animation-delay(.5s);
-
-		&.animated {
-			@include compatibility.animation(splash-out .5s);
-		}
-	}
-}
-
-$splash-bounce: .04;
-@keyframes splash-anim {
-	0%   { @include compatibility.transform(scale(1,1) translateY(0)); }
-    10%  { @include compatibility.transform(scale(1 + 2*$splash-bounce, 1 - 2*$splash-bounce)   translateY(0)); }
-    30%  { @include compatibility.transform(scale(1 - 2*$splash-bounce, 1 + 2*$splash-bounce)   translateY(-100px * ($splash-bounce/.05))); }
-    50%  { @include compatibility.transform(scale(1 + $splash-bounce, 1 - $splash-bounce) translateY(0)); }
-    57%  { @include compatibility.transform(scale(1,1) translateY(-7px * ($splash-bounce/.05))); }
-    64%  { @include compatibility.transform(scale(1,1) translateY(0)); }
-    100% { @include compatibility.transform(scale(1,1) translateY(0)); }
-}
-
-@keyframes splash-out {
-	0% {
-		@include compatibility.filter(blur(0));
-		opacity: 1;
-	}
-	100% {
-		@include compatibility.filter(blur(5px));
-		opacity: 0;
-	}
 }
 
 .round-btn {

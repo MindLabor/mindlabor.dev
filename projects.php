@@ -36,9 +36,7 @@
 		<link rel="stylesheet" href="css/projects.css">
 	</head>
 	<body>
-		<div id="splash-wrapper">
-			<div id="splash"></div>
-		</div>
+		<div id="splash-wrapper"></div>
 
 		<?php 
 			echo $twig->render("header.twig");
