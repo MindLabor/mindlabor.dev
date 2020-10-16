@@ -4,69 +4,45 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitf05f35c988af5f4c9780465c50e01fc8
+class ComposerStaticInit298ba82c4a07cf3233c146f0d7f1257f
 {
     public static $files = array (
-        '7e9bd612cc444b3eed788ebbe46263a0' => __DIR__ . '/..' . '/laminas/laminas-zendframework-bridge/src/autoload.php',
-        '3917c79c5052b270641b5a200963dbc2' => __DIR__ . '/..' . '/kint-php/kint/init.php',
+        '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
+        '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
     );
 
     public static $prefixLengthsPsr4 = array (
         'T' => 
         array (
-            'Tests\\Support\\' => 14,
+            'Twig\\' => 5,
         ),
-        'P' => 
+        'S' => 
         array (
-            'Psr\\Log\\' => 8,
-        ),
-        'L' => 
-        array (
-            'Laminas\\ZendFrameworkBridge\\' => 28,
-            'Laminas\\Escaper\\' => 16,
-        ),
-        'K' => 
-        array (
-            'Kint\\' => 5,
-        ),
-        'C' => 
-        array (
-            'CodeIgniter\\' => 12,
+            'Symfony\\Polyfill\\Mbstring\\' => 26,
+            'Symfony\\Polyfill\\Ctype\\' => 23,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'Tests\\Support\\' => 
+        'Twig\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/tests/_support',
+            0 => __DIR__ . '/..' . '/twig/twig/src',
         ),
-        'Psr\\Log\\' => 
+        'Symfony\\Polyfill\\Mbstring\\' => 
         array (
-            0 => __DIR__ . '/..' . '/psr/log/Psr/Log',
+            0 => __DIR__ . '/..' . '/symfony/polyfill-mbstring',
         ),
-        'Laminas\\ZendFrameworkBridge\\' => 
+        'Symfony\\Polyfill\\Ctype\\' => 
         array (
-            0 => __DIR__ . '/..' . '/laminas/laminas-zendframework-bridge/src',
-        ),
-        'Laminas\\Escaper\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/laminas/laminas-escaper/src',
-        ),
-        'Kint\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/kint-php/kint/src',
-        ),
-        'CodeIgniter\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/codeigniter4/framework/system',
+            0 => __DIR__ . '/..' . '/symfony/polyfill-ctype',
         ),
     );
 
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitf05f35c988af5f4c9780465c50e01fc8::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitf05f35c988af5f4c9780465c50e01fc8::$prefixDirsPsr4;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit298ba82c4a07cf3233c146f0d7f1257f::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit298ba82c4a07cf3233c146f0d7f1257f::$prefixDirsPsr4;
 
         }, null, ClassLoader::class);
     }

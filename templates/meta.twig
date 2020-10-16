@@ -1,0 +1,28 @@
+
+<title>{{ title }}</title>
+<meta name="description" content="{{ description }}">
+<meta name="robots" content="{{ robots }}">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+{# Custom twitter cards #}
+<meta name="twitter:title" content="{{ title }}">
+<meta name="twitter:image" content="{{ image }}">
+<meta name="twitter:description" content="{{ description }}">
+<meta name="twitter:card" content="{{ tw_card }}">
+<meta name="twitter:site" content="{{ tw_site }}">
+<meta name="twitter:creator" content="{{ tw_creator }}">
+
+{# Normal open graph entries #}
+<meta property="og:title" content="{{ title }}">
+<meta property="og:image" content="{{ image }}">
+<meta property="og:description" content="{{ description }}">
+<meta property="og:url" content="{{ og_url }}">
+<meta property="og:type" content="{{ og_type }}">
+
+{# Prevents SEO content duplication #}
+<link rel="canonical" href="{{ content_url }}">
+
+{# Global site tag (gtag.js) - Google Analytics #}
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-123986016-2"></script>
+<script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-123986016-2');</script>

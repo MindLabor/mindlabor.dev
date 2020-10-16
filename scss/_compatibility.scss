@@ -1,0 +1,81 @@
+
+@mixin display-flex() {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+@mixin user-select($property) {
+	-webkit-user-select: $property;
+	-moz-user-select: $property;
+	-ms-user-select: $property;
+	user-select: $property;
+}
+
+@mixin user-select($property) {
+	-webkit-user-select: $property;
+	-moz-user-select: $property;
+	-ms-user-select: $property;
+	user-select: $property;
+}
+
+@mixin transition($properties...) {
+	-webkit-transition: $properties;
+	-o-transition: $properties;
+	transition: $properties;
+}
+
+@mixin flex($webkit, $property) {
+	-webkit-box-flex: $webkit;
+	-ms-flex: $property;
+	flex: $property;
+}
+
+@mixin transform($arg) {
+	-webkit-transform: $arg;
+	-ms-transform: $arg;
+	transform: $arg;
+}
+
+@mixin force-transform($arg) {
+	-webkit-transform: $arg !important;
+	-ms-transform: $arg !important;
+	transform: $arg !important;
+}
+
+@mixin clip-path($arg) {
+	-webkit-clip-path: $arg;
+	clip-path: $arg;
+}
+
+@mixin backdrop-filter($arg) {
+	-webkit-backdrop-filter: $arg;
+	backdrop-filter: $arg;
+}
+
+@mixin animation($arg) {
+	-webkit-animation: $arg;
+	animation: $arg;
+}
+
+@mixin animation-delay($arg) {
+	-webkit-animation-delay: .5s;
+	animation-delay: .5s;
+}
+
+@mixin filter($arg) {
+	-webkit-filter: $arg;
+	filter: $arg;
+}
+
+@mixin justify-content($arg) {
+	-webkit-box-pack: $arg;
+	-ms-flex-pack: $arg;
+	justify-content: $arg;
+}
+
+@mixin flex-wrap($arg) {
+	-ms-flex-wrap: $arg;
+	flex-wrap: $arg;
+}
+
