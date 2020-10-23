@@ -14,6 +14,7 @@ A website about various coding projects articles and guides that help developers
 * Fractal Generator
 * Introduction to Frappe Framework
 * Web crawler for security checking
+* Sudoku Solver (backtracking and human solving strategies)
 
 Do you have any ideas? Create an issue with the label "idea" with your ideas.
 
