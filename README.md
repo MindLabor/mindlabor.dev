@@ -15,5 +15,6 @@ A website about various coding projects articles and guides that help developers
 * Introduction to Frappe Framework
 * Web crawler for security checking
 
+Do you have any ideas? Create an issue with the label "idea" with your ideas.
 
 [![Website mindlabor.dev](https://img.shields.io/website-up-down-green-red/http/mindlabor.dev.svg)](https://mindlabor.dev) [![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc/4.0/)
