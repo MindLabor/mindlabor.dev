@@ -59,8 +59,8 @@
 }
 
 @mixin animation-delay($arg) {
-	-webkit-animation-delay: .5s;
-	animation-delay: .5s;
+	-webkit-animation-delay: $arg;
+	animation-delay: $arg;
 }
 
 @mixin filter($arg) {

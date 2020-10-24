@@ -71,35 +71,17 @@ header {
 	#articles-more {
 		letter-spacing: .05em;
 		text-transform: uppercase;
-		font-size: 1.25rem;
-		text-align: center;
-		width: 100px;
+		width: 120px;
 		height: 52px;
-		cursor: pointer;
-		text-decoration: underline;
 		margin: 4rem auto 150px auto;
-		@include compatibility.transition(opacity base.$transition-duration);
-	
-		&:hover {
-			opacity: .85;
-		}
 	}
 
 	#projects-more {
 		letter-spacing: .05em;
 		text-transform: uppercase;
-		font-size: 1.25rem;
-		text-align: center;
-		width: 100px;
+		width: 120px;
 		height: 52px;
-		cursor: pointer;
-		text-decoration: underline;
 		margin: 4rem auto 150px auto;
-		@include compatibility.transition(opacity base.$transition-duration);
-	
-		&:hover {
-			opacity: .85;
-		}
 	}
 }
 
