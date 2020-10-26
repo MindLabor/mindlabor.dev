@@ -1,14 +1,14 @@
 <div class="mobile-menu">
-	<div class="menu-active" id="menu-home"><a href="/">Home</a></div></a>
-	<div id="menu-projects"><a href="/projects">Projects</a></div></a>
-	<div id="menu-articles"><a href="/lessons">Lessons</a></div></a>
-	<div id="menu-about"><a href="/maintenance">About</a></div></a>
-	<div id="menu-sign-up"><a href="/maintenance">Sign Up</a></div></a>
+	<div {% if activesite == "home" %} class="menu-active" {% endif %} id="menu-home"><a href="/">Home</a></div></a>
+	<div {% if activesite == "projects" %} class="menu-active" {% endif %} id="menu-projects"><a href="/projects">Projects</a></div></a>
+	<div {% if activesite == "lessons" %} class="menu-active" {% endif %} id="menu-articles"><a href="/lessons">Lessons</a></div></a>
+	<div {% if activesite == "about" %} class="menu-active" {% endif %} id="menu-about"><a href="/maintenance">About</a></div></a>
+	<div {% if activesite == "signup" %} class="menu-active" {% endif %} id="menu-sign-up"><a href="/maintenance">Sign Up</a></div></a>
 </div>
 
 <header>
 	<div id="header">
-		<div id="mobile-header-burger" onclick="$(this).toggleClass('open'); $('.mobile-menu').toggleClass('open'); $('body').toggleClass('fixed'); $('#header').toggleClass('header-mobile-open')">
+		<div id="mobile-header-burger">
 			<span></span>
 			<span></span>
 			<span></span>

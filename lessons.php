@@ -39,7 +39,9 @@
 		<div id="splash-wrapper"></div>
 
 		<?php 
-			echo $twig->render("header.twig");
+			echo $twig->render("header.twig", [
+				"activesite" => "lessons"
+			]);
 		?>
 		
 		<section class="content-box">
