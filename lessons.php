@@ -52,7 +52,7 @@
 				<?php echo $twig->render("content-box.twig", [
 					"index" => 0,
 					"thumbnail" => "assets/lessons/thumb-streams.svg",
-					"href" => "/maintenance.php",
+					"href" => "/maintenance",
 					"title" => "Functional Streams with Java",
 					"description" => "A useful trick to make your code more readable and concise.",
 					"tags" => ["Java", "Functional"]
@@ -61,7 +61,7 @@
 				<?php echo $twig->render("content-box.twig", [
 					"index" => 1,
 					"thumbnail" => "assets/lessons/thumb-fft.svg",
-					"href" => "/maintenance.php",
+					"href" => "/maintenance",
 					"title" => "FFT in Javascript using p5.js",
 					"description" => "Decompose an audio signal from your microphone into its frequencies using this simple library.",
 					"tags" => ["p5.js", "Tools", "Audio"]
@@ -70,7 +70,7 @@
 				<?php echo $twig->render("content-box.twig", [
 					"index" => 1,
 					"thumbnail" => "assets/lessons/thumb-fractals.jpg",
-					"href" => "/maintenance.php",
+					"href" => "/maintenance",
 					"title" => "Fractal Generation",
 					"description" => "What are fractals? How do you generate them? And why do they look so fascinating?",
 					"tags" => ["Generation", "Recursion", "Algorithms"]
