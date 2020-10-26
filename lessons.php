@@ -17,16 +17,16 @@
 
 		<?php # Title, meta tags & social media cards 
 			echo $twig->render("meta.twig", [
-				"title" => "Projects - MindLabor",
-				"description" => "Browse all projects and learn how we have built them step by step.",
+				"title" => "Lessons - MindLabor",
+				"description" => "Browse all lessons about various frameworks an technologies and learn how we have built them step by step.",
 				"robots" => "index, follow",
 				"image" => "https://www.mindlabor.dev/assets/global/mindlabor/white-bg-icon.png",
 				"tw_card" => "summary",
 				"tw_site" => "@labor_mind",
 				"tw_creator" => "@labor_mind",
-				"og_url" => "https://www.mindlabor.dev/projects",
+				"og_url" => "https://www.mindlabor.dev/lessons",
 				"og_type" => "blog",
-				"content_url" => "https://www.mindlabor.dev/projects",
+				"content_url" => "https://www.mindlabor.dev/lessons",
 			]);
 		?>
 
@@ -44,8 +44,8 @@
 		
 		<section class="content-box">
 			<div>
-				<h1>Projects</h1>
-				<h2>Browse all projects and learn how we have built them step by step</h2>
+				<h1>Lessons</h1>
+				<h2>Get an easy and fast introduction into various frameworks and technologies</h2>
 			</div>
 			<div class="content-box-wrapper">
 

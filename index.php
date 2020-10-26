@@ -36,8 +36,8 @@
 		<div id="splash-wrapper"></div>
 		<div class="mobile-menu">
 			<div class="menu-active" id="menu-home"><a href="/">Home</a></div></a>
-			<div id="menu-projects"><a href="/maintenance.php">Projects</a></div></a>
-			<div id="menu-articles"><a href="/maintenance.php">Articles</a></div></a>
+			<div id="menu-projects"><a href="/projects.php">Projects</a></div></a>
+			<div id="menu-articles"><a href="/lessons.php">Lessons</a></div></a>
 			<div id="menu-about"><a href="/maintenance.php">About</a></div></a>
 			<div id="menu-sign-up"><a href="/maintenance.php">Sign Up</a></div></a>
 		</div>
@@ -54,7 +54,7 @@
 				<div class="spacer"></div>
 				<div id="header-home"><a href="/">Home</a></div>
 				<div id="header-projects"><a href="/projects.php">Projects</a></div></a>
-				<div id="header-articles"><a href="/maintenance.php">Articles</a></div></a>
+				<div id="header-articles"><a href="/lessons.php">Lessons</a></div></a>
 				<div id="header-about"><a href="/maintenance.php">About</a></div></a>
 				<div id="header-sign-in"><a href="/maintenance.php">Sign In</a></div></a>
 				<div class="round-btn" id="sign-up"><a href="/maintenance.php">Sign Up</a></div></a>
@@ -121,7 +121,7 @@
 				]);?>
 
 			</div>
-			<div class="round-btn" id="articles-more"><a href="/maintenance.php">More</a></div>
+			<div class="round-btn" id="articles-more"><a href="/lessons.php">More</a></div>
 		</section>
 
 		<?php 
