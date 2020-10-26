@@ -44,7 +44,7 @@
 
 		<header>
 			<div id="header">
-				<div id="mobile-header-burger" onclick="$(this).toggleClass('open'); $('.mobile-menu').toggleClass('open'); $('body').toggleClass('fixed'); $('#header').toggleClass('header-mobile-open')">
+				<div id="mobile-header-burger">
 					<span></span>
 					<span></span>
 					<span></span>
