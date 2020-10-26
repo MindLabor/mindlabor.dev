@@ -104,7 +104,7 @@
 
 				<?php echo $twig->render("content-box.twig", [
 					"index" => 0,
-					"thumbnail" => "assets/articles/thumb-streams.svg",
+					"thumbnail" => "assets/lessons/thumb-streams.svg",
 					"href" => "/maintenance.php",
 					"title" => "Functional Streams with Java",
 					"description" => "A useful trick to make your code more readable and concise.",
@@ -113,7 +113,7 @@
 
 				<?php echo $twig->render("content-box.twig", [
 					"index" => 1,
-					"thumbnail" => "assets/articles/thumb-fft.svg",
+					"thumbnail" => "assets/lessons/thumb-fft.svg",
 					"href" => "/maintenance.php",
 					"title" => "FFT in Javascript using p5.js",
 					"description" => "Decompose an audio signal from your microphone into its frequencies using this simple library.",

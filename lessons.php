@@ -18,7 +18,7 @@
 		<?php # Title, meta tags & social media cards 
 			echo $twig->render("meta.twig", [
 				"title" => "Lessons - MindLabor",
-				"description" => "Browse all lessons about various frameworks an technologies and learn how we have built them step by step.",
+				"description" => "Browse all lessons about various frameworks and technologies and learn how we have built them step by step.",
 				"robots" => "index, follow",
 				"image" => "https://www.mindlabor.dev/assets/global/mindlabor/white-bg-icon.png",
 				"tw_card" => "summary",
@@ -45,27 +45,36 @@
 		<section class="content-box">
 			<div>
 				<h1>Lessons</h1>
-				<h2>Get an easy and fast introduction into various frameworks and technologies</h2>
+				<h2>Get an easy and fast introduction to various frameworks and technologies</h2>
 			</div>
 			<div class="content-box-wrapper">
 
 				<?php echo $twig->render("content-box.twig", [
 					"index" => 0,
-					"thumbnail" => "assets/projects/thumb-skadi.svg",
+					"thumbnail" => "assets/lessons/thumb-streams.svg",
 					"href" => "/maintenance.php",
-					"title" => "Discord Music Bot with NodeJS",
-					"description" => "Make your own Discord bot that streams music from YouTube, searches for lyrics, and shows other songs of the same artist.",
-					"tags" => ["NodeJs", "Discord API", "Audio"]
+					"title" => "Functional Streams with Java",
+					"description" => "A useful trick to make your code more readable and concise.",
+					"tags" => ["Java", "Functional"]
 				]); ?>
 
 				<?php echo $twig->render("content-box.twig", [
 					"index" => 1,
-					"thumbnail" => "assets/projects/thumb-fractals.jpg",
+					"thumbnail" => "assets/lessons/thumb-fft.svg",
 					"href" => "/maintenance.php",
-					"title" => "Fractal Generator",
-					"description" => "Dive into the world of fractals. Learn how they are created and write a program that generates them in Java.",
-					"tags" => ["Java", "Recursion", "Math"]
-				]); ?>
+					"title" => "FFT in Javascript using p5.js",
+					"description" => "Decompose an audio signal from your microphone into its frequencies using this simple library.",
+					"tags" => ["p5.js", "Tools", "Audio"]
+				]);?>
+
+				<?php echo $twig->render("content-box.twig", [
+					"index" => 1,
+					"thumbnail" => "assets/lessons/thumb-fractals.jpg",
+					"href" => "/maintenance.php",
+					"title" => "Fractal Generation",
+					"description" => "What are fractals? How do you generate them? And why do they look so fascinating?",
+					"tags" => ["Image Generation", "Recursion", "Algorithms"]
+				]);?>
 
 			</div>
 		</section>
