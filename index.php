@@ -36,10 +36,10 @@
 		<div id="splash-wrapper"></div>
 		<div class="mobile-menu">
 			<div class="menu-active" id="menu-home"><a href="/">Home</a></div></a>
-			<div id="menu-projects"><a href="/maintenance">Projects</a></div></a>
-			<div id="menu-articles"><a href="/maintenance">Articles</a></div></a>
-			<div id="menu-about"><a href="/maintenance">About</a></div></a>
-			<div id="menu-sign-up"><a href="/maintenance">Sign Up</a></div></a>
+			<div id="menu-projects"><a href="/maintenance.php">Projects</a></div></a>
+			<div id="menu-articles"><a href="/maintenance.php">Articles</a></div></a>
+			<div id="menu-about"><a href="/maintenance.php">About</a></div></a>
+			<div id="menu-sign-up"><a href="/maintenance.php">Sign Up</a></div></a>
 		</div>
 
 		<header>
@@ -53,11 +53,11 @@
 				<div id="logo"></div>
 				<div class="spacer"></div>
 				<div id="header-home"><a href="/">Home</a></div>
-				<div id="header-projects"><a href="/projects">Projects</a></div></a>
-				<div id="header-articles"><a href="/maintenance">Articles</a></div></a>
-				<div id="header-about"><a href="/maintenance">About</a></div></a>
-				<div id="header-sign-in"><a href="/maintenance">Sign In</a></div></a>
-				<div class="round-btn" id="sign-up"><a href="/maintenance">Sign Up</a></div></a>
+				<div id="header-projects"><a href="/projects.php">Projects</a></div></a>
+				<div id="header-articles"><a href="/maintenance.php">Articles</a></div></a>
+				<div id="header-about"><a href="/maintenance.php">About</a></div></a>
+				<div id="header-sign-in"><a href="/maintenance.php">Sign In</a></div></a>
+				<div class="round-btn" id="sign-up"><a href="/maintenance.php">Sign Up</a></div></a>
 			</div>
 			<div id="hero">
 				<h1>Practice coding the cool way.</h1>
@@ -72,7 +72,7 @@
 				<?php echo $twig->render("content-box.twig", [
 					"index" => 0,
 					"thumbnail" => "assets/projects/thumb-skadi.svg",
-					"href" => "/maintenance",
+					"href" => "/maintenance.php",
 					"title" => "Discord Music Bot with NodeJS",
 					"description" => "Make your own Discord bot that streams music from YouTube, searches for lyrics, and shows other songs of the same artist.",
 					"tags" => ["NodeJs", "Discord API", "Audio"]
@@ -81,14 +81,14 @@
 				<?php echo $twig->render("content-box.twig", [
 					"index" => 1,
 					"thumbnail" => "assets/projects/thumb-fractals.jpg",
-					"href" => "/maintenance",
+					"href" => "/maintenance.php",
 					"title" => "Fractal Generator",
 					"description" => "Dive into the world of fractals. Learn how they are created and write a program that generates them in Java.",
 					"tags" => ["Java", "Recursion", "Math"]
 				]); ?>
 
 			</div>
-			<div class="round-btn" id="projects-more"><a href="/projects">More</a></div>
+			<div class="round-btn" id="projects-more"><a href="/projects.php">More</a></div>
 		</section>
 
 		<section id="time-hero">
@@ -105,7 +105,7 @@
 				<?php echo $twig->render("content-box.twig", [
 					"index" => 0,
 					"thumbnail" => "assets/articles/thumb-streams.svg",
-					"href" => "/maintenance",
+					"href" => "/maintenance.php",
 					"title" => "Functional Streams with Java",
 					"description" => "A useful trick to make your code more readable and concise.",
 					"tags" => ["Java", "Functional"]
@@ -114,14 +114,14 @@
 				<?php echo $twig->render("content-box.twig", [
 					"index" => 1,
 					"thumbnail" => "assets/articles/thumb-fft.svg",
-					"href" => "/maintenance",
+					"href" => "/maintenance.php",
 					"title" => "FFT in Javascript using p5.js",
 					"description" => "Decompose an audio signal from your microphone into its frequencies using this simple library.",
 					"tags" => ["p5.js", "Tools", "Audio"]
 				]);?>
 
 			</div>
-			<div class="round-btn" id="articles-more"><a href="/maintenance">More</a></div>
+			<div class="round-btn" id="articles-more"><a href="/maintenance.php">More</a></div>
 		</section>
 
 		<?php 
