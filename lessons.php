@@ -73,7 +73,7 @@
 					"href" => "/maintenance.php",
 					"title" => "Fractal Generation",
 					"description" => "What are fractals? How do you generate them? And why do they look so fascinating?",
-					"tags" => ["Image Generation", "Recursion", "Algorithms"]
+					"tags" => ["Generation", "Recursion", "Algorithms"]
 				]);?>
 
 			</div>
