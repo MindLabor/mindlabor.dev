@@ -94,12 +94,12 @@
 		<section id="time-hero">
 			<div>
 				<h1>Not enough time?<span class="text-ext"> No Problem.</span></h1>
-				<p>Explore mini-articles about various topics that help you with your projects and personal development as a developer.</p>
+				<p>Explore mini-lessons about various topics that help you with your projects and personal development as a developer.</p>
 			</div>
 		</section>
 
 		<section class="content-box">
-			<h1 data-aos="fade-up" data-aos-duration="400" data-aos-offset="100">Latest Articles</h1>
+			<h1 data-aos="fade-up" data-aos-duration="400" data-aos-offset="100">Latest Lessons</h1>
 			<div class="content-box-wrapper">
 
 				<?php echo $twig->render("content-box.twig", [
