@@ -46,6 +46,7 @@
 		?>
 
 		<div id="content">
+			<div id="path"><a href="/projects">Projects</a> → <a href="/maintenance">Fractal Generator</a> → <span>Functional Streams with Java</span></div>
 			<h1>Functional Streams with Java</h1>
 			<div id="written-by"><div id="p-image"></div>	Written by John Doe <span>• 24th Aug, 2018</span></div>
 			<div id="lesson-content">
