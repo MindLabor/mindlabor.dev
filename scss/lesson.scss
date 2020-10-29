@@ -1,0 +1,46 @@
+@use "compatibility";
+@use "base";
+
+p {
+	font-family: "Mulish", sans-serif;
+	line-height: 32px;
+	margin-top: 20px;
+	text-rendering: optimizeLegibility;
+}
+
+#content {
+	max-width: 1000px;
+	margin: auto;
+	margin-bottom: 400px;
+
+	h1 {
+		margin-top: 150px;
+	}
+
+	#written-by {
+		line-height: 42px;
+		font-size: 0.9rem;
+		font-weight: 600;
+
+		> span {
+			color: #666;
+			font-weight: 400;
+			font-size: 0.8rem;
+		}
+	}
+
+	#p-image {
+		width: 42px;
+		height: 42px;
+		border-radius: 21px;
+		background-image: url(https://avatars2.githubusercontent.com/u/42311986?s=460&u=a77d945cc3aba622ba704050334208f56da05d47&v=4);
+		background-position: center;
+		background-size: cover;
+		float: left;
+		margin-right: 20px;
+	}
+
+	#lesson-content {
+		margin-top: 40px;
+	}
+}

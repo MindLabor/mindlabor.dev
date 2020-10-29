@@ -125,7 +125,9 @@
 		</section>
 
 		<?php 
-			echo $twig->render("footer.twig");
+			echo $twig->render("footer.twig", [
+				"assets_path" => "assets/"
+			]);
 		?>
 
 		<script type="application/ld+json">
