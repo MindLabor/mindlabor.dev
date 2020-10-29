@@ -49,6 +49,10 @@ li {
 			color: base.$light-font;
 			font-size: 0.75rem;
 		}
+
+		a:hover {
+			text-decoration: underline;
+		}
 	}
 
 	#p-image {
