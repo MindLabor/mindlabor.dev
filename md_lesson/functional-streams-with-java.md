@@ -30,4 +30,4 @@ contributors:
   - name: "JohnnyBoooiii"
     url: "https://github.com/dfg"
 ---
-It's the third episode of Coding in the Cabana! On this snowy day, I attempt to animate the path of the classic "space filling curve" known as the Hilbert Curve.
+It's the third episode of Coding in the Cabana! On this snowy day, I attempt to animate the path of the classic "space filling curve" known as the Hilbert Curve.---

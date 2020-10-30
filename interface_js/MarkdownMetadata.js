@@ -42,7 +42,9 @@ class MarkdownHandler {
 	extractMetaData() {
 		return this.markdown.substring(
 			this.markdown.indexOf("---") + 3,
-			this.markdown.lastIndexOf("---")
+			this.markdown.substring(
+				this.markdown.indexOf("---") + 3
+			).indexOf("---") + 3
 		).trim();
 	}
 }
