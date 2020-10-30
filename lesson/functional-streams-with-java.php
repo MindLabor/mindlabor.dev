@@ -137,5 +137,9 @@
 		<script src="../vendor/jquery-351.js"></script>
 		<script src="../vendor/prism/prism.js"></script>
 		<script src="../js/general.js"></script>
+		
+		<script src="../vendor/js-yaml.min.js"></script>
+		<script src="../interface_js/MarkdownMetadata.js"></script>
+		<script src="../js/lesson.js"></script>
 	</body>
 </html>
