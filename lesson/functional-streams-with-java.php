@@ -45,80 +45,7 @@
 			]);
 		?>
 
-		<div id="content">
-			<div id="path"><a href="/projects">Projects</a> → <a href="/maintenance">Fractal Generator</a> → <span>Functional Streams with Java</span></div>
-			<h1>Functional Streams with Java
-				<div id="menu-dots">
-					<div class="drop-down" id="menu-dots-drop">
-						<div class="drop-down-element" id="share-btn"><img src="../assets/global/icons/share.svg">Share</div>
-						<div class="drop-down-element" id="view-on-github-btn"><img src="../assets/global/icons/github-black.svg">View on GitHub</div>
-					</div>
-				</div>
-			</h1>
-			<div id="written-by">
-				<div id="p-image"></div>
-				<nm>Written by </nm><a href="https://github.com/MindLabor" target="_blank" rel="noopener noreferrer nofollow">John Doe</a> <span>• 24th Aug, 2018</span>
-			</div>
-			<div id="lesson-content">
-				<p>
-					Often, when you’re about to implement some complex stuff, things can become confusing really quickly. 
-					So it is important to write clean code. A way of many is to use streams. Not the Java Stream API but the concept of a stream.
-				</p>
-				<h2>1. Creating a class</h2>
-				<p>
-					Take the example mentioned above and name the class “Train”. It has the following variables: people, fuel, timePast and trainDriver.
-				</p>
-				<pre><code class="language-java">public class Train { 
-	int people, timePast;
-	float fuel;
-	String trainDriver;
-}</code></pre>
-				<h2>2. Creating the functionality</h2>
-				<p>
-					As the train moves, the fuel level decreases. So we should be able to refill the tank again. 
-					We also want to pick up people on the way. Here are some methods we could include: enter, leave, fillfuel, changeDriver, etc.
-				</p>
-				<pre><code class="language-java">public void start() {
-	test += 900f;
-}</code></pre>
-				<p>
-					Streams can be very useful, especially when you’re implementing complex logic and want to have a clear structure and clean code. You might not want to use streams in a big loop though, 
-					since there are very slow compared to a direct implementation. In all other cases, go ahead and try it out yourself.
-				</p>
-			</div>
-			<div id="lesson-navigation">
-				<div>
-					<div class="round-btn" id="prev-lesson"><a href="/maintenance">← Introduction</a></div>
-				</div>
-				<div>
-					<div class="round-btn" id="next-lesson"><a href="/maintenance">Wrapping up states →</a></div>
-				</div>
-			</div>
-			<div id=""></div>
-			<h2>Additional Resources</h2>
-			<ol>
-				<li><a href="#" target="_blank" rel="noopener noreferrer">Object Oriented vs Functional Programming with TypeScript</a></li>
-				<li><a href="#" target="_blank" rel="noopener noreferrer">Streams</a></li>
-			</ol>
-			<h2>Contributers</h2>
-			<div id="contributers">
-				<div>
-					<a href="https://github.com/MindLabor" target="_blank" rel="noopener noreferrer">
-						<img src="https://avatars2.githubusercontent.com/u/42311986?s=460&u=a77d945cc3aba622ba704050334208f56da05d47&v=4" alt="John Doe">
-					</a>
-				</div>
-				<div>
-					<a href="https://github.com/MindLabor" target="_blank" rel="noopener noreferrer">
-						<img src="https://www.blue-concept.com/wpneu/wp/wp-content/uploads/2018/06/maxmustermann-430x287.jpg" alt="Ragnar">
-					</a>
-				</div>
-				<div>
-					<a href="https://github.com/MindLabor" target="_blank" rel="noopener noreferrer">
-						<img src="https://i.mmo.cm/is/image/mmoimg/thumbnew/weirdo-foam-latex-mask--mw-117350-1.jpg" alt="William">
-					</a>
-				</div>
-			</div>
-		</div>
+		<div id="content"><!-- AJAX Content --></div>
 
 		<?php 
 			echo $twig->render("footer.twig", [
@@ -151,6 +78,10 @@
 		<script src="../vendor/jquery-351.js"></script>
 		<script src="../vendor/prism/prism.js"></script>
 		<script src="../js/general.js"></script>
+  
+		<script src="https://unpkg.com/twig/twig.min.js"></script>
+		<script src="https://unpkg.com/showdown/dist/showdown.min.js"></script>
+		<script src="../interface_js/MarkdownMetadata.js"></script>
 		<script src="../js/lesson.js"></script>
 	</body>
 </html>

@@ -10,7 +10,7 @@ $(document).ready(() => {
 		$(".mobile-menu").toggleClass("open");
 		$("body").toggleClass("fixed");
 		$("#header").toggleClass("header-mobile-open")
-	})
+	});
 
 });
 
