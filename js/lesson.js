@@ -8,7 +8,7 @@ $(document).ready(async () => {
 		// Handle lesson settings dropdownss
 		$("#menu-dots").click(() => $("#menu-dots-drop").toggle());
 		$("#menu-dots").clickOutside(["#menu-dots-drop"], function () {
-		$("#menu-dots-drop").hide();
+			$("#menu-dots-drop").hide();
 		});
 	});
 
