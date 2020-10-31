@@ -57,7 +57,7 @@
 			</h1>
 			<div id="written-by">
 				<div id="p-image"></div>
-				Written by <a href="https://github.com/MindLabor" target="_blank" rel="noopener noreferrer">John Doe</a> <span>• 24th Aug, 2018</span>
+				<nm>Written by </nm><a href="https://github.com/MindLabor" target="_blank" rel="noopener noreferrer nofollow">John Doe</a> <span>• 24th Aug, 2018</span>
 			</div>
 			<div id="lesson-content">
 				<p>
@@ -87,8 +87,12 @@
 				</p>
 			</div>
 			<div id="lesson-navigation">
-				<div class="round-btn" id="prev-lesson"><a href="/maintenance">← Introduction</a></div>
-				<div class="round-btn" id="next-lesson"><a href="/maintenance">Wrapping up states →</a></div>
+				<div>
+					<div class="round-btn" id="prev-lesson"><a href="/maintenance">← Introduction</a></div>
+				</div>
+				<div>
+					<div class="round-btn" id="next-lesson"><a href="/maintenance">Wrapping up states →</a></div>
+				</div>
 			</div>
 			<div id=""></div>
 			<h2>Additional Resources</h2>

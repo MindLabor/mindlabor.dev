@@ -3,7 +3,7 @@
 
 p {
 	font-family: "Mulish", sans-serif;
-	line-height: 32px;
+	line-height: 1.5rem;
 	margin-top: 20px;
 	text-rendering: optimizeLegibility;
 }
@@ -11,6 +11,7 @@ p {
 h2 {
 	margin-top: 40px;
 	font-weight: 600;
+	font-size: 1.4rem;
 }
 
 li {
@@ -28,7 +29,8 @@ li {
 	margin-bottom: 200px;
 
 	h1 {
-		height: 4rem;
+		height: auto;
+		line-height: 3rem;
 	}
 
 	#menu-dots {
@@ -40,20 +42,30 @@ li {
 		background-repeat: no-repeat;
 		width: 1.5rem;
 		height: 1.5rem;
-		margin-top: 1.25rem;
+		margin: 1.25rem 1rem 0 1rem;
 		cursor: pointer;
 	}
 
 	#path {
 		font-size: 0.9rem;
 		font-weight: 600;
+		line-height: 0.95rem;
 
 		a:hover {
 			text-decoration: underline;
+			margin: 0px;
 		}
 
 		span {
 			cursor: pointer;
+		}
+
+		a:not(:first-child), span {
+			margin: 0px 6px;
+		}
+
+		a:first-child {
+			margin-right: 6px;
 		}
 	}
 
@@ -61,6 +73,7 @@ li {
 		line-height: 42px;
 		font-size: 0.9rem;
 		font-weight: 600;
+		margin-top: 10px;
 
 		> span {
 			color: base.$light-font;
@@ -86,19 +99,18 @@ li {
 	#lesson-content {
 		margin-top: 40px;
 	}
+
+	#lesson-navigation {
+		margin-top: 20px;
+	}
 }
 
 #lesson-navigation {
 	margin-top: 60px;
 	height: 100px;
-
-	#prev-lesson {
-		float: left;
-	}
-
-	#next-lesson {
-		float: right;
-	}
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
 
 	.round-btn {
 		width: auto;
@@ -107,6 +119,7 @@ li {
 		padding: 0px 20px;
 		font-family: "Mulish", sans-serif;
 		letter-spacing: -0.2px;
+		margin: .5rem 0px;
 	}
 }
 
@@ -124,5 +137,71 @@ li {
 	img {
 		width: 60px;
 		height: 60px;
+	}
+}
+
+@media only screen and (max-width: 1200px) {
+	#content {
+		width: 85%;
+		margin: inherit auto;
+	}
+}
+
+@media only screen and (max-width: 700px) {
+	#prev-lesson {
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	#content {
+		margin-top: 100px;
+		margin-bottom: 150px;
+
+		h1 {
+			font-size: 2.5rem;
+			line-height: 2.5rem;
+		}
+		
+		#menu-dots {
+			width: 1.25rem;
+			height: 1.25rem;
+			margin: 1rem 1rem 0 1rem;
+		}
+	}
+}
+
+@media only screen and (max-width: 400px) {
+	html, body {
+		font-size: 18px;
+	}
+
+	#content {
+		margin-top: 70px;
+
+		#path {
+			display: none;
+		}
+
+		h1 {
+			margin-bottom: 20px;
+			font-size: 1.75rem;
+			line-height: 1.75rem;
+		}
+
+		h2 {
+
+		}
+
+		nm {
+			display: none;
+		}
+
+		#menu-dots {
+			width: 1rem;
+			height: 1rem;
+			margin: .25rem 1rem 0 1rem;
+		}
+
 	}
 }
