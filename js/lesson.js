@@ -22,7 +22,6 @@ async function loadLesson() {
       url: "../interface/markdown",
       success: async markdown => {
 
-
         // Create a markdown handler
         let mdHandler = new MarkdownHandler(markdown);
 
@@ -52,7 +51,6 @@ async function loadLesson() {
         // Convert markdown to html
         let converter = new showdown.Converter();
         let	html      = converter.makeHtml(onlyMarkdown);
-        console.log(html);
 
         // Insert html and update code snippets
         $("#lesson-content").html(html);

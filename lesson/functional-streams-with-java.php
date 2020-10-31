@@ -81,6 +81,7 @@
   
 		<script src="https://unpkg.com/twig/twig.min.js"></script>
 		<script src="https://unpkg.com/showdown/dist/showdown.min.js"></script>
+		<script src="../vendor/js-yaml.min.js"></script>
 		<script src="../interface_js/MarkdownMetadata.js"></script>
 		<script src="../js/lesson.js"></script>
 	</body>
