@@ -6,9 +6,11 @@ A website about various coding projects articles and guides that help developers
 **The [website](https://mindlabor.dev) is currently under construction so there should be more to see soon.**
 
 
+### Upcoming Projects
+* Discord Music Bot
+
 ### Upcoming Project ideas
 * Angular Chat App
-* Discord Music Bot
 * Ad Blocker Chrome Extension
 * Spring Web App
 * Fractal Generator

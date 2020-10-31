@@ -54,7 +54,7 @@
 				<?php echo $twig->render("content-box.twig", [
 					"index" => 0,
 					"thumbnail" => "assets/lessons/thumb-streams.svg",
-					"href" => "/maintenance",
+					"href" => "/lesson/functional-streams-with-java",
 					"title" => "Functional Streams with Java",
 					"description" => "A useful trick to make your code more readable and concise.",
 					"tags" => ["Java", "Functional"]
@@ -82,7 +82,9 @@
 		</section>
 
 		<?php 
-			echo $twig->render("footer.twig");
+			echo $twig->render("footer.twig", [
+				"assets_path" => "assets/"
+			]);
 		?>
 
 		<script type="application/ld+json">

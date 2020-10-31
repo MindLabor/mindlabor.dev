@@ -1,0 +1,48 @@
+
+<div id="path">
+	{% if type == "project" %}
+		<a href="/projects">Projects</a> → <a href="/project/{{ project.path }}">{{ project.title }}</a> → <span>{{ title }}</span>
+	{% endif %}
+
+	{% if type == "lesson" %}
+		<a href="/lessons">Lessons</a> → <span>{{ title }}</span>
+	{% endif %}
+</div>
+<h1>{{ title }}
+	<div id="menu-dots">
+		<div class="drop-down" id="menu-dots-drop">
+			<div class="drop-down-element" id="share-btn"><img src="../assets/global/icons/share.svg">Share</div>
+			<div class="drop-down-element" id="view-on-github-btn"><img src="../assets/global/icons/github-black.svg">View on GitHub</div>
+		</div>
+	</div>
+</h1>
+<div id="written-by">
+	<a href="https://github.com/{{ author.github }}" target="_blank" rel="noopener noreferrer nofollow">
+		<img id="p-image" src="https://github.com/{{ author.github }}.png?size=64"></img>
+	</a>
+	<nm>Written by </nm>
+	<a href="https://github.com/{{ author.github }}" target="_blank" rel="noopener noreferrer nofollow">{{ author.name }}</a>
+	<span> • {{ date }}</span>
+</div>
+<div id="lesson-content"><!-- AJAX Content --></div>
+<div id="lesson-navigation">
+	<div class="round-btn" id="prev-lesson"><a href="/maintenance">← Back</a></div>
+	<div class="round-btn" id="next-lesson"><a href="/maintenance">Next →</a></div>
+</div>
+<div id=""></div>
+<h2>Additional Resources</h2>
+<ol>
+	{% for r in resources %}
+		<li><a href="{{ r.url }}" target="_blank" rel="noopener noreferrer nofollow">{{ r.title }}</a></li>
+	{% endfor %}
+</ol>
+<h2>Contributors</h2>
+<div id="contributers">
+	{% for c in contributors %}
+		<div>
+			<a href="https://github.com/{{ c.name }}" target="_blank" rel="noopener noreferrer nofollow">
+				<img src="https://github.com/{{ c.name }}.png?size=128" alt="{{ c.name }}">
+			</a>
+		</div>
+	{% endfor %}
+</div>
