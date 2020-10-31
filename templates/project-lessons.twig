@@ -1,0 +1,12 @@
+<div class="lesson-overview">
+     {% for key, lesson in lessons %}
+          <div class="lesson">
+               <div class="lesson-image"><img src="{{ lesson.image }}"></div>
+               <div class="lesson-text">
+                    <div class="name">{{key + 1}}. {{ lesson.name }}</div>
+                    <div class="desc">{{ lesson.desc }}</div>
+               </div>
+               {% if lesson.available %}<div class="availability">free</div>{% endif %}
+          </div>
+     {% endfor %}
+</div>

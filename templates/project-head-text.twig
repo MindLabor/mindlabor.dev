@@ -1,0 +1,23 @@
+<div id="project-head">
+     <div>
+          <div class="text-row">
+               <div color="white"> BUILD </div>
+               <div color="black"> A </div>
+          </div>
+
+          <div class="text-row">
+               {% for key, w in title %}
+                    <div {% if ((key + 1) % 2 != 0) %} color="black" {% endif %}>{{ w }}</div>
+               {% endfor %}
+          </div>
+
+          <div class="text-row">
+               <div color="white"> WITH </div>
+          </div>
+     </div>
+     <div class="logo-wrapper">
+          {% for logo in images %}
+               <div class="logo-image-wrapper"><img src="{{ logo }}"></div>
+          {% endfor %}
+     </div>
+</div>
