@@ -3,13 +3,16 @@
 $(document).ready(async () => {
   
 	// Load the lesson
-	await loadLesson();
+	loadLesson(() => {
 
-	// Handle lesson settings dropdown
-	$("#menu-dots").click(() => $("#menu-dots-drop").toggle());
-	$("#menu-dots").clickOutside(["#menu-dots-drop"], function () {
-	  $("#menu-dots-drop").hide();
+		// Handle lesson settings dropdownss
+		$("#menu-dots").click(() => $("#menu-dots-drop").toggle());
+		$("#menu-dots").clickOutside(["#menu-dots-drop"], function () {
+		$("#menu-dots-drop").hide();
+		});
 	});
+
+	
   
 });
 
@@ -17,7 +20,7 @@ $(document).ready(async () => {
 /**
 * Loads the lesson
 */
-async function loadLesson() {
+function loadLesson(callback) {
 	$.ajax({
 	  url: "../interface/markdown",
 	  success: async markdown => {
@@ -55,6 +58,8 @@ async function loadLesson() {
 		// Insert html and update code snippets
 		$("#lesson-content").html(html);
 		Prism.highlightAll();
+
+		callback();
 	  }
 	});
 }
