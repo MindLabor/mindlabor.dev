@@ -21,6 +21,10 @@ li {
 	}
 }
 
+pre[class*="language-"] {
+	font-size: 0.9rem;
+}
+
 #content {
 	max-width: 1000px;
 	margin: auto;
@@ -59,11 +63,9 @@ li {
 		width: 42px;
 		height: 42px;
 		border-radius: 21px;
-		background-image: url(https://avatars2.githubusercontent.com/u/42311986?s=460&u=a77d945cc3aba622ba704050334208f56da05d47&v=4);
-		background-position: center;
-		background-size: cover;
 		float: left;
 		margin-right: 16px;
+		box-shadow: 0px 5px 10px 1px rgba(base.$dark-font, 16%);
 	}
 
 	#lesson-content {
@@ -102,6 +104,7 @@ li {
 		margin: 20px 10px;
 		float: left;
 		cursor: pointer;
+		box-shadow: 0px 5px 10px 1px rgba(base.$dark-font, 16%);
 	}
 
 	img {
