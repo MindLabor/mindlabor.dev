@@ -47,8 +47,18 @@
 
 		<div id="content">
 			<div id="path"><a href="/projects">Projects</a> → <a href="/maintenance">Fractal Generator</a> → <span>Functional Streams with Java</span></div>
-			<h1>Functional Streams with Java</h1>
-			<div id="written-by"><div id="p-image"></div>Written by <a href="https://github.com/MindLabor" target="_blank" rel="noopener noreferrer">John Doe</a> <span>• 24th Aug, 2018</span></div>
+			<h1>Functional Streams with Java
+				<div id="menu-dots">
+					<div class="drop-down" id="menu-dots-drop">
+						<div class="drop-down-element" id="share-btn"><img src="../assets/global/icons/share.svg">Share</div>
+						<div class="drop-down-element" id="view-on-github-btn"><img src="../assets/global/icons/github-black.svg">View on GitHub</div>
+					</div>
+				</div>
+			</h1>
+			<div id="written-by">
+				<div id="p-image"></div>
+				Written by <a href="https://github.com/MindLabor" target="_blank" rel="noopener noreferrer">John Doe</a> <span>• 24th Aug, 2018</span>
+			</div>
 			<div id="lesson-content">
 				<p>
 					Often, when you’re about to implement some complex stuff, things can become confusing really quickly. 
@@ -137,5 +147,6 @@
 		<script src="../vendor/jquery-351.js"></script>
 		<script src="../vendor/prism/prism.js"></script>
 		<script src="../js/general.js"></script>
+		<script src="../js/lesson.js"></script>
 	</body>
 </html>

@@ -27,6 +27,23 @@ li {
 	margin-top: 150px;
 	margin-bottom: 200px;
 
+	h1 {
+		height: 4rem;
+	}
+
+	#menu-dots {
+		float: right;
+		position: relative;
+		background-image: url("../assets/global/icons/menu-dots.svg");
+		background-position: center;
+		background-size: contain;
+		background-repeat: no-repeat;
+		width: 1.5rem;
+		height: 1.5rem;
+		margin-top: 1.25rem;
+		cursor: pointer;
+	}
+
 	#path {
 		font-size: 0.9rem;
 		font-weight: 600;
