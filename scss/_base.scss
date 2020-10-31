@@ -644,3 +644,10 @@ html:not(.no-js) [data-aos=fade-up] {
 		}
 	}
 }
+
+
+@media only screen and (max-width: 400px) {
+	html, body {
+		font-size: 18px;
+	}
+}
