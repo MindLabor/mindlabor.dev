@@ -65,7 +65,7 @@
 				<div class="round-btn" id="learn-more">Get Started</div>
 			</div>
 		</header>
-		<section class="content-box">
+		<section class="content-box" id="projects-section">
 			<h1 data-aos="fade-up" data-aos-duration="400" data-aos-offset="100">Latest Projects</h1>
 			<div class="content-box-wrapper">
 
