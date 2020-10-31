@@ -7,6 +7,11 @@ $blue: #6306FA;
 $purple: #710AF7;
 $pink: #EC34C6;
 
+:root{
+	--white-dark: #eeeeee;
+}
+
+
 @mixin hover-transition() {
 	-webkit-transition: -webkit-transform $transition-duration;
 	transition: -webkit-transform $transition-duration;
@@ -134,6 +139,13 @@ header {
 		height: 100px;
 		padding: 10px 50px;
 
+		
+		&.int{
+			div{
+				@include compatibility.flex(0, 0 0 240px);
+			}	
+		}
+
 		div {
 			@include compatibility.flex(0, 0 0 140px);
 			line-height: 100px;
@@ -149,6 +161,7 @@ header {
 			&:hover {
 				@include compatibility.transform(translateY(-4px));
 			}
+
 		}
 
 		a {
