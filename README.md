@@ -10,10 +10,11 @@ A website about various coding projects articles and guides that help developers
 * Discord Music Bot
 
 ### Upcoming Project ideas
-* Angular Chat App
+* VSCode code style checker (dod)
 * Ad Blocker Chrome Extension
-* Spring Web App
 * Fractal Generator
+* Angular Chat App
+* Spring Web App
 * Introduction to Frappe Framework
 * Web crawler for security checking
 * Sudoku Solver (backtracking and human solving strategies)
