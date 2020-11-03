@@ -12,7 +12,7 @@ A website about various coding projects articles and guides that help developers
 ### Upcoming Project ideas
 * VSCode code style checker (dod)
 * Ad Blocker Chrome Extension
-* Fractal Generator
+* Fractal Generator (& webgl)
 * Angular Chat App
 * Spring Web App
 * Introduction to Frappe Framework
