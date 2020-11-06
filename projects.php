@@ -54,7 +54,7 @@
 				<?php echo $twig->render("content-box.twig", [
 					"index" => 0,
 					"thumbnail" => "assets/projects/thumb-skadi.svg",
-					"href" => "/maintenance",
+					"href" => "/project/dicord-music-bot-with-nodejs",
 					"title" => "Discord Music Bot with NodeJS",
 					"description" => "Make your own Discord bot that streams music from YouTube, searches for lyrics, and shows other songs of the same artist.",
 					"tags" => ["NodeJs", "Discord API", "Audio"]

@@ -1,5 +1,5 @@
 <?php 
 
-	echo file_get_contents("../md_lesson/functional-streams-with-java.md");
+	echo file_get_contents("../md_project/dicord-music-bot-with-nodejs.md");
 
 ?>

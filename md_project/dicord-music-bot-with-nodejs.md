@@ -1,30 +1,26 @@
 ---
-title: "Functional Streams with Java"
+title: "Discord Music Bot with NodeJS"
 description: "Write a discord music bot in nodejs with many features like showing lyrics and streaming youtube videos."
 thumbnail: "thumb-fractals.svg"
-url: "functional-streams-with-java"
-date: 2020-10-30
+url: "dicord-music-bot-with-nodejs"
+date: 2020-11-06
 
 author:
-  name: "John Doe"
-  github: "JohnDoeDev"
+  name: "Samuel Braun"
+  github: "MindLaborDev"
 
 tags: 
-  - title: "Java"
-    name: "java"
-  - title: "Functional"
-    name: "functional"
+  - title: "NodeJS"
+    name: "node"
+  - title: "Discord API"
+    name: "discord-api"
 
 resources:
   - title: "Object Oriented vs Functional Programming with TypeScript"
     url: "https://en.wikipedia.org/wiki/Hilbert_curve"
-  - title: "Streams"
-    url: "https://marcin-chwedczuk.github.io/iterative-algorithm-for-drawing-hilbert-curve"
 
 contributors:
   - name: "MindLabor"
-  - name: "JohnDoe"
-  - name: "Joemama"
 ---
 
 Often, when you’re about to implement some complex stuff, things can become confusing really quickly. 
