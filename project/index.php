@@ -7,19 +7,8 @@
 	$loader = new FilesystemLoader(__DIR__ . "/../templates");
 	$twig = new Environment($loader);
 
-	// Parse the REQUEST_URI
-	$parsedUri = parse_url($_SERVER["REQUEST_URI"]);
-	$path = explode('/', trim($parsedUri["path"], '/'));
-
-	// if path is /project/some-project-here which has 2 parts. 
-	if (count($path) == 2) {
-		print_r(scandir("../md_project/" . $path[1]));
-		die();
-	}
-
-	// if path is not /project/some-project-here/lesson-here which has 3 parts. 
-	if (count($path) != 3) 
-		die("Invalid request");
+	// Validate request and exit if it is not valid
+	$path = validate_request();
 
 	// Parse markdown file with yaml metadata
 	$markdown = new Markdown($path[1], $path[2]);
@@ -30,6 +19,41 @@
 		"markdown" => $markdown->get_filtered_markdown(),
 		"data" => $metadata
 	];
+
+	// Fetch project data
+	$project_data_string = file_get_contents("../md_project/" . $path[1] . ".json");
+	$project_data = json_decode($project_data_string, true);
+	$data["data"]["project"] = $project_data;
+
+	// Evaluate other needed data (such as next and previous lesson)
+	$data["data"]["type"] = "project";
+	$all_lessons = $data["data"]["project"]["lessons"];
+	$current_lesson = $data["data"]["url"];
+	if (!in_array($current_lesson, $all_lessons)) die("Wrong Format! Lesson is not in lesson overview of project!");
+	$current_index = array_search($current_lesson, $all_lessons);
+	$data["data"]["next"] = $current_index+1 < count($all_lessons)? $all_lessons[$current_index+1] : "";
+	$data["data"]["prev"] = $current_index-1 >= 0? $all_lessons[$current_index-1] : "";
+
+	/**
+	 * Validates this request and returns the request parts
+	 */
+	function validate_request() {
+
+		// Parse the REQUEST_URI
+		$parsedUri = parse_url($_SERVER["REQUEST_URI"]);
+		$path = explode('/', trim($parsedUri["path"], '/'));
+
+		// if path is /project/some-project-here which has 2 parts. 
+		if (count($path) == 2) {
+			print_r(scandir("../md_project/" . $path[1]));
+			die(); // TODO: Implement project overview
+		}
+
+		// if path is not /project/some-project-here/lesson-here which has 3 parts. 
+		if (count($path) != 3) die("Invalid request");
+
+		return $path;
+	}
 ?>
 
 <!DOCTYPE html>
