@@ -1,13 +1,9 @@
 
-<div id="path">
-	{% if type == "project" %}
-		<a href="/projects">Projects</a> → <a href="/project/{{ project.url }}">{{ project.title }}</a> → <span>{{ title }}</span>
-	{% endif %}
-
-	{% if type == "lesson" %}
-		<a href="/lessons">Lessons</a> → <span>{{ title }}</span>
-	{% endif %}
-</div>
+{% if type == "project" %}
+	<div id="path">
+		<a href="/projects">Projects</a> → <a href="/project/{{ project.url }}">{{ project.title }}</a>
+	</div>
+{% endif %}
 <h1>{{ title }}
 	<div id="menu-dots">
 		<div class="drop-down" id="menu-dots-drop">

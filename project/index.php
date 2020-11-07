@@ -33,6 +33,7 @@
 	$current_index = array_search($current_lesson, $all_lessons);
 	$data["data"]["next"] = $current_index+1 < count($all_lessons)? $all_lessons[$current_index+1] : "";
 	$data["data"]["prev"] = $current_index-1 >= 0? $all_lessons[$current_index-1] : "";
+	$data["data"]["currentLessonIndex"] = $current_index;
 
 	/**
 	 * Validates this request and returns the request parts
