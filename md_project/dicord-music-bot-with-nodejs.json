@@ -1,0 +1,15 @@
+{
+	"title": "Discord Music Bot with NodeJS",
+	"description": "Write a discord music bot in nodejs with many features like showing lyrics and streaming youtube videos.",
+	"thumbnail": "thumb-fractals.svg",
+	"url": "dicord-music-bot-with-nodejs",
+	"author": {
+		"name": "Samuel Braun",
+		"github": "MindLaborDev"
+	},
+	"lessons": [
+		"getting-started",
+		"making-simple-bot"
+	]
+
+}
