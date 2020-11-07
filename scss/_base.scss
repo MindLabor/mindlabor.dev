@@ -11,6 +11,9 @@ $pink: #EC34C6;
 	--white-dark: #eeeeee;
 }
 
+pre[class*=language-] {
+    background: $dark-font !important;
+}
 
 @mixin hover-transition() {
 	-webkit-transition: -webkit-transform $transition-duration;
