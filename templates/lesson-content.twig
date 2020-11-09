@@ -17,11 +17,11 @@
 	</div>
 </h1>
 <div id="written-by">
-	<a href="https://github.com/{{ project.author.github }}" target="_blank" rel="noopener noreferrer nofollow">
-		<img id="p-image" src="https://github.com/{{ project.author.github }}.png?size=64"></img>
+	<a href="https://github.com/{{ type == "project" ? project.author.github : author.github }}" target="_blank" rel="noopener noreferrer nofollow">
+		<img id="p-image" src="https://github.com/{{ type == "project" ? project.author.github : author.github }}.png?size=64"></img>
 	</a>
 	<nm>Written by </nm>
-	<a href="https://github.com/{{ project.author.github }}" target="_blank" rel="noopener noreferrer nofollow">{{ project.author.name }}</a>
+	<a href="https://github.com/{{ type == "project" ? project.author.github : author.github }}" target="_blank" rel="noopener noreferrer nofollow">{{ type == "project" ? project.author.name : author.name }}</a>
 	 • <span id="lesson-date"></span>
 </div>
 <div id="lesson-content"><!-- AJAX Content --></div>

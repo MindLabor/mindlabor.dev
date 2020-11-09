@@ -2,12 +2,18 @@
 
 	# Load twig templates
 	require __DIR__ . "/vendor/autoload.php";
-
 	use Twig\Environment;
 	use Twig\Loader\FilesystemLoader;
-
 	$loader = new FilesystemLoader(__DIR__ . "/templates");
 	$twig = new Environment($loader);
+
+	// Load project data
+	$project_files = glob("md_project/*.json");
+	$project_data = [];
+	foreach ($project_files as $file) {
+		$project_data_string = file_get_contents($file);
+		$project_data[] = json_decode($project_data_string, true);
+	}
 ?>
 
 <!DOCTYPE html>
@@ -51,23 +57,18 @@
 			</div>
 			<div class="content-box-wrapper">
 
-				<?php echo $twig->render("content-box.twig", [
-					"index" => 0,
-					"thumbnail" => "assets/projects/thumb-skadi.svg",
-					"href" => "/project/dicord-music-bot-with-nodejs",
-					"title" => "Discord Music Bot with NodeJS",
-					"description" => "Make your own Discord bot that streams music from YouTube, searches for lyrics, and shows other songs of the same artist.",
-					"tags" => ["NodeJs", "Discord API", "Audio"]
-				]); ?>
-
-				<?php echo $twig->render("content-box.twig", [
-					"index" => 1,
-					"thumbnail" => "assets/projects/thumb-fractals.jpg",
-					"href" => "/maintenance",
-					"title" => "Fractal Generator",
-					"description" => "Dive into the world of fractals. Learn how they are created and write a program that generates them in Java.",
-					"tags" => ["Java", "Recursion", "Math"]
-				]); ?>
+				<?php 
+					foreach ($project_data as $index=>$project) {
+						echo $twig->render("content-box.twig", [
+							"index" => $index,
+							"thumbnail" => "assets/projects/" . $project["thumbnail"],
+							"href" => "/project/" . $project["url"],
+							"title" => $project["title"],
+							"description" => $project["description"],
+							"tags" => $project["tags"]
+						]);
+					}
+				?>
 
 			</div>
 		</section>

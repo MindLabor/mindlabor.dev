@@ -1,23 +1,12 @@
 <?php 
 
 	class Markdown {
-		public $project;
-		public $lesson;
+		public $file;
 		public $markdown;
 		public $yaml_string;
 
-		function __construct($project, $lesson) {
-			$this->project = $project;
-			$this->lesson = $lesson;
-		}
-
-
-		/**
-		 * Checks if markdown file exists
-		 */
-		function file_exists() {
-			$markdown_file = "../md_project/" . $this->project . "/" . $this->lesson;
-			return file_exists($markdown_file . ".md");
+		function __construct($file) {
+			$this->file = $file;
 		}
 
 
@@ -25,8 +14,7 @@
 		 * Parse the yaml metadata of markdown
 		 */
 		function parse_yaml() {
-			$markdown_file = "../md_project/" . $this->project . "/" . $this->lesson;
-			$this->markdown = file_get_contents($markdown_file . ".md");
+			$this->markdown = file_get_contents($this->file);
 
 			// Make sure that the metadata is the first thing in the markdown file
 			if (!strpos(trim($this->markdown), "---") == 0)

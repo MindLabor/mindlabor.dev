@@ -1,7 +1,7 @@
 ---
 title: "Functional Streams with Java"
 description: "Write a discord music bot in nodejs with many features like showing lyrics and streaming youtube videos."
-thumbnail: "thumb-fractals.svg"
+thumbnail: "thumb-streams.svg"
 url: "functional-streams-with-java"
 date: 2020-10-30
 
@@ -10,10 +10,8 @@ author:
   github: "JohnDoeDev"
 
 tags: 
-  - title: "Java"
-    name: "java"
-  - title: "Functional"
-    name: "functional"
+  - "functional"
+  - "java"
 
 resources:
   - title: "Object Oriented vs Functional Programming with TypeScript"

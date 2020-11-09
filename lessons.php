@@ -2,12 +2,19 @@
 
 	# Load twig templates
 	require __DIR__ . "/vendor/autoload.php";
-
+	require __DIR__ . "/interface/markdown.php";
 	use Twig\Environment;
 	use Twig\Loader\FilesystemLoader;
-
 	$loader = new FilesystemLoader(__DIR__ . "/templates");
 	$twig = new Environment($loader);
+
+	// Fetch lesson data
+	$lesson_files = glob("md_lesson/*.md");
+	$lesson_data = [];
+	foreach ($lesson_files as $file) {
+		$markdown = new Markdown($file); // "../md_project/" . $this->project . "/" . $this->lesson
+		$lesson_data[] = $markdown->parse_yaml();
+	}
 ?>
 
 <!DOCTYPE html>
@@ -51,33 +58,18 @@
 			</div>
 			<div class="content-box-wrapper">
 
-				<?php echo $twig->render("content-box.twig", [
-					"index" => 0,
-					"thumbnail" => "assets/lessons/thumb-streams.svg",
-					"href" => "/lesson/functional-streams-with-java",
-					"title" => "Functional Streams with Java",
-					"description" => "A useful trick to make your code more readable and concise.",
-					"tags" => ["Java", "Functional"]
-				]); ?>
-
-				<?php echo $twig->render("content-box.twig", [
-					"index" => 1,
-					"thumbnail" => "assets/lessons/thumb-fft.svg",
-					"href" => "/maintenance",
-					"title" => "FFT in Javascript using p5.js",
-					"description" => "Decompose an audio signal from your microphone into its frequencies using this simple library.",
-					"tags" => ["p5.js", "Tools", "Audio"]
-				]);?>
-
-				<?php echo $twig->render("content-box.twig", [
-					"index" => 1,
-					"thumbnail" => "assets/lessons/thumb-fractals.jpg",
-					"href" => "/maintenance",
-					"title" => "Fractal Generation",
-					"description" => "What are fractals? How do you generate them? And why do they look so fascinating?",
-					"tags" => ["Generation", "Recursion", "Algorithms"]
-				]);?>
-
+				<?php 
+				foreach ($lesson_data as $lesson) {
+					echo $twig->render("content-box.twig", [
+						"index" => 0,
+						"thumbnail" => "assets/lessons/" . $lesson["thumbnail"],
+						"href" => "/lesson/" . $lesson["url"],
+						"title" => $lesson["title"],
+						"description" => $lesson["description"],
+						"tags" => $lesson["tags"]
+					]);
+				}
+				?>
 			</div>
 		</section>
 

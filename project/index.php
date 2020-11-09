@@ -10,11 +10,17 @@
 	// Validate request and exit if it is not valid
 	$path = validate_request();
 
+	// Check if file exists
+	$file = "../md_project/" . $path[1] . "/" . $path[2] . ".md";
+	if (!file_exists($file)) 
+		die("Invalid request!");
+
 	// Parse markdown file with yaml metadata
-	$markdown = new Markdown($path[1], $path[2]);
-	if (!$markdown->file_exists()) die("Invalid request!");
+	$markdown = new Markdown($file);
 	$metadata = $markdown->parse_yaml();
-	if (!$metadata) die("Wrong Format! Yaml must be the at the top!");
+	if (!$metadata) 
+		die("Wrong Format! Yaml must be the at the top!");
+	
 	$data = [
 		"markdown" => $markdown->get_filtered_markdown(),
 		"data" => $metadata
@@ -30,6 +36,7 @@
 	$all_lessons = $data["data"]["project"]["lessons"];
 	$current_lesson = $data["data"]["url"];
 	if (!in_array($current_lesson, $all_lessons)) die("Wrong Format! Lesson is not in lesson overview of project!");
+	
 	$current_index = array_search($current_lesson, $all_lessons);
 	$data["data"]["next"] = $current_index+1 < count($all_lessons)? $all_lessons[$current_index+1] : "";
 	$data["data"]["prev"] = $current_index-1 >= 0? $all_lessons[$current_index-1] : "";
