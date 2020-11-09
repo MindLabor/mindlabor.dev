@@ -5,14 +5,8 @@ $font: 'Open Sans', sans-serif;
 
 p {
 	line-height: 1.6rem;
-	margin-top: 20px;   
+	margin-bottom: 20px;   
 	font-family: $font;
-}
-
-h2 {
-	margin-top: 40px;
-	font-weight: 600;
-	font-size: 1.4rem;
 }
 
 ol, ul {
@@ -46,6 +40,41 @@ pre[class*="language-"] {
 	h1 {
 		height: auto;
 		line-height: 3rem;
+	}
+
+	h2 {
+		margin-top: 50px;
+		margin-bottom: 20px;
+		font-weight: 600;
+		font-size: 2rem;
+	}
+	
+	h3 {
+		margin-top: 40px;
+		margin-bottom: 20px;
+		font-weight: 600;
+		font-size: 1.5rem;
+	}
+
+	h4 {
+		margin-top: 40px;
+		margin-bottom: 20px;
+		font-weight: 600;
+		font-size: 1.25rem;
+	}
+
+	h5 {
+		margin-top: 40px;
+		margin-bottom: 20px;
+		font-weight: 600;
+		font-size: 1rem;
+	}
+
+	h6 {
+		margin-top: 40px;
+		margin-bottom: 10px;
+		font-weight: 600;
+		font-size: .9rem;
 	}
 
 	li {
