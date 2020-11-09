@@ -13,6 +13,7 @@ $pink: #EC34C6;
 
 pre[class*=language-] {
     background: $dark-font !important;
+	font-size: .75rem !important;
 }
 
 @mixin hover-transition() {

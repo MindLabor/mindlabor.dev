@@ -1,11 +1,18 @@
 @use "compatibility";
 @use "base";
 
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap');
+$font: 'Source Sans Pro', sans-serif;
+
 p {
-	font-family: "Mulish", sans-serif;
-	line-height: 1.5rem;
+	line-height: 1.6rem;
 	margin-top: 20px;
-	text-rendering: optimizeLegibility;
+	text-rendering: optimizeLegibility;    
+	text-align: justify;
+	text-align-last: left;
+	font-family: $font;
+	letter-spacing: -0.5px;
+    font-size: 1.1rem;
 }
 
 h2 {
@@ -35,6 +42,16 @@ pre[class*="language-"] {
 	h1 {
 		height: auto;
 		line-height: 3rem;
+	}
+
+	li {
+		line-height: 1.2rem;
+		font-weight: 300;
+		text-rendering: optimizeLegibility;
+		margin: .5rem 0px;
+		font-family: $font;
+		max-width: 75%;
+		letter-spacing: -0.5px;
 	}
 
 	#menu-dots {
@@ -190,10 +207,6 @@ pre[class*="language-"] {
 			margin-bottom: 20px;
 			font-size: 1.75rem;
 			line-height: 1.75rem;
-		}
-
-		h2 {
-
 		}
 
 		nm {
