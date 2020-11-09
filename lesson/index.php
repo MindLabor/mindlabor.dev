@@ -60,12 +60,13 @@
 			"description" => $data["data"]["description"],
 			"robots" => "index, follow",
 			"image" => "https://www.mindlabor.dev/assets/lessons/" . $data["data"]["thumbnail"],
-			"tw_card" => "summary",
-			"tw_site" => "@labor_mind",
-			"tw_creator" => "@labor_mind",
-			"og_url" => "https://www.mindlabor.dev/lessons/" . $data["data"]["url"],
-			"og_type" => "blog",
-			"content_url" => "https://www.mindlabor.dev/lessons/" . $data["data"]["url"],
+			"og_url" => "https://www.mindlabor.dev" . $_SERVER["REQUEST_URI"],
+			"og_type" => "article",
+			"og_article_s" => [
+				"author" => "https://github.com/" . $data["data"]["author"]["github"],
+				"published_time" => $data["data"]["date"]
+			],
+			"content_url" => "https://www.mindlabor.dev" . $_SERVER["REQUEST_URI"],
 		]);
 	?>
 

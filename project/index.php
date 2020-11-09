@@ -67,7 +67,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<?php echo $twig->render("meta.twig", [
+		"title" => $data["data"]["title"] . " - MindLabor",
+		"description" => $data["data"]["project"]["description"],
+		"robots" => "index, follow",
+		"image" => "https://www.mindlabor.dev/assets/projects/" . $data["data"]["project"]["thumbnail"],
+		"og_url" => "https://www.mindlabor.dev" . $_SERVER["REQUEST_URI"],
+		"og_type" => "article",
+		"og_article_s" => [
+			"author" => "https://github.com/" . $data["data"]["project"]["author"]["github"],
+			"published_time" => $data["data"]["date"]
+		],
+		"content_url" => "https://www.mindlabor.dev" . $_SERVER["REQUEST_URI"],
+	]); ?>
 
 	<link rel="shortcut icon" href="../../assets/global/mindlabor/favicon-32x32.png" type="image/x-icon">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap">
