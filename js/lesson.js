@@ -30,6 +30,22 @@ function loadLesson() {
 
 	// Insert html and update code snippets
 	$("#lesson-content").html(html);
+
+	// Hightlight inline <code> blocks
+	$("#lesson-content").find("code").each((i, e) => {
+		if ($(e).attr("class")) return;
+		
+		const code = $(e).html();
+		const firstSpace = code.indexOf(" ");
+		if (firstSpace !== -1) {
+			$(e).addClass(code.split(" ")[0]);
+			$(e).addClass("language-" + code.split(" ")[0]);
+			$(e).html(code.substring(firstSpace+1));
+		} else {
+			$(e).addClass("language-none");
+		}
+	});
+
 	Prism.highlightAll();
 }
 

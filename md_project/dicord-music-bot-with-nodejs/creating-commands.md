@@ -92,7 +92,7 @@ module.exports = [{
 }]
 ```
 
-Add the following code into your CommandMessage class, and don't forget to import the Commands.js file using `const Commands = require("../commands/Commands.js");`.
+Add the following code into your CommandMessage class, and don't forget to import the Commands.js file using `js const Commands = require("../commands/Commands.js");`.
 ```js
 /* util/CommandMessage.js */
 

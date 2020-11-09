@@ -28,7 +28,13 @@ li {
 }
 
 pre[class*="language-"] {
-	font-size: 0.9rem;
+	font-size: 0.9rem !important;
+}
+
+:not(pre) > code[class*="language-"] {
+	font-size: 0.9rem !important;
+	padding: 0.2rem 0.4rem;
+	margin: 0px 5px;
 }
 
 #content {
