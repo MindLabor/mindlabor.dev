@@ -46,6 +46,12 @@ function loadLesson() {
 		}
 	});
 
+	// Add link rel & target attributes
+	$("#lesson-content").find("a").each((i, e) => {
+		$(e).attr("rel", "noopener noreferrer nofollow");
+		$(e).attr("target", "_blank");
+	});
+
 	Prism.highlightAll();
 }
 
