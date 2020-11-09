@@ -149,6 +149,13 @@ pre[class*="language-"] {
 
 	#lesson-content {
 		margin-top: 40px;
+
+		a {
+			display: inline-block;
+			color: base.$purple;
+			cursor: pointer;
+			@include base.hover-transition(-2px);
+		}
 	}
 
 	#lesson-navigation {

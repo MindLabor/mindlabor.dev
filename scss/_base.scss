@@ -16,7 +16,7 @@ $pink: #EC34C6;
 	font-size: .75rem !important;
 }
 
-@mixin hover-transition() {
+@mixin hover-transition($offset: -4px) {
 	-webkit-transition: -webkit-transform $transition-duration;
 	transition: -webkit-transform $transition-duration;
 	-o-transition: transform $transition-duration;
@@ -24,7 +24,7 @@ $pink: #EC34C6;
 	transition: transform $transition-duration, -webkit-transform $transition-duration;
 
 	&:hover {
-		@include compatibility.force-transform(translateY(-4px));
+		@include compatibility.force-transform(translateY($offset));
 	}
 }
 
