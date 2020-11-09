@@ -1,24 +1,22 @@
 @use "compatibility";
 @use "base";
 
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap');
-$font: 'Source Sans Pro', sans-serif;
+$font: 'Open Sans', sans-serif;
 
 p {
 	line-height: 1.6rem;
-	margin-top: 20px;
-	text-rendering: optimizeLegibility;    
-	text-align: justify;
-	text-align-last: left;
+	margin-top: 20px;   
 	font-family: $font;
-	letter-spacing: -0.5px;
-    font-size: 1.1rem;
 }
 
 h2 {
 	margin-top: 40px;
 	font-weight: 600;
 	font-size: 1.4rem;
+}
+
+ol, ul {
+	margin: 2rem 0;
 }
 
 li {
@@ -51,7 +49,6 @@ pre[class*="language-"] {
 		margin: .5rem 0px;
 		font-family: $font;
 		max-width: 75%;
-		letter-spacing: -0.5px;
 	}
 
 	#menu-dots {
@@ -136,7 +133,7 @@ pre[class*="language-"] {
 		max-width: 300px;
 		text-transform: initial;
 		padding: 0px 20px;
-		font-family: "Mulish", sans-serif;
+		font-family: "Cabin", sans-serif;
 		letter-spacing: -0.2px;
 		margin: .5rem 0px;
 	}
