@@ -11,8 +11,12 @@ $pink: #EC34C6;
 	--white-dark: #eeeeee;
 }
 
+:not(pre) > code[class*="language-"], pre[class*="language-"] {
+    background: $dark-font !important;
+	font-size: .75rem !important;
+}
 
-@mixin hover-transition() {
+@mixin hover-transition($offset: -4px) {
 	-webkit-transition: -webkit-transform $transition-duration;
 	transition: -webkit-transform $transition-duration;
 	-o-transition: transform $transition-duration;
@@ -20,7 +24,7 @@ $pink: #EC34C6;
 	transition: transform $transition-duration, -webkit-transform $transition-duration;
 
 	&:hover {
-		@include compatibility.force-transform(translateY(-4px));
+		@include compatibility.force-transform(translateY($offset));
 	}
 }
 
@@ -96,25 +100,27 @@ $pink: #EC34C6;
 		font-size: 1rem;
 		line-height: 2rem;
 		font-weight: 400;
-		padding: .5rem 1.5rem;
+		padding: .75rem 1.5rem;
 
-		& > img {
+		& img {
 			height: 28px;
 			margin-top: 4px;
 			float: left;
 			margin-right: .6rem;
 		}
 
+		&:not(:last-child) {
+			border-bottom: 1px solid #c5c5c5;
+		}
+
 		&:first-child {
-			padding-top: 1rem;
-			border-top-left-radius: 32px;
-			border-top-right-radius: 32px;
+			border-top-left-radius: 24px;
+			border-top-right-radius: 24px;
 		}
 
 		&:last-child {
-			padding-bottom: 1rem;
-			border-bottom-left-radius: 32px;
-			border-bottom-right-radius: 32px;
+			border-bottom-left-radius: 24px;
+			border-bottom-right-radius: 24px;
 		}
 
 		&:hover {

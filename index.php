@@ -2,12 +2,15 @@
 
 	# Load twig templates
 	require __DIR__ . "/vendor/autoload.php";
-
 	use Twig\Environment;
 	use Twig\Loader\FilesystemLoader;
-
 	$loader = new FilesystemLoader(__DIR__ . "/templates");
 	$twig = new Environment($loader);
+
+	// Load projects data and lessons data
+	require __DIR__ . "/interface/content.php";
+	$projects_data = get_all_projects(6);
+	$lessons_data = get_all_lessons(6);
 ?>
 
 <!DOCTYPE html>
@@ -19,9 +22,6 @@
 			"description" => "Explore full coding projects from Discord bots to Chrome extensions and learn about every step from idea to release.",
 			"robots" => "index, follow",
 			"image" => "https://www.mindlabor.dev/assets/global/mindlabor/white-bg-icon.png",
-			"tw_card" => "summary",
-			"tw_site" => "@labor_mind",
-			"tw_creator" => "@labor_mind",
 			"og_url" => "https://www.mindlabor.dev/",
 			"og_type" => "blog",
 			"content_url" => "https://www.mindlabor.dev/",
@@ -69,23 +69,18 @@
 			<h1 data-aos="fade-up" data-aos-duration="400" data-aos-offset="100">Latest Projects</h1>
 			<div class="content-box-wrapper">
 
-				<?php echo $twig->render("content-box.twig", [
-					"index" => 0,
-					"thumbnail" => "assets/projects/thumb-skadi.svg",
-					"href" => "/maintenance",
-					"title" => "Discord Music Bot with NodeJS",
-					"description" => "Make your own Discord bot that streams music from YouTube, searches for lyrics, and shows other songs of the same artist.",
-					"tags" => ["NodeJs", "Discord API", "Audio"]
-				]); ?>
-
-				<?php echo $twig->render("content-box.twig", [
-					"index" => 1,
-					"thumbnail" => "assets/projects/thumb-fractals.jpg",
-					"href" => "/maintenance",
-					"title" => "Fractal Generator",
-					"description" => "Dive into the world of fractals. Learn how they are created and write a program that generates them in Java.",
-					"tags" => ["Java", "Recursion", "Math"]
-				]); ?>
+				<?php 
+					foreach ($projects_data as $index=>$project) {
+						echo $twig->render("content-box.twig", [
+							"index" => $index,
+							"thumbnail" => "assets/projects/" . $project["thumbnail"],
+							"href" => "/project/" . $project["url"],
+							"title" => $project["title"],
+							"description" => $project["description"],
+							"tags" => $project["tags"]
+						]);
+					}
+				?>
 
 			</div>
 			<div class="round-btn" id="projects-more"><a href="/projects">More</a></div>
@@ -102,23 +97,18 @@
 			<h1 data-aos="fade-up" data-aos-duration="400" data-aos-offset="100">Latest Lessons</h1>
 			<div class="content-box-wrapper">
 
-				<?php echo $twig->render("content-box.twig", [
-					"index" => 0,
-					"thumbnail" => "assets/lessons/thumb-streams.svg",
-					"href" => "/maintenance",
-					"title" => "Functional Streams with Java",
-					"description" => "A useful trick to make your code more readable and concise.",
-					"tags" => ["Java", "Functional"]
-				]); ?>
-
-				<?php echo $twig->render("content-box.twig", [
-					"index" => 1,
-					"thumbnail" => "assets/lessons/thumb-fft.svg",
-					"href" => "/maintenance",
-					"title" => "FFT in Javascript using p5.js",
-					"description" => "Decompose an audio signal from your microphone into its frequencies using this simple library.",
-					"tags" => ["p5.js", "Tools", "Audio"]
-				]);?>
+				<?php 
+					foreach ($lessons_data as $lesson) {
+						echo $twig->render("content-box.twig", [
+							"index" => 0,
+							"thumbnail" => "assets/lessons/" . $lesson["thumbnail"],
+							"href" => "/lesson/" . $lesson["url"],
+							"title" => $lesson["title"],
+							"description" => $lesson["description"],
+							"tags" => $lesson["tags"]
+						]);
+					}
+				?>
 
 			</div>
 			<div class="round-btn" id="articles-more"><a href="/lessons">More</a></div>

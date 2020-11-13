@@ -1,17 +1,16 @@
 @use "compatibility";
 @use "base";
 
+$font: 'Open Sans', sans-serif;
+
 p {
-	font-family: "Mulish", sans-serif;
-	line-height: 1.5rem;
-	margin-top: 20px;
-	text-rendering: optimizeLegibility;
+	line-height: 1.6rem;
+	margin-bottom: 20px;   
+	font-family: $font;
 }
 
-h2 {
-	margin-top: 40px;
-	font-weight: 600;
-	font-size: 1.4rem;
+ol, ul {
+	margin: 2rem 0;
 }
 
 li {
@@ -23,7 +22,13 @@ li {
 }
 
 pre[class*="language-"] {
-	font-size: 0.9rem;
+	font-size: 0.9rem !important;
+}
+
+:not(pre) > code[class*="language-"] {
+	font-size: 0.9rem !important;
+	padding: 0.2rem 0.4rem;
+	margin: 0px 5px;
 }
 
 #content {
@@ -35,6 +40,50 @@ pre[class*="language-"] {
 	h1 {
 		height: auto;
 		line-height: 3rem;
+	}
+
+	h2 {
+		margin-top: 50px;
+		margin-bottom: 20px;
+		font-weight: 600;
+		font-size: 2rem;
+	}
+	
+	h3 {
+		margin-top: 40px;
+		margin-bottom: 20px;
+		font-weight: 600;
+		font-size: 1.5rem;
+	}
+
+	h4 {
+		margin-top: 40px;
+		margin-bottom: 20px;
+		font-weight: 600;
+		font-size: 1.25rem;
+	}
+
+	h5 {
+		margin-top: 40px;
+		margin-bottom: 20px;
+		font-weight: 600;
+		font-size: 1rem;
+	}
+
+	h6 {
+		margin-top: 40px;
+		margin-bottom: 10px;
+		font-weight: 600;
+		font-size: .9rem;
+	}
+
+	li {
+		line-height: 1.2rem;
+		font-weight: 300;
+		text-rendering: optimizeLegibility;
+		margin: .5rem 0px;
+		font-family: $font;
+		max-width: 75%;
 	}
 
 	#menu-dots {
@@ -100,6 +149,13 @@ pre[class*="language-"] {
 
 	#lesson-content {
 		margin-top: 40px;
+
+		a {
+			display: inline-block;
+			color: base.$purple;
+			cursor: pointer;
+			@include base.hover-transition(-2px);
+		}
 	}
 
 	#lesson-navigation {
@@ -119,7 +175,7 @@ pre[class*="language-"] {
 		max-width: 300px;
 		text-transform: initial;
 		padding: 0px 20px;
-		font-family: "Mulish", sans-serif;
+		font-family: "Cabin", sans-serif;
 		letter-spacing: -0.2px;
 		margin: .5rem 0px;
 	}
@@ -190,10 +246,6 @@ pre[class*="language-"] {
 			margin-bottom: 20px;
 			font-size: 1.75rem;
 			line-height: 1.75rem;
-		}
-
-		h2 {
-
 		}
 
 		nm {

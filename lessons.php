@@ -2,12 +2,15 @@
 
 	# Load twig templates
 	require __DIR__ . "/vendor/autoload.php";
-
 	use Twig\Environment;
 	use Twig\Loader\FilesystemLoader;
-
 	$loader = new FilesystemLoader(__DIR__ . "/templates");
 	$twig = new Environment($loader);
+
+	// Load lessons data
+	require __DIR__ . "/interface/content.php";
+	$lessons_data = get_all_lessons(6);
+
 ?>
 
 <!DOCTYPE html>
@@ -21,9 +24,6 @@
 				"description" => "Browse all lessons about various frameworks and technologies and learn how we have built them step by step.",
 				"robots" => "index, follow",
 				"image" => "https://www.mindlabor.dev/assets/global/mindlabor/white-bg-icon.png",
-				"tw_card" => "summary",
-				"tw_site" => "@labor_mind",
-				"tw_creator" => "@labor_mind",
 				"og_url" => "https://www.mindlabor.dev/lessons",
 				"og_type" => "blog",
 				"content_url" => "https://www.mindlabor.dev/lessons",
@@ -51,33 +51,19 @@
 			</div>
 			<div class="content-box-wrapper">
 
-				<?php echo $twig->render("content-box.twig", [
-					"index" => 0,
-					"thumbnail" => "assets/lessons/thumb-streams.svg",
-					"href" => "/lesson/functional-streams-with-java",
-					"title" => "Functional Streams with Java",
-					"description" => "A useful trick to make your code more readable and concise.",
-					"tags" => ["Java", "Functional"]
-				]); ?>
-
-				<?php echo $twig->render("content-box.twig", [
-					"index" => 1,
-					"thumbnail" => "assets/lessons/thumb-fft.svg",
-					"href" => "/maintenance",
-					"title" => "FFT in Javascript using p5.js",
-					"description" => "Decompose an audio signal from your microphone into its frequencies using this simple library.",
-					"tags" => ["p5.js", "Tools", "Audio"]
-				]);?>
-
-				<?php echo $twig->render("content-box.twig", [
-					"index" => 1,
-					"thumbnail" => "assets/lessons/thumb-fractals.jpg",
-					"href" => "/maintenance",
-					"title" => "Fractal Generation",
-					"description" => "What are fractals? How do you generate them? And why do they look so fascinating?",
-					"tags" => ["Generation", "Recursion", "Algorithms"]
-				]);?>
-
+				<?php 
+					foreach ($lessons_data as $lesson) {
+						echo $twig->render("content-box.twig", [
+							"index" => 0,
+							"thumbnail" => "assets/lessons/" . $lesson["thumbnail"],
+							"href" => "/lesson/" . $lesson["url"],
+							"title" => $lesson["title"],
+							"description" => $lesson["description"],
+							"tags" => $lesson["tags"]
+						]);
+					}
+				?>
+				
 			</div>
 		</section>
 

@@ -1,5 +1,5 @@
 /* PrismJS 1.22.0
-https://prismjs.com/download.html#themes=prism-okaidia&languages=markup+css+clike+javascript+antlr4+aspnet+bash+basic+batch+bnf+c+csharp+cpp+coffeescript+csp+css-extras+django+docker+git+glsl+go+graphql+haskell+http+ignore+ini+java+javadoc+javadoclike+javastacktrace+jsdoc+julia+kotlin+latex+less+lisp+lua+makefile+markdown+markup-templating+matlab+mongodb+nginx+objectivec+perl+php+phpdoc+php-extras+plsql+powershell+processing+prolog+purescript+python+r+jsx+tsx+ruby+rust+sass+scss+scala+scheme+sql+iecst+swift+twig+typescript+vbnet+vim+visual-basic+wasm+wiki+xml-doc&plugins=line-numbers+show-language+inline-color+toolbar+copy-to-clipboard+match-braces */
+https://prismjs.com/download.html#themes=prism-okaidia&languages=markup+css+clike+javascript+antlr4+aspnet+bash+basic+batch+bnf+c+csharp+cpp+coffeescript+csp+css-extras+django+docker+git+glsl+go+graphql+haskell+http+ignore+ini+java+javadoc+javadoclike+javastacktrace+jsdoc+json+julia+kotlin+latex+less+lisp+lua+makefile+markdown+markup-templating+matlab+mongodb+nginx+objectivec+perl+php+phpdoc+php-extras+plsql+powershell+processing+prolog+purescript+python+r+jsx+tsx+ruby+rust+sass+scss+scala+scheme+sql+iecst+swift+twig+typescript+vbnet+vim+visual-basic+wasm+wiki+xml-doc&plugins=line-numbers+show-language+inline-color+toolbar+copy-to-clipboard+match-braces */
 /**
  * okaidia theme for JavaScript, CSS and HTML
  * Loosely based on Monokai textmate theme by http://www.monokai.nl/
@@ -11,7 +11,7 @@ pre[class*="language-"] {
 	color: #f8f8f2;
 	background: none;
 	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
-	font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
 	font-size: 1em;
 	text-align: left;
 	white-space: pre;
@@ -33,20 +33,20 @@ pre[class*="language-"] {
 /* Code blocks */
 pre[class*="language-"] {
 	padding: 1em;
-	margin: 0.5em 0;
+	margin: .5em 0;
 	overflow: auto;
 	border-radius: 0.3em;
 }
 
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
-	background: #011526;
+	background: #272822;
 }
 
 /* Inline code */
 :not(pre) > code[class*="language-"] {
-	padding: 0.1em;
-	border-radius: 0.3em;
+	padding: .1em;
+	border-radius: .3em;
 	white-space: normal;
 }
 
@@ -62,7 +62,7 @@ pre[class*="language-"] {
 }
 
 .token.namespace {
-	opacity: 0.7;
+	opacity: .7;
 }
 
 .token.property,
@@ -149,20 +149,21 @@ pre[class*="language-"].line-numbers > code {
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
+
 }
 
-.line-numbers-rows > span {
-	display: block;
-	counter-increment: linenumber;
-}
+	.line-numbers-rows > span {
+		display: block;
+		counter-increment: linenumber;
+	}
 
-.line-numbers-rows > span:before {
-	content: counter(linenumber);
-	color: #999;
-	display: block;
-	padding-right: 0.8em;
-	text-align: right;
-}
+		.line-numbers-rows > span:before {
+			content: counter(linenumber);
+			color: #999;
+			display: block;
+			padding-right: 0.8em;
+			text-align: right;
+		}
 
 div.code-toolbar {
 	position: relative;
@@ -170,8 +171,8 @@ div.code-toolbar {
 
 div.code-toolbar > .toolbar {
 	position: absolute;
-	top: 0.3em;
-	right: 0.2em;
+	top: .3em;
+	right: .2em;
 	transition: opacity 0.3s ease-in-out;
 	opacity: 0;
 }
@@ -211,12 +212,12 @@ div.code-toolbar > .toolbar a,
 div.code-toolbar > .toolbar button,
 div.code-toolbar > .toolbar span {
 	color: #bbb;
-	font-size: 0.8em;
-	padding: 0 0.5em;
+	font-size: .8em;
+	padding: 0 .5em;
 	background: #f5f2f0;
 	background: rgba(224, 224, 224, 0.2);
-	box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.2);
-	border-radius: 0.5em;
+	box-shadow: 0 2px 0 0 rgba(0,0,0,0.2);
+	border-radius: .5em;
 }
 
 div.code-toolbar > .toolbar a:hover,
@@ -249,10 +250,10 @@ span.inline-color-wrapper {
 	display: inline-block;
 	height: 1.333ch;
 	width: 1.333ch;
-	margin: 0 0.333ch;
+	margin: 0 .333ch;
 	box-sizing: border-box;
 	border: 1px solid white;
-	outline: 1px solid rgba(0, 0, 0, 0.5);
+	outline: 1px solid rgba(0,0,0,.5);
 	overflow: hidden;
 }
 
@@ -271,24 +272,25 @@ span.inline-color {
 .rainbow-braces .token.punctuation.brace-level-1,
 .rainbow-braces .token.punctuation.brace-level-5,
 .rainbow-braces .token.punctuation.brace-level-9 {
-	color: #e50;
+	color: #E50;
 	opacity: 1;
 }
 .rainbow-braces .token.punctuation.brace-level-2,
 .rainbow-braces .token.punctuation.brace-level-6,
 .rainbow-braces .token.punctuation.brace-level-10 {
-	color: #0b3;
+	color: #0B3;
 	opacity: 1;
 }
 .rainbow-braces .token.punctuation.brace-level-3,
 .rainbow-braces .token.punctuation.brace-level-7,
 .rainbow-braces .token.punctuation.brace-level-11 {
-	color: #26f;
+	color: #26F;
 	opacity: 1;
 }
 .rainbow-braces .token.punctuation.brace-level-4,
 .rainbow-braces .token.punctuation.brace-level-8,
 .rainbow-braces .token.punctuation.brace-level-12 {
-	color: #e0e;
+	color: #E0E;
 	opacity: 1;
 }
+
