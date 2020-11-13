@@ -5,9 +5,16 @@
   <p align="center">
     <a href="https://mindlabor.dev/"><img src="https://raw.githubusercontent.com/MindLabor/mindlabor.dev/master/assets/global/mindlabor/wgrad-bg-icon.png" height="200"></a>
   </p>
-  <h1></h1>
 </div>
 
+<p align="center">
+  <a href="https://mindlabor.dev/" alt="MindLabor">
+      <img src="https://img.shields.io/website-up-down-green-red/http/mindlabor.dev.svg" /></a>
+  <a href="https://creativecommons.org/licenses/by-nc/4.0/" alt="License">
+      <img src="https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg" /></a>
+</p>
+<h1></h1>
+  
 A website about various coding projects, articles, and guides that help developers getting started with new frameworks and technologies.
 
 
@@ -32,4 +39,3 @@ A website about various coding projects, articles, and guides that help develope
 
 Do you have any ideas? Create an issue with the label "idea" with your ideas.
 
-[![Website mindlabor.dev](https://img.shields.io/website-up-down-green-red/http/mindlabor.dev.svg)](https://mindlabor.dev) [![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc/4.0/)
