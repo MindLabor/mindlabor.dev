@@ -7,13 +7,9 @@
 	$loader = new FilesystemLoader(__DIR__ . "/templates");
 	$twig = new Environment($loader);
 
-	// Load project data
-	$project_files = glob("md_project/*.json");
-	$project_data = [];
-	foreach ($project_files as $file) {
-		$project_data_string = file_get_contents($file);
-		$project_data[] = json_decode($project_data_string, true);
-	}
+	// Load projects data
+	require __DIR__ . "/interface/content.php";
+	$projects_data = get_all_projects(6);
 ?>
 
 <!DOCTYPE html>
@@ -55,7 +51,7 @@
 			<div class="content-box-wrapper">
 
 				<?php 
-					foreach ($project_data as $index=>$project) {
+					foreach ($projects_data as $index=>$project) {
 						echo $twig->render("content-box.twig", [
 							"index" => $index,
 							"thumbnail" => "assets/projects/" . $project["thumbnail"],

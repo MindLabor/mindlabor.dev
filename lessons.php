@@ -2,19 +2,15 @@
 
 	# Load twig templates
 	require __DIR__ . "/vendor/autoload.php";
-	require __DIR__ . "/interface/markdown.php";
 	use Twig\Environment;
 	use Twig\Loader\FilesystemLoader;
 	$loader = new FilesystemLoader(__DIR__ . "/templates");
 	$twig = new Environment($loader);
 
-	// Fetch lesson data
-	$lesson_files = glob("md_lesson/*.md");
-	$lesson_data = [];
-	foreach ($lesson_files as $file) {
-		$markdown = new Markdown($file); // "../md_project/" . $this->project . "/" . $this->lesson
-		$lesson_data[] = $markdown->parse_yaml();
-	}
+	// Load lessons data
+	require __DIR__ . "/interface/content.php";
+	$lessons_data = get_all_lessons(6);
+
 ?>
 
 <!DOCTYPE html>
@@ -56,17 +52,18 @@
 			<div class="content-box-wrapper">
 
 				<?php 
-				foreach ($lesson_data as $lesson) {
-					echo $twig->render("content-box.twig", [
-						"index" => 0,
-						"thumbnail" => "assets/lessons/" . $lesson["thumbnail"],
-						"href" => "/lesson/" . $lesson["url"],
-						"title" => $lesson["title"],
-						"description" => $lesson["description"],
-						"tags" => $lesson["tags"]
-					]);
-				}
+					foreach ($lessons_data as $lesson) {
+						echo $twig->render("content-box.twig", [
+							"index" => 0,
+							"thumbnail" => "assets/lessons/" . $lesson["thumbnail"],
+							"href" => "/lesson/" . $lesson["url"],
+							"title" => $lesson["title"],
+							"description" => $lesson["description"],
+							"tags" => $lesson["tags"]
+						]);
+					}
 				?>
+				
 			</div>
 		</section>
 
