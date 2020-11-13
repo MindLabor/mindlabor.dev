@@ -13,11 +13,14 @@ A website about various coding projects, articles, and guides that help develope
 
 **The [website](https://mindlabor.dev) is currently under construction so there should be more to see soon.**
 
+ 
+&nbsp;
+ 
 
-### Current Projects
+## Current Projects
 * Discord Music Bot
 
-### Upcoming Project ideas
+## Upcoming Project ideas
 * VSCode code style checker (dod)
 * Ad Blocker Chrome Extension
 * Fractal Generator (& webgl)
