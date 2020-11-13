@@ -1,6 +1,14 @@
-# MindLabor
 
-A website about various coding projects articles and guides that help developers getting started with new frameworks and technologies. 
+
+
+<div align="center">
+  <p align="center">
+    <a href="https://mindlabor.dev/"><img src="https://raw.githubusercontent.com/MindLabor/mindlabor.dev/master/assets/global/mindlabor/wgrad-bg-icon.png" height="200"></a>
+  </p>
+  <h1></h1>
+</div>
+
+A website about various coding projects, articles, and guides that help developers getting started with new frameworks and technologies.
 
 
 **The [website](https://mindlabor.dev) is currently under construction so there should be more to see soon.**
