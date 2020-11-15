@@ -84,11 +84,10 @@ module.exports = async function(command) {
 The Commands.js file takes all command files and puts them together in one object with other command-specific data. In this case, it takes the help function and adds aliases to it, so there are multiple ways of writing a command (#help, #h, #command, #commands).
 ```js
 /* commands/Commands.js */
-const help = require("./help");
 
 module.exports = [{
-	aliases: ["help", "h", "command", "commands"],
-	execute: help
+	name: "help",
+	aliases: ["help", "h", "command", "commands"]
 }]
 ```
 
@@ -112,7 +111,8 @@ execute() {
 	}
 
 	// Execute command and pass the current object to it
-	command.execute(this);
+	const execute = require("./../commands/" + command.name);
+	execute(this);
 }
 ```
 The execute method fetches the command data from Commands.js and executes the command using its function. Finally, modify the index.js file so that the CommandMessage is used to validate and execute our command.

@@ -86,6 +86,12 @@ pre[class*="language-"] {
 		max-width: 75%;
 	}
 
+	img {
+		width: 85%;
+		max-height: 250px;
+		object-fit: contain;
+	}
+
 	#menu-dots {
 		float: right;
 		position: relative;
@@ -220,6 +226,10 @@ pre[class*="language-"] {
 		h1 {
 			font-size: 2.5rem;
 			line-height: 2.5rem;
+		}
+
+		img {
+			width: 100%;
 		}
 		
 		#menu-dots {
