@@ -15,27 +15,4 @@
 </p>
 <h1></h1>
   
-A website about various coding projects, articles, and guides that help developers getting started with new frameworks and technologies.
-
-
-**The [website](https://mindlabor.dev) is currently under construction so there should be more to see soon.**
-
- 
-&nbsp;
- 
-
-## Current Projects
-* Discord Music Bot
-
-## Upcoming Project ideas
-* VSCode code style checker (dod)
-* Ad Blocker Chrome Extension
-* Fractal Generator (& webgl)
-* Angular Chat App
-* Spring Web App
-* Introduction to Frappe Framework
-* Web crawler for security checking
-* Sudoku Solver (backtracking and human solving strategies)
-
-Do you have any ideas? Create an issue with the label "idea" with your ideas.
-
+A website that uses Markdown as its content management system. Useful for websites that rely on community contributions.
