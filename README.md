@@ -14,3 +14,9 @@
 <h1></h1>
   
 A website that uses Markdown as its content management system. Useful for websites that rely on community contributions.
+
+### Demo Content
+__Website:__ https://mindlabor.dev/project/dicord-music-bot-with-nodejs/getting-started
+
+__Data:__ https://github.com/MindLabor/mindlabor.dev/tree/master/md_project
+
