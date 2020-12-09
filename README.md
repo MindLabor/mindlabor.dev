@@ -10,8 +10,6 @@
 <p align="center">
   <a href="https://mindlabor.dev/" alt="MindLabor">
       <img src="https://img.shields.io/website-up-down-green-red/http/mindlabor.dev.svg" /></a>
-  <a href="https://creativecommons.org/licenses/by-nc/4.0/" alt="License">
-      <img src="https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg" /></a>
 </p>
 <h1></h1>
   
