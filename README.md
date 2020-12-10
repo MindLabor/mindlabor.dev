@@ -8,7 +8,7 @@
 
 &nbsp;<br>&nbsp;
 
-### Content
+## Content
 __Website:__ https://mindlabor.dev/project/dicord-music-bot-with-nodejs/getting-started
 
 __Data:__ https://github.com/MindLabor/mindlabor.dev/tree/master/md_project
