@@ -12,10 +12,10 @@
 Here are some images in case the live demo not being online
 
 
-<img align="center" src="https://raw.githubusercontent.com/MindLaborDev/mindlabor.dev/master/demo/article.png" />
-
-
 <img align="center" src="https://raw.githubusercontent.com/MindLaborDev/mindlabor.dev/master/demo/home.png" />
+
+
+<img align="center" src="https://raw.githubusercontent.com/MindLaborDev/mindlabor.dev/master/demo/article.png" />
 
 
 
